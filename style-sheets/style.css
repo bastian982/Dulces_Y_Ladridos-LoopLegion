@@ -52,6 +52,10 @@ main section div.encabezado-mision-vision{
   border-radius: 10px 0 0 10px;
 }
 
+.bg-atributos{
+  background-color: #b67352;
+}
+
 
 section.contactanos-nosotros {
   text-align: center;
