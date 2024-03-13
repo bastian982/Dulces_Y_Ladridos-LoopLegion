@@ -1,4 +1,4 @@
-nav.bg-header {
+nav.bg-header, #navbarSuperior {
   background-color: #8cb9bd;
 }
 .bg-header2 {
@@ -76,4 +76,23 @@ div.texto-imagen-final-nosotros {
 footer {
   background-color: #ecb159;
   height: 70px;
+}
+@media (max-width: 991px){
+/* body{
+  width: 100vw;
+} */
+  #botonBusqueda{
+    width: fit-content;
+    border: none;
+    padding: 0;
+    margin: 5px 0 0 10px;   
+
+  }
+  i.fa-solid{
+    width: 5vw;
+    height: auto;
+    padding: 0;
+    margin: 0;    
+  }
+
 }

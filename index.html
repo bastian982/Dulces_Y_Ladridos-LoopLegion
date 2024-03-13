@@ -13,50 +13,68 @@
 </head>
 
 <body>
-  <nav class="navbar bg-header">
-    <div class="container-fluid">
-      <a class="navbar-brand"><img src="./assets/img/Logo_y_nombre.png" alt="Logo y nombre de la empresa" /></a>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search" />
-        <button class="btn-search text-white" type="submit">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
-      </form>
-      <div>
-        <a href="#"><i class="fa-regular fa-user"></i></a>
-        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-      </div>
-    </div>
-  </nav>
+  <header class="container-sm-fluid ps-0 pe-0 pt-0">
+    <nav class="container-sm-fluid ps-0 pe-0 pt-0">
+      <div class="navbar navbar-expand-lg  justify-content-between navbarSuperior" id="navbarSuperior">
+        <a id="botonBusqueda" class="btn nav-link navbar-toggler" role="button" data-bs-toggle="collapse" data-bs-target="#searchContent"
+        aria-controls="searchContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </a>
+        <a class="navbar-brand"><img src="./assets/img/Logo_y_nombre.png" alt="Logo y nombre de la empresa" /></a>
+       <div class="navbar">
+        <div class="collapse navbar-collapse" id="searchContent">
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search" />
+            <button class="btn-search text-white" type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+          <div>
+            <a href="#"><i class="fa-regular fa-user"></i></a>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+          </div>
+        </div>
 
-  <nav class="navbar navbar-expand-lg bg-header2">
-    <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item ">
-            <a class="nav-link active text-white" aria-current="page" href="#">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#">Productos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#">Publicaciones</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#">Experiencia</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#">Nosotros</a>
-          </li>
-        </ul>
-        </form>
+      <button class="navbar-toggler m-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+        
+
       </div>
-    </div>
-  </nav>
+
+       </div>
+       
+    </nav>
+  
+    <nav class="navbar navbar-expand-lg bg-header2">
+      <div class="container-fluid">
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item ">
+              <a class="nav-link active text-white" aria-current="page" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Publicaciones</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Experiencia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Nosotros</a>
+            </li>
+          </ul>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+  </header>
+  
 
   <div class="img-fluid img-header">
     <h1>Nosotros</h1>
