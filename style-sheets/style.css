@@ -1,0 +1,79 @@
+nav.bg-header {
+  background-color: #8cb9bd;
+}
+.bg-header2 {
+  background-color: #b67352;
+}
+form.d-flex {
+  position: relative;
+}
+
+form .btn-search {
+  background: #b67352;
+  position: absolute;
+  border: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  padding: 0 15px;
+  border-radius: 0 15px;
+}
+
+div a i {
+  padding: 10px;
+  font-size: 30px;
+  color: #b67352;
+}
+
+.img-header {
+  background-image: url(../assets/img/img-header-nosotros.png);
+  padding: 100px;
+  text-align: center;
+}
+
+main section h4 {
+  margin-top: 15px;
+  text-align: center;
+}
+
+main section div.contenido-mision-vision{
+  position: relative;
+  display: flex;
+  background-color: #FEFBF6;
+  border: 2px solid #b67352;
+  height: 100px;
+  margin: 15px;
+  border-radius: 10px;
+}
+
+main section div.encabezado-mision-vision{
+  position: absolute;
+  background-color: #b67352;
+  border: 2px solid #b67352;
+  height: 100px;
+  width: 70px;
+  border-radius: 10px 0 0 10px;
+}
+
+
+section.contactanos-nosotros {
+  text-align: center;
+  padding: 30px;
+  background-color: #b67352;
+}
+
+section.img-final-nosotros {
+  background-image: url(../assets/img/imagen_con_frase-al-final-de-pag-nosotros.png);
+}
+
+div.texto-imagen-final-nosotros {
+  text-align: center;
+  padding: 250px 0;
+  width: 405px;
+}
+
+footer {
+  background-color: #ecb159;
+  height: 70px;
+}
