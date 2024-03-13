@@ -38,21 +38,17 @@ main section h4 {
 }
 
 main section div.contenido-mision-vision{
-  position: relative;
   display: flex;
   background-color: #FEFBF6;
   border: 2px solid #b67352;
-  height: 100px;
   margin: 15px;
   border-radius: 10px;
+  padding: 0px 10px 0px 0;
 }
 
 main section div.encabezado-mision-vision{
-  position: absolute;
   background-color: #b67352;
   border: 2px solid #b67352;
-  height: 100px;
-  width: 70px;
   border-radius: 10px 0 0 10px;
 }
 
