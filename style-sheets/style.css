@@ -1,0 +1,139 @@
+nav.bg-header, #navbarSuperior {
+  background-color: #8cb9bd;
+}
+.bg-header2 {
+  background-color: #b67352;
+}
+form.d-flex {
+  position: relative;
+}
+
+form .btn-search {
+  background: #b67352;
+  position: absolute;
+  border: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  padding: 0 15px;
+  border-radius: 0 15px;
+}
+
+div a i {
+  padding: 10px;
+  font-size: 30px;
+  color: #b67352;
+}
+
+.img-header {
+  background-image: url(../assets/img/img-header-nosotros.png);
+  padding: 100px;
+  text-align: center;
+  background-size: cover;
+}
+
+main section h4 {
+  margin-top: 15px;
+  text-align: center;
+}
+
+main section div.contenido-mision-vision{
+  display: flex;
+  background-color: #FEFBF6;
+  border: 2px solid #b67352;
+  margin: 15px;
+  border-radius: 10px;
+  padding: 0px 10px 0px 0;
+}
+
+main section div.encabezado-mision-vision{
+  background-color: #b67352;
+  border: 2px solid #b67352;
+  border-radius: 10px 0 0 10px;
+}
+
+.bg-atributos{
+  background-color: #b67352;
+}
+
+
+section.contactanos-nosotros {
+  text-align: center;
+  padding: 30px;
+  background-color: #b67352;
+}
+
+section.img-final-nosotros {
+  background-image: url(../assets/img/imagen_con_frase-al-final-de-pag-nosotros.png);
+
+}
+
+div.texto-imagen-final-nosotros {
+  text-align: center;
+  padding: 250px 0;
+  width: 405px;
+}
+
+footer {
+  background-color: #ecb159;
+  height: 70px;
+}
+@media (max-width: 991px){
+/* body{
+  width: 100vw;
+} */
+  #botonBusqueda{
+    width: fit-content;
+    border: none;
+    padding: 0;
+    margin: 5px 0 0 10px;   
+
+  }
+  i.fa-solid{
+    width: 5vw;
+    height: auto;
+    padding: 0;
+    margin: 0;    
+  }
+
+}
+
+/*Estilos de */
+
+/* Estilos para las tarjetas */
+.card {
+  margin-bottom: 20px; /* Espacio entre tarjetas */
+}
+
+.card-img-top {
+  max-width: 100%; /* Imagen se ajusta al ancho de la tarjeta */
+  height: auto; /* Altura automática */
+}
+
+.card-body {
+  background-color: #FEFBF6; /* Color de fondo del cuerpo de la tarjeta */
+}
+
+.card-title {
+  color: #b67352; /* Color del título de la tarjeta */
+}
+
+.card-text {
+  color: #000; /* Color del texto de la tarjeta */
+}
+
+.btn-primary {
+  background-color: #b67352; /* Color de fondo del botón */
+  border-color: #b67352; /* Color del borde del botón */
+}
+
+.btn-primary:hover {
+  background-color: #8c4f2d; /* Color de fondo del botón al pasar el mouse */
+  border-color: #8c4f2d; /* Color del borde del botón al pasar el mouse */
+}
+
+
+.bg-atributos{
+  background-color: #b67352;
+}
