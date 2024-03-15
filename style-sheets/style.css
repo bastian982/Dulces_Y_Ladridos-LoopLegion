@@ -30,6 +30,7 @@ div a i {
   background-image: url(../assets/img/img-header-nosotros.png);
   padding: 100px;
   text-align: center;
+  background-size: cover;
 }
 
 main section h4 {
@@ -65,6 +66,7 @@ section.contactanos-nosotros {
 
 section.img-final-nosotros {
   background-image: url(../assets/img/imagen_con_frase-al-final-de-pag-nosotros.png);
+
 }
 
 div.texto-imagen-final-nosotros {
@@ -95,4 +97,43 @@ footer {
     margin: 0;    
   }
 
+}
+
+/*Estilos de */
+
+/* Estilos para las tarjetas */
+.card {
+  margin-bottom: 20px; /* Espacio entre tarjetas */
+}
+
+.card-img-top {
+  max-width: 100%; /* Imagen se ajusta al ancho de la tarjeta */
+  height: auto; /* Altura automática */
+}
+
+.card-body {
+  background-color: #FEFBF6; /* Color de fondo del cuerpo de la tarjeta */
+}
+
+.card-title {
+  color: #b67352; /* Color del título de la tarjeta */
+}
+
+.card-text {
+  color: #000; /* Color del texto de la tarjeta */
+}
+
+.btn-primary {
+  background-color: #b67352; /* Color de fondo del botón */
+  border-color: #b67352; /* Color del borde del botón */
+}
+
+.btn-primary:hover {
+  background-color: #8c4f2d; /* Color de fondo del botón al pasar el mouse */
+  border-color: #8c4f2d; /* Color del borde del botón al pasar el mouse */
+}
+
+
+.bg-atributos{
+  background-color: #b67352;
 }
