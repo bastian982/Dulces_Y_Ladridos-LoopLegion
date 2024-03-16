@@ -8,28 +8,24 @@ body{
     background-image: url(../assets/img/Fondo-de-pagina-huellitas.png);
 }
 
-/* .contactoContainer{
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
-} */
 
 .formContainer {
-    /* height: 100vh; */
     background-color: var(--color-fondo-formulario);
-    border-radius: 10px 0px 0px 10px;
+    border-radius: 10px 10px 10px 10px;
     color: var(--letras-form);
+    padding: 20px;
+
 }
 
-/* form{
-    display: inline;
-    justify-content: center;
-} */
+#inputComment{
+    resize: none;
+}
 
-.imageContainer img{
-  /*   width: auto; */
-     height: 100vh;
-     border-radius: 0px 10px 10px 0px;
-     
- }
+.custom-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px 10px 10px 10px;
+  }
+
+
 
