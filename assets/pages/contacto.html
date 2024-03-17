@@ -85,7 +85,7 @@
 
       <div class="col-md-6 formContainer">
         <h4 class="p-1 text-center">Contactanós</h4>
-        <form id="contactForm">
+        <form id="contactForm" novalidate> <!-- se le agrega el atributo novalidate para que no valide el correo electronico y asi nosotros poder personalizar la validación -->
           <div class=" mb-2">
             <label for="inputName" class="form-label">Nombre (s):</label>
             <input type="text" class="form-control" id="inputName" placeholder="Juan" required autocomplete="name">
@@ -118,9 +118,9 @@
             <button type="submit" class="btn btn-primary">Enviar</button>
           </div>
 
-          <!-- <ul class="text-bg-warning rounded-1" id="error-message">
-
-          </ul> -->
+          <ul class="text-bg-warning rounded-1" id="error-message">
+            
+          </ul>
 
         </form>
       </div>

@@ -48,13 +48,15 @@ document.addEventListener('DOMContentLoaded', function() {
             .then((datos) => {//recibe resolve
                 
                 console.log('Datos del formulario:', datos);
+                document.getElementById("error-message").innerHTML =  ("");
                 alert('Formulario enviado correctamente.');
+                document.getElementById("contactForm").reset();
                 
                 })
 
             .catch((error) => { //recibe reject
                 console.log(error)
-                alert(error);
+                document.getElementById("error-message").innerHTML =  (`<li>${error}</li>`);
             });
     });
 });
