@@ -9,8 +9,8 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
   <script src="https://kit.fontawesome.com/aa7627e879.js" crossorigin="anonymous"></script>
 
-  <link rel="stylesheet" href="../../style-sheets/style.css" />
-  <link rel="stylesheet" href="../../style-sheets/styleContacto.css" />
+  <link rel="stylesheet" href="../style-sheets/style.css" />
+  <link rel="stylesheet" href="../style-sheets/styleContacto.css" />
 </head>
 
 <body>
@@ -85,26 +85,26 @@
 
       <div class="col-md-6 formContainer">
         <h4 class="p-1 text-center">Contactanós</h4>
-        <form>
+        <form id="contactForm">
           <div class=" mb-2">
             <label for="inputName" class="form-label">Nombre (s):</label>
-            <input type="text" class="form-control" id="inputName" placeholder="Juan" required>
+            <input type="text" class="form-control" id="inputName" placeholder="Juan" required autocomplete="name">
           </div>
 
           <div class="mb-2">
             <label for="inputLastName" class="form-label">Apellidos:</label>
-            <input type="text" class="form-control" id="inputLastName" placeholder="Perez" required>
+            <input type="text" class="form-control" id="inputLastName" placeholder="Perez" required autocomplete="family-name">
           </div>
 
           <div class="mb-2">
             <label for="inputEmail" class="form-label">Correo electrónico:</label>
-            <input type="email" class="form-control" id="inputEmail" placeholder="tucorreo@correo.com" required>
+            <input type="email" class="form-control" id="inputEmail" placeholder="tucorreo@correo.com" required autocomplete="email">
           </div>
 
           <div class="mb-2">
             <label for="inputComment">Comentarios, mensajes:</label>
             <textarea class="form-control" placeholder="Deja tu comentario o mensaje" id="inputComment"
-              rows="4"></textarea>
+              rows="4" required></textarea>
           </div>
 
           <div class="mb-2">
@@ -115,7 +115,7 @@
           </div>
 
           <div class="mb-3">
-            <button onclick="handleButton(this, event)" type="button" class="btn btn-primary">Enviar</button>
+            <button type="submit" class="btn btn-primary">Enviar</button>
           </div>
 
           <!-- <ul class="text-bg-warning rounded-1" id="error-message">
@@ -177,6 +177,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+
+    <script src="../js/contact.js"></script>
 </body>
 
 </html>
