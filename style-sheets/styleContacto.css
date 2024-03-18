@@ -1,0 +1,28 @@
+:root{
+    --color-fondo-formulario: #B67352;
+    --color-amarillo:#ECB159;
+    --letras-form: white;
+}
+
+body{
+    background-image: url(../img/Fondo-de-pagina-huellitas.png);
+}
+
+
+.formContainer {
+    background-color: var(--color-fondo-formulario);
+    border-radius: 10px 10px 10px 10px;
+    color: var(--letras-form);
+    padding: 20px;
+
+}
+
+#inputComment{
+    resize: none;
+}
+
+.custom-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px 10px 10px 10px;
+  }
