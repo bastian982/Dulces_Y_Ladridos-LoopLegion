@@ -3,29 +3,26 @@
     --color-amarillo:#ECB159;
     --letras-form: white;
 }
-.contactoContainer{
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
+
+body{
+    background-image: url(../img/Fondo-de-pagina-huellitas.png);
 }
-.imageContainer img{
-   width: auto;
-    height: 55vh;
-    border-radius: 0px 10px 10px 0px;
-}
+
+
 .formContainer {
-    height: 55vh;
     background-color: var(--color-fondo-formulario);
-    border-radius: 10px 0px 0px 10px;
+    border-radius: 10px 10px 10px 10px;
     color: var(--letras-form);
+    padding: 20px;
+
 }
-form{
-    display: inline;
-    justify-content: center;
+
+#inputComment{
+    resize: none;
 }
-main{
-    background-image: url(../assets/img/Fondo-de-pagina-huellitas.png);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+
+.custom-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px 10px 10px 10px;
+  }
