@@ -70,6 +70,9 @@
             <li class="nav-item">
               <a class="nav-link text-white" href="./nosotros.html">Nosotros</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="./assets/pages/contacto.html">Contactanós</a>
+            </li>
           </ul>
           </form>
         </div>
@@ -85,7 +88,7 @@
 
       <div class="col-md-6 formContainer">
         <h4 class="p-1 text-center">Contactanós</h4>
-        <form id="contactForm" novalidate> <!-- se le agrega el atributo novalidate para que no valide el correo electronico y asi nosotros poder personalizar la validación -->
+        <form id="contactForm" novalidate action="https://formsubmit.co/dulcesyladridos@gmail.com" method="POST"> <!-- se le agrega el atributo novalidate para que no valide el correo electronico y asi nosotros poder personalizar la validación , se agrego el atributo action para vincuilar el formulario al correo -->
           <div class=" mb-2">
             <label for="inputName" class="form-label">Nombre (s):</label>
             <input type="text" class="form-control" id="inputName" placeholder="Juan" required autocomplete="name">
