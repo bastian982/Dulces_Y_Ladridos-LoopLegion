@@ -24,6 +24,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 reject('El correo electrónico debe ser válido y utilizar un servidor permitido.'); //si es diferente devuelve reject
             }
 
+            //Validacion mensaje
+            if(message == ""){
+                reject('Escribe un mensaje o comentario');
+            }
+
 
             // Validación de términos y condiciones
             if (!tyc) { //valida si es difernte a checked
