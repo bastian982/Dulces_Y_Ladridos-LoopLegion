@@ -29,7 +29,7 @@ div a i {
 }
 
 .img-header {
-  background-image: url(../assets/img/img-header-nosotros.png);
+  background-image: url(../img/img-header-nosotros.png);
   padding: 100px;
   text-align: center;
   background-size: cover;
@@ -67,7 +67,7 @@ section.contactanos-nosotros {
 }
 
 section.img-final-nosotros {
-  background-image: url(../assets/img/imagen_con_frase-al-final-de-pag-nosotros.png);
+  background-image: url(../img/imagen_con_frase-al-final-de-pag-nosotros.png);
   background-size: cover
 
 }
