@@ -81,23 +81,34 @@
   </header>
 
   <main class="container  wrap"> <!-- d-flex justify-content-center row -->
-    <h1 class="text-center m-2">PUBLICACIONES</h1>
-    <div class="store-wrapper d-flex accordion  ">
-      <aside class=" d-flex flex-column category-list" style="width: 18%; background-color: #b67352;height: 100%;">
-        <h4 class="text-center m-2">Categorias</h4>
-        <nav>
-          <ul class="d-flex flex-column text-center">
-            <li class="list-unstyled py-3 mb-3 bg-black" style="width: 90%;"><a href="#" category="Todo" class=" text-decoration-none">Todo</a></li>
-            <li class="list-unstyled py-3 mb-3 bg-black" style="width: 90%;"><a href="#" category="Alimentación" class=" text-decoration-none">Alimentación</a></li>
-            <li class="list-unstyled py-3 mb-3 bg-black" style="width: 90%;"><a href="#" category="Cuidado" class=" text-decoration-none">Cuidado</a></li>
-            <li class="list-unstyled py-3 mb-3 bg-black" style="width: 90%;"><a href="#" category="Tips" class=" text-decoration-none">Tips</a></li>
-            <li class="list-unstyled py-3 mb-3 bg-black" style="width: 90%;"><a href="#" category="Recetas" class=" text-decoration-none">Recetas</a></li>
-          </ul>
-        </nav>
-      </aside>
+    <h1 class=" m-2">PUBLICACIONES</h1>
+    <ul class="nav justify-content-end">
+      <li class="nav-item">
+        <p class="nav-link active" aria-current="page">Categorías</p>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">Todo</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Alimentación</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Cuidado</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Tips</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Recetas</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+      </li>
+    </ul>
+    <div class="container-fluid">
 
-      <section class="blog-list d-flex flex-wrap  justify-content-around col-md-12" style="width: 82%;">
-        <article class="card m-3 " category="Tips" style="width: 27%;" ><!--  -->
+      <section class="blog-list d-flex flex-wrap  justify-content-around col-12" style="width: 100%;">
+        <article class="card m-4 col-sm-6 mb-3 mb-sm-6" category="Tips" style="width: 27%;" ><!--  -->
           <img src="../img/perrito.jpg" class="card-img-top mt-3" alt="...">
           <div class="card-body">
             <h5 class="card-title">Card title</h5>
