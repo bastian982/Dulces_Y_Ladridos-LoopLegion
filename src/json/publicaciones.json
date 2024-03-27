@@ -11,7 +11,7 @@
                 "first_name":"Pedro",
                 "last_name":"Wong"
             },
-            "date": 1711412263002,
+            "date": "Tue Jul 20 1999 15:17:40 GMT-0500 (hora de verano central)",
             "categories": ["alimentacion","cuidado","tips"]
         },
         {
@@ -150,7 +150,7 @@
                 "last_name":"Wong"
             },
             "date": 1711412263002,
-            "categories": ["tips","holi"]
+            "categories": ["tips"]
         },
         {
             "id": 12,

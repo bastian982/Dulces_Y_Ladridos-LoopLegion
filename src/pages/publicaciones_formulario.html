@@ -94,13 +94,29 @@
         <section class="my-5"> <!-- Formulario creación de publicaciones -->
             <h5>Crear nueva publicación:</h5>
             <div class="mb-3">
-                <label for="title-input" class="form-label">Titulo</label>
-                <input type="email" class="form-control" id="title-input" placeholder="Postres saludables para los niños">
+                <label for="title-input" class="form-label">Título</label>
+                <input type="text" class="form-control" id="title-input" placeholder="Postres saludables para los niños">
+            </div>
+            <div class="mb-3">
+                <label for="title-input" class="form-label">Autor</label>
+                <input type="text" class="form-control" id="first-name-input" placeholder="Augusto">
+                <label for="title-input" class="form-label">Apellido</label>
+                <input type="text" class="form-control" id="last-name-input" placeholder="Díaz">
+            </div>
+            <div class="mb-3">
+                <label for="title-input" class="form-label">Descripción</label>
+                <input type="text" class="form-control" id="decription-input" placeholder="Postres saludables para los niños">
             </div>
             <div class="mb-3">
                 <label for="text-area" class="form-label">Texto de la publicación</label>
-                <textarea class="form-control" id="text-area" rows="3"></textarea>
+                <textarea class="form-control" id="content-input" rows="3"></textarea>
             </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="catego1-input">
+                <label class="form-check-label" for="catego1-input">
+                  categoria 1
+                </label>
+              </div>
             <div class="col-12 d-flex justify-content-center">
                 <button id="boton-agregar" type="button" class="btn btn-primary">Agregar</button>
             </div>
@@ -109,7 +125,6 @@
         
         
         
-        <button type="button" class="btn btn-danger">Eliminar</button>
         <button type="button" class="btn btn-outline-danger">Eliminar todos los elementos</button>
       
     </div>

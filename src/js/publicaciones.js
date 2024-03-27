@@ -9,6 +9,7 @@ publicaciones.map( data => `
             <h6 class="card-title">${data.autor.first_name} ${data.autor.last_name}</h6>
             <p class="card-text">${data.description}</p>
             <button onclick="printThisPublication(${data.id})" class="btn btn-primary" >Ver mas . . .</button>
+            <button onclick="deleteThisPublication(${data.id})" class="btn btn-danger" >eliminar</button>
           </div>
         </article>
     ` );
@@ -74,6 +75,7 @@ const printThisPublication = async(id) => {
   let message = `
     <div class="row text-center justify-content-center my-5">
     <h1>${info.title}</h1>
+    <h4>By: ${info.autor.first_name} ${info.autor.last_name}</h4>
     <p>${info.content}</p>
     <img src="../img/perrito.jpg" class=" mt-3" alt="..." style="width: 45%">
     
@@ -82,3 +84,12 @@ const printThisPublication = async(id) => {
   printMessage("blog-container",message);
 };
 /* <button onclick="printAll(url)" class="btn btn-primary col-2" >Return</button> */
+
+const deleteThisPublication = async(id) =>{
+  let data = await getDataAPI(url);
+  data.splice(id-1,1);
+
+  //reescribir json
+  console.log(data);
+  printCards("blog-container",cards(data));
+};
