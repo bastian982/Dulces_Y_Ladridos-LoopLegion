@@ -2,7 +2,7 @@
     "data": [
         {
             "id": 1,
-            "title": "cuidado dental canino",
+            "title": "1 cuidado dental canino",
             "description":"lalalalalalalalala",
             "content": "George",
             "image":"url",
@@ -12,11 +12,11 @@
                 "last_name":"Wong"
             },
             "date": 1711412263002,
-            "categories": ["alimantacion","cuidado","tips","recetas"]
+            "categories": ["alimentacion","cuidado","tips"]
         },
         {
             "id": 2,
-            "title": "cuidado dental canino",
+            "title": "2 cuidado dental canino",
             "description":"lalalalalalalalala",
             "content": "George",
             "image":"url",
@@ -26,10 +26,10 @@
                 "last_name":"Wong"
             },
             "date": 1711412263002,
-            "categories": ["alimantacion","cuidado","tips","recetas"]
+            "categories": ["alimentacion","cuidado","recetas"]
         },{
             "id": 3,
-            "title": "cuidado dental canino",
+            "title": "3 cuidado dental canino",
             "description":"lalalalalalalalala",
             "content": "George",
             "image":"url",
@@ -39,11 +39,11 @@
                 "last_name":"Wong"
             },
             "date": 1711412263002,
-            "categories": ["alimantacion","cuidado","tips","recetas"]
+            "categories": ["alimentacion","tips","recetas"]
         },
         {
             "id": 4,
-            "title": "cuidado dental canino",
+            "title": "4 cuidado dental canino",
             "description":"lalalalalalalalala",
             "content": "George",
             "image":"url",
@@ -53,11 +53,11 @@
                 "last_name":"Wong"
             },
             "date": 1711412263002,
-            "categories": ["alimantacion","cuidado","tips","recetas"]
+            "categories": ["cuidado","tips","recetas"]
         },
         {
             "id": 5,
-            "title": "cuidado dental canino",
+            "title": "5 cuidado dental canino",
             "description":"lalalalalalalalala",
             "content": "George",
             "image":"url",
@@ -67,11 +67,11 @@
                 "last_name":"Wong"
             },
             "date": 1711412263002,
-            "categories": ["alimantacion","cuidado","tips","recetas"]
+            "categories": ["alimentacion"]
         },
         {
             "id": 6,
-            "title": "cuidado dental canino",
+            "title": "6 cuidado dental canino",
             "description":"lalalalalalalalala",
             "content": "George",
             "image":"url",
@@ -81,10 +81,10 @@
                 "last_name":"Wong"
             },
             "date": 1711412263002,
-            "categories": ["alimantacion","cuidado","tips","recetas"]
+            "categories": ["tips","recetas"]
         },{
             "id": 7,
-            "title": "cuidado dental canino",
+            "title": "7 cuidado dental canino",
             "description":"lalalalalalalalala",
             "content": "George",
             "image":"url",
@@ -94,11 +94,11 @@
                 "last_name":"Wong"
             },
             "date": 1711412263002,
-            "categories": ["alimantacion","cuidado","tips","recetas"]
+            "categories": ["cuidado"]
         },
         {
             "id": 8,
-            "title": "cuidado dental canino",
+            "title": "8 cuidado dental canino",
             "description":"lalalalalalalalala",
             "content": "George",
             "image":"url",
@@ -108,11 +108,11 @@
                 "last_name":"Wong"
             },
             "date": 1711412263002,
-            "categories": ["alimantacion","cuidado","tips","recetas"]
+            "categories": ["recetas"]
         },
         {
             "id": 9,
-            "title": "cuidado dental canino",
+            "title": "9 cuidado dental canino",
             "description":"lalalalalalalalala",
             "content": "George",
             "image":"url",
@@ -122,11 +122,11 @@
                 "last_name":"Wong"
             },
             "date": 1711412263002,
-            "categories": ["alimantacion","cuidado","tips","recetas"]
+            "categories": ["cuidado","tips"]
         },
         {
             "id": 10,
-            "title": "cuidado dental canino",
+            "title": "10 cuidado dental canino",
             "description":"lalalalalalalalala",
             "content": "George",
             "image":"url",
@@ -136,7 +136,35 @@
                 "last_name":"Wong"
             },
             "date": 1711412263002,
-            "categories": ["alimantacion","cuidado","tips","recetas"]
+            "categories": ["alimentacion","cuidado","tips","recetas"]
+        },
+        {
+            "id": 11,
+            "title": "11 cuidado dental canino",
+            "description":"lalalalalalalalala",
+            "content": "George",
+            "image":"url",
+            "autor": {
+                "link":"perfil",
+                "first_name":"Pedro",
+                "last_name":"Wong"
+            },
+            "date": 1711412263002,
+            "categories": ["tips","holi"]
+        },
+        {
+            "id": 12,
+            "title": "12 cuidado dental canino",
+            "description":"lalalalalalalalala",
+            "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eum accusamus velit rerum libero, fuga quaerat possimus quidem consequatur corporis voluptas, asperiores tempore nam ea modi, dolores quas inventore veritatis? Unde, incidunt ipsum. Ratione, repellat sunt. Velit, distinctio in nemo ipsum expedita impedit veniam consequuntur quae, ex nulla voluptate? Necessitatibus ducimus magnam suscipit, mollitia voluptatibus minima maxime incidunt esse expedita! Ratione nobis officia est corrupti doloremque, optio veritatis natus, magni repellendus sequi laboriosam veniam. Quos nobis numquam voluptas nostrum perferendis repellat, ipsum ex, nihil eos obcaecati laboriosam recusandae. Numquam, illum!",
+            "image":"url",
+            "autor": {
+                "link":"perfil",
+                "first_name":"Pedro",
+                "last_name":"Wong"
+            },
+            "date": 1711412263002,
+            "categories": ["tips","recetas"]
         }
     ]
 }
