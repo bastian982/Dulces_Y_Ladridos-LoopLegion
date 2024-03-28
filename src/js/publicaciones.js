@@ -8,20 +8,22 @@ publicaciones.map( data => `
             <h5 class="card-title">${data.title}</h5>
             <h6 class="card-title">${data.autor.first_name} ${data.autor.last_name}</h6>
             <p class="card-text">${data.description}</p>
-            <button onclick="printThisPublication(${data.id})" class="btn btn-primary" >Ver mas . . .</button>
-            <button onclick="deleteThisPublication(${data.id})" class="btn btn-danger" >eliminar</button>
+            <section class="d-flex justify-content-around">
+              <button onclick="printThisPublication(${data.id})" class="btn btn-primary my-1" >Ver mas ...</button>
+              <button onclick="deleteThisPublication(${data.id})" class="btn btn-danger my-1" >eliminar</button>
+            </section>
           </div>
         </article>
     ` );
 /* <a href="./publicacion_lectura.html" class="btn btn-primary">Ver mas . . .</a> */
 const printCards = ( container,cards ) => document.getElementById(container).innerHTML = cards.join(""); //id = "user-cards"
-const printMessage = (id,message) =>  document.getElementById(id).innerHTML = message ;
+const printHTML = (id,message) =>  document.getElementById(id).innerHTML = message ;
+const printText = (id,message) =>  document.getElementById(id).innerText = message ;
 
 const getDataAPI = async ( url ) => {
     const resolve = await fetch( url );
     const usersData = await resolve.json();
     const publicaciones = usersData.data;
-    //console.log(publicaciones);
     return publicaciones;
 };
 
@@ -68,20 +70,18 @@ categoriaRecetas.addEventListener("click", ()=>{
 
 
 const printThisPublication = async(id) => { 
-  console.log(id);
   let data = await getDataAPI(url);
   let info = data[id-1];
-  console.log(info);
   let message = `
-    <div class="row text-center justify-content-center my-5">
-    <h1>${info.title}</h1>
-    <h4>By: ${info.autor.first_name} ${info.autor.last_name}</h4>
-    <p>${info.content}</p>
-    <img src="../img/perrito.jpg" class=" mt-3" alt="..." style="width: 45%">
-    
+    <div class="row text-center justify-content-center my-3">
+      <h1 class="mb-3">${info.title}</h1>
+      <p id="paragraph-content" class="text-start"></p>
+      <img src="../img/perrito.jpg" class=" mt-3" alt="..." style="width: 45%">
+      <h4 class="mb-3 text-end">By: ${info.autor.first_name} ${info.autor.last_name}</h4>
     </div>
   `;
-  printMessage("blog-container",message);
+  printHTML("blog-container",message);
+  printText("paragraph-content",`${info.content}`);
 };
 /* <button onclick="printAll(url)" class="btn btn-primary col-2" >Return</button> */
 
@@ -90,6 +90,5 @@ const deleteThisPublication = async(id) =>{
   data.splice(id-1,1);
 
   //reescribir json
-  console.log(data);
   printCards("blog-container",cards(data));
 };
