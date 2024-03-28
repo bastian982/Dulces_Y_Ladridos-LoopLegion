@@ -80,98 +80,59 @@
 
   </header>
 
+
+
+
+
+
+
   <main class="container  wrap"> <!-- d-flex justify-content-center row -->
-    <h1 class="text-center m-2">PUBLICACIONES</h1>
+    <h1 class="text-center m-2">MODIFICAR PUBLICACIONES</h1>
 
-    <!-- Categorias de publicaciones -->
-    <ul class="nav justify-content-end "> 
-      <li class="nav-item ">
-        <p class="nav-link ">Categorias: </p>
-      </li>
-      <li class="nav-item">
-        <a id="todas-publicaciones" class="nav-link" href="#">Todas</a>
-      </li>
-      <li class="nav-item">
-        <a id="alimentacion-publicaciones" class="nav-link" href="#">Alimentación</a>
-      </li>
-      <li class="nav-item">
-        <a id="cuidado-publicaciones" class="nav-link" href="#">Cuidado</a>
-      </li>
-      <li class="nav-item">
-        <a id="tips-publicaciones" class="nav-link" href="#">Tips</a>
-      </li>
-      <li class="nav-item">
-        <a id="recetas-publicaciones" class="nav-link" href="#">Recetas</a>
-      </li>
-    </ul>
+    <div class="container">
 
-    <div class="store-wrapper d-flex accordion">
-
-      <section id="blog-container" class="blog-list d-flex flex-wrap  justify-content-around " style="width: 100%;"> <!-- col-md-12 -->
-        <!-- <article class="card m-3 col-md-12 col-sm-12" category="Tips" style="width: 27%;" >
-          <img src="../img/perrito.jpg" class="card-img-top mt-3" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </article>
-
-        <article class="card m-3 col-md-12 col-sm-12" category="Tips" style="width: 27%;"> 
-          <img src="../img/perrito.jpg" class="card-img-top mt-3" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </article>
-
-        <article class="card m-3 col-md-12 col-sm-12" category="Cuidado" style="width: 27%;">
-          <img src="../img/perrito.jpg" class="card-img-top mt-3" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </article>
-
-        <article class="card m-3 col-md-4 col-sm-12" category="Alimentación" style="width: 27%;">
-          <img src="../img/perrito.jpg" class="card-img-top mt-3" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </article>
-
-        <article class="card m-3 col-md-4 col-sm-12" category="Recetas" style="width: 27%;"> 
-          <img src="../img/perrito.jpg" class="card-img-top mt-3" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </article>
-
-        <article class="card m-3 col-md-4 col-sm-12" category="Recetas" style="width: 27%;"> 
-          <img src="../img/perrito.jpg" class="card-img-top mt-3" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </article> -->
-      </section>
+        <section class="my-5"> <!-- Formulario creación de publicaciones -->
+            <h5>Crear nueva publicación:</h5>
+            <div class="mb-3">
+                <label for="title-input" class="form-label">Título</label>
+                <input type="text" class="form-control" id="title-input" placeholder="Postres saludables para los niños">
+            </div>
+            <div class="mb-3">
+                <label for="title-input" class="form-label">Autor</label>
+                <input type="text" class="form-control" id="first-name-input" placeholder="Augusto">
+                <label for="title-input" class="form-label">Apellido</label>
+                <input type="text" class="form-control" id="last-name-input" placeholder="Díaz">
+            </div>
+            <div class="mb-3">
+                <label for="title-input" class="form-label">Descripción</label>
+                <input type="text" class="form-control" id="decription-input" placeholder="Postres saludables para los niños">
+            </div>
+            <div class="mb-3">
+                <label for="text-area" class="form-label">Texto de la publicación</label>
+                <textarea class="form-control" id="content-input" rows="3"></textarea>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="catego1-input">
+                <label class="form-check-label" for="catego1-input">
+                  categoria 1
+                </label>
+              </div>
+            <div class="col-12 d-flex justify-content-center">
+                <button id="boton-agregar" type="button" class="btn btn-primary">Agregar</button>
+            </div>
+        </section> <!-- Fin del formulario de creación de publicación -->
+            
+        
+        
+        
+        <button type="button" class="btn btn-outline-danger">Eliminar todos los elementos</button>
+      
     </div>
-    <section><a href="./publicaciones_formulario.html">Modificar publicaciones</a></section> <!--  -->
+    <section><a href="./publicaciones.html">Regresar</a></section><!--  -->
 
   </main>
+
+
 
 
   <footer class="text-center bg-body-tertiary">
@@ -213,7 +174,7 @@
     <!-- Copyright -->
   </footer>
 
-  <script src="../js/publicaciones.js"></script>
+  <script src="../js/publicaciones_formulario.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
