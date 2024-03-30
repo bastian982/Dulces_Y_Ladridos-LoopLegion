@@ -1,21 +1,100 @@
-import { Galletas } from "./product-class.js";
-const galletaChocolate = new Galletas("Galleta de Chocolate");
+import {
+    Galleta,
+    Pasteles,
+    Brownie
+  } from "./product-class.js";
 
-galletaChocolate.dogoName = "Terrier de Chocolate";
-galletaChocolate.description = "Deliciosa galleta hecha con harina de trigo y chocolate";
-console.table(galletaChocolate);
+import  fs  from 'node:fs'
 
-const galletaAvena = new Galletas ("Galleta de Avena"); 
-galletaAvena.dogoName= "Poodle Oat Puffs";
-galletaAvena.description="";
-console.table(galletaAvena);
+const arregloDeProductos = [
+  new Galleta(
+    "Galleta de Chocolate",
+    "Terrier de Chocolate",
+    "Galleta de chocolate con relleno de chocolate",
+    35,
+    1,
+  ),
+    new Galleta(
+     "Galleta de Mantequilla",
+     "Corgi Cookies",
+     "Galleta de mantequilla suave con forma de Corgi",
+     120,
+     6,
+    ), 
+
+    new Galleta(
+        "Galleta de Avena",
+        "Poodle Oat Puffs",
+        "Galleta de avena bañadas en azucar glass",
+        35,
+        1,
+    ), 
+   
+    new Galleta(
+        "Galleta de Chispas",
+        "Dalmata Delight",
+        "Galleta de mantequilla con chispas de chocolate",
+        35,
+        1,
+    ), 
 
 
-const galletaMantequilla = new Galletas ("Galleta de Mantequilla"); 
-galletaMantequilla.dogoName= "Corgi Cookies";
-galletaMantequilla.description="";
-console.table(galletaMantequilla);
+  new Brownie(
+    "Brownie de Chocolate",
+    "Labrabownie",
+    "Pastelillo de chocolate con relleno de chocolate",
+    50,
+    1,
+  ),
+  new Brownie(
+    "Brownie de Frambuesa",
+    "Pastorcito de Frambuesa",
+    "Pastelillo de chocolate con decoracion de frambuesa",
+    50,
+    1,
+  ),
+  new Pasteles(
+    "Pastel de Tres Leches",
+    "Husky de 3 Leches",
+    "Pastel de Tres Leches",
+    50,
+    1,
+  ),
 
-const galletaChispas= new Galletas ("Galleta de Chispas de Chocolate"); 
-galletaChispas.dogoName= "Dalmata Delight";
+  new Pasteles(
+    "Pastel de Chocolate",
+    "Chocolate Retriever",
+    "Pastel de chocolate con cubierta de chocolate",
+    50,
+    1,
+  ),
+
+  new Pasteles(
+    "Pastel de Zanahoria",
+    "Pug de zanahoria /carrot bite",
+    "Pastel de zanahoria con betún de queso crema ",
+    50,
+    1,
+  ),
+
+  new Pasteles(
+    "Pastel Cheesecake",
+    "Cheehuhua Dream",
+    "Pastel de cheesecake con decoracion de chocolate",
+    50,
+    1,
+  ),
+
+];
+console.log(arregloDeProductos);
+
+const addDataToJson = (objectToSave) => {
+  const data = `{"data":${JSON.stringify(objectToSave)}}`
+// getItem traer el arreglo para crear el archivo json
+  fs.writeFile("./src/js/productos.json", data, "utf8", (err) => {
+    if (err) throw err;
+    console.log("The file has been saved!");
+  });
+};
+addDataToJson(arregloDeProductos);
 
