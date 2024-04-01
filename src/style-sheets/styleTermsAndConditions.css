@@ -1,0 +1,18 @@
+section.img-fluid {
+  background-image: url(../img/img-header-nosotros.png);
+  background-size: cover;
+  height: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main{
+    background-image: url(../img/Fondo-de-pagina-huellitas.png);
+}
+
+h2~p{
+    text-align: justify;
+    font-weight: 450;
+}
