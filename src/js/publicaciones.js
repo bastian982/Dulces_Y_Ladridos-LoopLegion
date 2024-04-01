@@ -91,4 +91,5 @@ const deleteThisPublication = async(id) =>{
 
   //reescribir json
   printCards("blog-container",cards(data));
+  console.log(data);
 };
