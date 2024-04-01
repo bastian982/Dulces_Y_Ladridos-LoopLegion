@@ -10,6 +10,7 @@
   <script src="https://kit.fontawesome.com/aa7627e879.js" crossorigin="anonymous"></script>
 
   <link rel="stylesheet" href="../style-sheets/style.css" />
+  <link rel="stylesheet" href="../style-sheets/styleProductos.css">
 </head>
 
 <body>
@@ -79,10 +80,39 @@
   </header>
   
 
-  <main class="container container-fluid">
-    
-    <h1>PRODUCTOS</h1>
+  <main class="">
+    <div class="container-fluid row ">
+      <div class="col-2 m-2 mt-4" id="contenedorCategorias">
+        Categorias
+        <ul class="list-group">
+          <li class="list-group-item">
+            <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+            <label class="form-check-label" for="firstCheckbox">Pasteles</label>
+          </li>
+          <li class="list-group-item">
+            <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
+            <label class="form-check-label" for="secondCheckbox">Galletas</label>
+          </li>
+          <li class="list-group-item">
+            <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+            <label class="form-check-label" for="thirdCheckbox">Brownies</label>
+          </li>
+          <li class="list-group-item">
+            <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+            <label class="form-check-label" for="thirdCheckbox">Otros</label>
+          </li>
+        </ul>
+      </div>
+      <div class="col-10 container-fluid">
+        <div id="cards" class="row center">
+          
+          
 
+          
+
+      
+      </div>
+    </div>
   </main>
   
   <footer class="text-center bg-body-tertiary">
@@ -128,6 +158,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+  <script type="module" src="../js/productos.js"></script>
 </body>
 
 </html>

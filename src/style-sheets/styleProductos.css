@@ -1,0 +1,36 @@
+#contenedorCategorias{
+    background-color: #8CB9BD;
+    color: #B67352 ;
+    height: 200px;
+    width: 180px;
+    border-radius: 10%;
+    text-align: center;
+}
+
+.list-group{
+    text-align: start;
+}
+
+.list-group-item{
+    background-color: #8CB9BD;
+    border: none;
+}
+
+.card{
+    background-color: #B67352;
+    width: 250px;
+}
+
+.btnProduct{
+    background-color: rgb(89, 117, 133);
+    width: 50px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
