@@ -85,7 +85,4 @@ function createProduct(
   }
 }
 
-function updateProduct(element) {
-  
-}
 addForm.onsubmit = addData;
