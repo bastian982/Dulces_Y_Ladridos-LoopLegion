@@ -1,12 +1,18 @@
 let url = "../json/productos.json";
 
-const getProducts = async (url) => {
-  const resolve = await fetch(url);
-  const usersData = await resolve.json();
-  const productos = usersData.data;
-  console.log(productos);
-  return productos;
-};
+// const getProducts = async (url) => {
+//   const resolve = await fetch(url);
+//   const usersData = await resolve.json();
+//   const productos = usersData.data;
+//   console.log(productos);
+//   return productos;
+// };
+//Función exclusiva para simular el funcionamiento
+const getProducts = () => {
+  return JSON.parse(
+    localStorage.getItem("arregloDeProductos")
+  );  
+}
 
 const cards = (productos) =>
   productos.map(

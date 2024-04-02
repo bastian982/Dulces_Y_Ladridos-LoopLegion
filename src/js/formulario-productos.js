@@ -1,17 +1,23 @@
+// // Import our custom CSS
+import '../scss/styles.scss';
+
+// Import all of Bootstrap's JS
+import * as bootstrap from 'bootstrap'
 import {
   Postre,
   Galleta,
   Pasteles,
   Brownie,
 } from "../../Productos/product-class.js";
+import { getProducts } from './admin.js';
 
+const arregloDeProductosName = "arregloDeProductos";
 const addForm = document.getElementById("addForm");
 
 
 function addData(event) {
   event.preventDefault();
   const typeProduct = document.getElementById("typeProduct").value;
-  const idAddInput = document.getElementById("idAddInput").value;
   const nameAddInput = document.getElementById("nameAddInput").value;
   const dogoNameAddInput = document.getElementById("dogoNameAddInput").value;
   const descriptionAddInput = document.getElementById(
@@ -79,4 +85,7 @@ function createProduct(
   }
 }
 
+function updateProduct(element) {
+  
+}
 addForm.onsubmit = addData;

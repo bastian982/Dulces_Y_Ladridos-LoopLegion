@@ -8,13 +8,13 @@
  
   <script src="https://kit.fontawesome.com/aa7627e879.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../style-sheets/style.css" />
+
+  <script type="module" src="../js/admin.js" defer></script>
   <script type="module" src="../js/formulario-productos.js" defer></script>
 </head>
 
 <body>
-  <!--<header id="main-header" class="container-sm-fluid ps-0 pe-0 pt-0">
-  Aqui se inserta el header derde headerYFooter.js con el id="main-header"-->
-  <!-- </header> -->
+
   <header class="container-sm-fluid ps-0 pe-0 pt-0">
     <nav class="container-sm-fluid ps-0 pe-0 pt-0">
       <div class="navbar navbar-expand-lg  justify-content-between navbarSuperior" id="navbarSuperior">
@@ -98,8 +98,6 @@
                 <option value="Pastel">Pasteles</option>
                 <option value="Brownie">Brownies</option>
             </select>
-            <label for="idAddInput" class="form-label">ID del nuevo postre</label> <!--Crear un sistema de folios automáticos-->
-            <input type="text" class="form-control" id="idAddInput" name="idAddInput" placeholder="Nuevo ID para registrar el producto">
             <label for="nameAddInput" class="form-label">Nombre del nuevo postre</label>
             <input type="text" class="form-control" id="nameAddInput" name="nameAddInput" placeholder="Nombre tradicional del postre">
             <label for="dogoNameAddInput" class="form-label">Dogo Name del nuevo postre</label>
@@ -119,7 +117,14 @@
 
         </div>
         </div>
-        </div>
+
+        <p>
+            <button class="btn btn-link mt-4" type="button" data-bs-toggle="collapse" data-bs-target="#updateTable" aria-expanded="false" aria-controls="collapseWidthExample">
+              Modificar o eliminar productos
+            </button>
+          </p>
+        <div id="updateTable" class="container collapse"></div>
+        
         <!-- <div class="mt-5">
           <h6> Modificar producto:</h6>
           <h7>(Cambios en las características del producto) </h7>
@@ -173,6 +178,8 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script> -->
     */
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
