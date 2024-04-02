@@ -82,7 +82,7 @@ function  saveChanges (event) {
     //    }
     console.log(idElement);
 }
-function createTable() {
+export function createTable() {
     const updateTable = document.getElementById("updateTable");
     updateTable.innerHTML =`
     <div class="container-fluid pt-5">

@@ -9,7 +9,8 @@ import {
   Pasteles,
   Brownie,
 } from "../../Productos/product-class.js";
-import { getProducts } from './admin.js';
+import { createTable, getProducts } from './admin.js';
+
 
 const arregloDeProductosName = "arregloDeProductos";
 const addForm = document.getElementById("addForm");
@@ -37,7 +38,7 @@ function addData(event) {
     priceAddInput,
     piecesAddInput
   );
-
+  productToAdd.id = productToAdd.id +5;//Borrar linea cuando ya este funcionando el backend
   arregloDeProductos.push(productToAdd);
   console.log(arregloDeProductos);
   localStorage.setItem("arregloDeProductos", JSON.stringify(arregloDeProductos));
@@ -83,6 +84,7 @@ function createProduct(
     default:
       break;
   }
+  createTable();
 }
 
 addForm.onsubmit = addData;
