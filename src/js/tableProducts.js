@@ -3,16 +3,10 @@ import '../style-sheets/styleAdmin.css'
 
 // Import all of Bootstrap's JS
 import * as bootstrap from 'bootstrap'
+import { getProducts, setProducts } from './localStorage';
 const arregloDeProductosName = "arregloDeProductos";
 
-export const getProducts = (nameData) => {
-    return JSON.parse(
-      localStorage.getItem(nameData)
-    );  
-  }
-  export const setProducts = (nameData,data) => {
-     localStorage.setItem(nameData, JSON.stringify(data));  
-  }
+
   function deleteProduct(event) {
     console.log("delete");
     let id = event.target.id.slice(0,-9);

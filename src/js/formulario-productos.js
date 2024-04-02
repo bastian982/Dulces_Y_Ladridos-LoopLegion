@@ -9,7 +9,7 @@ import {
   Pasteles,
   Brownie,
 } from "../../Productos/product-class.js";
-import { createTable, getProducts } from './admin.js';
+import { createTable } from './tableProducts.js';
 
 
 const arregloDeProductosName = "arregloDeProductos";
