@@ -12,7 +12,9 @@
 
 
   <script type="module" src="../js/tableProducts.js" defer></script>
+  <script type="module" src="../js/tablePublicaciones.js" defer></script>
   <script type="module" src="../js/formulario-productos.js" defer></script>
+  <script type="module" src="../js/publicaciones_formulario.js" defer></script>
 </head>
 
 <body>
@@ -86,12 +88,26 @@
 
 
   <main class="container  wrap"> <!-- d-flex justify-content-center row -->
-    <h1 class="text-center m-2">PRODUCTOS </h1>
+    <h1 class="text-center m-2"> Perfil de Administrador </h1>
 
     <div class="container">
       <section class="mt-5"> <!-- Formulario para agregar, modificar o borrar productos -->
         <h5>Agregar nuevo producto:</h5>
         <h7>(Agregar un nuevo producto en la lista) </h7>
+        
+        </div>
+        <p class="d-inline-flex gap-1">
+          <button class="btn btn-warning mt-4" type="button" data-bs-toggle="collapse" data-bs-target="#addProducts" aria-expanded="false" aria-controls="collapseWidthExample">
+            Agregar productos
+          </button>
+        
+          
+        <button class="btn btn-warning mt-4" type="button" data-bs-toggle="collapse" data-bs-target="#addPublicaciones" aria-expanded="false" aria-controls="collapseWidthExample">
+          Agregar Publicaciones
+        </button>
+      </p>
+
+      <div id="addProducts" class="container collapse">
         <div class="mt-3">
           <form id="addForm" >
             <label for="typeProduct">¿Qué tipo de postre quieres registrar?</label>
@@ -118,7 +134,56 @@
           </form>
 
         </div>
+
+      </div>
+
+    <div id="addPublicaciones" class="container collapse">
+      <section class="mt-5"> <!-- Formulario creación de publicaciones -->
+        <h5>Crear nueva publicación:</h5>
+        <div class="mb-3">
+          <label for="title-input" class="form-label">Título</label>
+          <input type="text" class="form-control" id="title-input" placeholder="Postres saludables para los niños">
         </div>
+        <div class="mb-3">
+          <h6>Autor: </h6>
+          <label for="title-input" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="first-name-input" placeholder="Augusto">
+          <label for="title-input" class="form-label">Apellido</label>
+          <input type="text" class="form-control" id="last-name-input" placeholder="Díaz">
+        </div>
+        <div class="mb-3">
+          <label for="title-input" class="form-label">Descripción</label>
+          <input type="text" class="form-control" id="decription-input" placeholder="Toda la información que necesitas para que tu hijo . . .">
+        </div>
+        <div class="mb-3">
+          <label for="text-area" class="form-label">Texto de la publicación</label>
+          <textarea class="form-control" id="content-input" rows="3"></textarea>
+        </div>
+        <h6>Categorias: </h6>
+        <div class="form-check form-check-inline">
+          <input name="checkbox-input" class="form-check-input" type="checkbox" value="alimentacion" id="catego1-input">
+          <label class="form-check-label" for="catego1-input">Alimentación</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input name="checkbox-input" class="form-check-input" type="checkbox" value="cuidado" id="catego2-input">
+          <label class="form-check-label" for="catego2-input">Cuidado</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input name="checkbox-input" class="form-check-input" type="checkbox" value="tips" id="catego3-input">
+          <label class="form-check-label" for="catego3-input">Tips</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input name="checkbox-input" class="form-check-input" type="checkbox" value="recetas" id="catego4-input">
+          <label class="form-check-label" for="catego4-input">Recetas</label>
+        </div>
+        <div class="text-center">
+          <p id="error-message" class="text-danger"></p>
+        </div>
+        <div class="col-12 d-flex justify-content-center my-2">
+          <button id="boton-agregar" type="button" class="btn btn-primary">Agregar</button>
+        </div>
+      </section> <!-- Fin del formulario de creación de publicación -->
+    </div>
 
         <p>
             <button class="btn btn-link mt-4" type="button" data-bs-toggle="collapse" data-bs-target="#updateTable" aria-expanded="false" aria-controls="collapseWidthExample">
@@ -127,6 +192,12 @@
           </p>
         <div id="updateTable" class="container collapse"></div>
         
+        <p>
+          <button class="btn btn-link mt-4" type="button" data-bs-toggle="collapse" data-bs-target="#tablePublicaciones" aria-expanded="false" aria-controls="collapseWidthExample">
+            Modificar o eliminar Publicaciones
+          </button>
+        </p>
+      <div id="tablePublicaciones" class="container collapse"></div>
         <!-- <div class="mt-5">
           <h6> Modificar producto:</h6>
           <h7>(Cambios en las características del producto) </h7>
