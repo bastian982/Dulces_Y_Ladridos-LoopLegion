@@ -17,37 +17,39 @@
   <header class="container-sm-fluid ps-0 pe-0 pt-0">
     <nav class="container-sm-fluid ps-0 pe-0 pt-0">
       <div class="navbar navbar-expand-lg  justify-content-between navbarSuperior" id="navbarSuperior">
-        <a id="botonBusqueda" class="btn nav-link navbar-toggler" role="button" data-bs-toggle="collapse" data-bs-target="#searchContent"
-        aria-controls="searchContent" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </a>
+        <a id="botonBusqueda" class="btn nav-link navbar-toggler" role="button" data-bs-toggle="collapse"
+          data-bs-target="#searchContent" aria-controls="searchContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </a>
         <a class="navbar-brand"><img src="../img/logo_y_nombre.png" alt="Logo y nombre de la empresa" /></a>
-       <div class="navbar">
-        <div class="collapse navbar-collapse" id="searchContent">
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search" />
-            <button class="btn-search text-white" type="submit">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-          </form>
-          <div>
-            <a href="#"><i class="fa-regular fa-user"></i></a>
-            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+        <div class="navbar">
+          <div class="collapse navbar-collapse" id="searchContent">
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search" />
+              <button class="btn-search text-white" type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </form>
+            <div>
+              <a href="#"><i class="fa-regular fa-user"></i></a>
+              <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
           </div>
-        </div>
 
-      <button class="navbar-toggler m-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-        
+          <button class="navbar-toggler m-2" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+
+        </div>
 
       </div>
 
-       </div>
-       
     </nav>
-  
+
     <nav class="navbar navbar-expand-lg bg-header2">
       <div class="container-fluid">
 
@@ -78,10 +80,35 @@
     </nav>
 
   </header>
-  
 
   <main class="">
     <div class="container-fluid row ">
+
+      <div class="dropdown m-2 d-flex flex-row-reverse" id="dropdownCategorias">
+        <button class="btn btn-secondary dropdown-toggle me-0" type="button" data-bs-toggle="dropdown"
+          aria-expanded="false" id="botonCategorias">
+          Categorias
+        </button>
+        <ul class="dropdown-menu ">
+          <li class="dropdown-item">
+            <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+            <label class="form-check-label" for="firstCheckbox">Pasteles</label>
+          </li>
+          <li class="dropdown-item">
+            <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
+            <label class="form-check-label" for="secondCheckbox">Galletas</label>
+          </li>
+          <li class="dropdown-item">
+            <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+            <label class="form-check-label" for="thirdCheckbox">Brownies</label>
+          </li>
+          <li class="dropdown-item">
+            <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+            <label class="form-check-label" for="thirdCheckbox">Otros</label>
+          </li>
+        </ul>
+      </div>
+
       <div class="col-2 m-2 mt-4" id="contenedorCategorias">
         Categorias
         <ul class="list-group">
@@ -103,18 +130,14 @@
           </li>
         </ul>
       </div>
-      <div class="col-10 container-fluid">
+
+      <div class="col-md-10 container-fluid">
         <div id="cards" class="row center">
-          
-          
 
-          
-
-      
+        </div>
       </div>
-    </div>
   </main>
-  
+
   <footer class="text-center bg-body-tertiary">
     <!-- Grid container -->
     <div class="container pt-4">

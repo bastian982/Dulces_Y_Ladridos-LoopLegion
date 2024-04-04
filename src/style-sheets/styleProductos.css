@@ -1,27 +1,36 @@
-#contenedorCategorias{
+#contenedorCategorias {
     background-color: #8CB9BD;
-    color: #B67352 ;
+    color: #B67352;
     height: 200px;
     width: 180px;
     border-radius: 10%;
     text-align: center;
 }
 
-.list-group{
+#botonCategorias {
+    display: none;
+}
+
+.list-group {
     text-align: start;
 }
 
-.list-group-item{
+.list-group-item {
     background-color: #8CB9BD;
     border: none;
 }
 
-.card{
+.cardNaranja {
+    background-color: #ECB159;
+    width: 250px;
+}
+
+.cardCafe {
     background-color: #B67352;
     width: 250px;
 }
 
-.btnProduct{
+.btnProduct {
     background-color: rgb(89, 117, 133);
     width: 50px;
     height: 45px;
@@ -29,8 +38,32 @@
     border-radius: 50%;
 }
 
-.center{
+.center {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
+
+
+
+@media screen and (max-width: 900px) {
+    #contenedorCategorias {
+        display: none;
+    }
+
+    .cardNaranja {
+        background-color: #ECB159;
+        width: 180px;
+    }
+
+    .cardCafe {
+        background-color: #B67352;
+        width: 180px;
+    }
+
+    #botonCategorias {
+        display: block;
+        background-color: #8CB9BD;
+        color: #B67352;
+    }
+}
