@@ -33,10 +33,10 @@ const cards = (productos) => {
 const printCards = (container, cards) =>
   (document.getElementById(container).innerHTML = cards.join(""));
 
-const printAll = async (url) => {
-  let data = await getProducts(url);
+const printAll = /*async*/ () => {
+  let data = getProducts() //await getProducts(url);
   console.log(data);
   printCards("cards", cards(data));
 };
 
-printAll(url);
+printAll();
