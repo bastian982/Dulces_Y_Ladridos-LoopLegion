@@ -1,9 +1,3 @@
-import { hide } from '@popperjs/core';
-import '../scss/styles.scss'
-import '../style-sheets/styleAdmin.css'
-
-// Import all of Bootstrap's JS
-import * as bootstrap from 'bootstrap'
 import { getProducts, setProducts } from './localStorage';
 const arregloDePublicacionesName = "arregloDePublicaciones";
 
