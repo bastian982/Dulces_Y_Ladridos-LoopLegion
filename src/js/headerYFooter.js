@@ -16,7 +16,7 @@ document.getElementById("main-header").innerHTML = `
     aria-label="Toggle navigation">
     <i class="fa-solid fa-magnifying-glass"></i>
   </a>
-  <a class="navbar-brand"><img src="/src/img/logo_y_nombre.png" alt="Logo y nombre de la empresa" /></a> <!-- ../img/logo_y_nombre.png -->
+  <a class="navbar-brand"><img src="../img/logo_y_nombre.png" alt="Logo y nombre de la empresa" /></a> <!-- ../img/logo_y_nombre.png -->
   <div class="navbar">
     <div class="collapse navbar-collapse" id="searchContent">
       <form class="d-flex" role="search">
@@ -50,22 +50,22 @@ document.getElementById("main-header").innerHTML = `
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
       <li class="nav-item ">
-        <a class="nav-link active text-white" aria-current="page" href="/index.html">Inicio</a> <!-- ../../index.html -->
+        <a class="nav-link active text-white" aria-current="page" href="../../index.html">Inicio</a> <!-- ../../index.html -->
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" href="/src/pages/productos.html">Productos</a> <!-- ./productos.html -->
+        <a class="nav-link text-white" href="./productos.html">Productos</a> <!-- ./productos.html -->
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" href="/src/pages/publicaciones.html">Publicaciones</a> <!-- ./publicaciones.html -->
+        <a class="nav-link text-white" href="./publicaciones.html">Publicaciones</a> <!-- ./publicaciones.html -->
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" href="/src/pages/experiencia.html">Experiencia</a> <!-- ./experiencia.html -->
+        <a class="nav-link text-white" href="./experiencia.html">Experiencia</a> <!-- ./experiencia.html -->
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" href="/src/pages/nosotros.html">Nosotros</a> <!-- ./nosotros.html -->
+        <a class="nav-link text-white" href="./nosotros.html">Nosotros</a> <!-- ./nosotros.html -->
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" href="/src/pages/contacto.html">Contáctanos</a> <!-- ./contacto.html -->
+        <a class="nav-link text-white" href="./contacto.html">Contáctanos</a> <!-- ./contacto.html -->
       </li>
     </ul>
     </form>

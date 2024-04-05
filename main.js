@@ -1,10 +1,6 @@
-// // Import our custom CSS
-import '../scss/styles.scss';
 
-// Import all of Bootstrap's JS
-import * as bootstrap from 'bootstrap'
-import dataProductos from '../json/productos.json' with { type: 'json' }
-import dataPublicaciones from '../json/publicaciones.json' with { type: 'json' }
+import dataProductos from './src/json/productos.json' with { type: 'json' }
+import dataPublicaciones from './src/json/publicaciones.json' with { type: 'json' }
 
 const arregloDeProductosName = "arregloDeProductos";
 const arregloDePublicacionesName = "arregloDePublicaciones";
