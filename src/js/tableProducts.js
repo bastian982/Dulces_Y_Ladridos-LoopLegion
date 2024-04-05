@@ -1,9 +1,11 @@
-import { hide } from '@popperjs/core';
-import '../style-sheets/styleAdmin.css'
+// import { hide } from '@popperjs/core';
+// import '../style-sheets/styleAdmin.css'
+// // // Import our custom CSS
+// import '../scss/styles.scss';
 
 // Import all of Bootstrap's JS
-import * as bootstrap from 'bootstrap'
-import { getProducts, setProducts } from './localStorage';
+// import * as bootstrap from 'bootstrap'
+import { getProducts, setProducts } from './localStorage.js';
 const arregloDeProductosName = "arregloDeProductos";
 
 

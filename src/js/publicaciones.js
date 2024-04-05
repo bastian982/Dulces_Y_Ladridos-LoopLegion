@@ -1,4 +1,4 @@
-import { getProducts } from "./localStorage";
+import { getProducts } from "./localStorage.js";
 const arregloDePublicacionesName = "arregloDePublicaciones";
 let url = "../json/publicaciones.json";
 const dataPrueba = getProducts(arregloDePublicacionesName);

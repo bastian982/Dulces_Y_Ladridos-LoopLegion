@@ -1,4 +1,5 @@
 import { hide } from '@popperjs/core';
+import '../scss/styles.scss'
 import '../style-sheets/styleAdmin.css'
 
 // Import all of Bootstrap's JS
