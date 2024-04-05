@@ -1,8 +1,11 @@
+import { getProducts } from "./localStorage.js";
+const arregloDePublicacionesName = "arregloDePublicaciones";
 let url = "../json/publicaciones.json";
-
+const dataPrueba = getProducts(arregloDePublicacionesName);
+console.log(dataPrueba);
 const cards = (publicaciones) =>
 publicaciones.map( data => `
-    <article class="card m-3 col-md-12 col-sm-12" category="Tips" style="width: 27%;" ><!--  -->
+    <article class="card col-3 m-4 p-0 icon-link-hover" style="width: 18rem;" category="Tips" style="width: 27%;" ><!--  -->
           <img src="../img/perrito.jpg" class="card-img-top mt-3" alt="...">
           <div class="card-body">
             <h5 class="card-title">${data.title}</h5>
@@ -20,22 +23,23 @@ const printCards = ( container,cards ) => document.getElementById(container).inn
 const printHTML = (id,message) =>  document.getElementById(id).innerHTML = message ;
 const printText = (id,message) =>  document.getElementById(id).innerText = message ;
 
-const getDataAPI = async ( url ) => {
-    const resolve = await fetch( url );
-    const usersData = await resolve.json();
-    const publicaciones = usersData.data;
-    return publicaciones;
-};
+// const getDataAPI = async ( url ) => {
+//     const resolve = await fetch( url );
+//     const usersData = await resolve.json();
+//     const publicaciones = usersData.data;
+//     return publicaciones;
+// };
+
 
 const printAll = async(url) => { 
-  let data = await getDataAPI(url);
+  let data = dataPrueba;//await getDataAPI(url);
   printCards("blog-container",cards(data)); /*make and print cards*/ 
 };
 
 printAll(url);
 
 const printFiltered = async(filter) => {
-  let publicaciones = await getDataAPI(url);
+  let publicaciones = dataPrueba;//await getDataAPI(url);
   let data = [];
   for(let publicacion of publicaciones){
     if(publicacion.categories.includes(filter)) data.push(publicacion);  //.toLowerCase()
@@ -70,7 +74,7 @@ categoriaRecetas.addEventListener("click", ()=>{
 
 
 const printThisPublication = async(id) => { 
-  let data = await getDataAPI(url);
+  let data = dataPrueba // await getDataAPI(url);
   let info = data[id-1];
   let message = `
     <div class="row text-center justify-content-center my-3">
@@ -85,10 +89,12 @@ const printThisPublication = async(id) => {
 };
 /* <button onclick="printAll(url)" class="btn btn-primary col-2" >Return</button> */
 
-const deleteThisPublication = async(id) =>{
-  let data = await getDataAPI(url);
+const deleteThisPublication = /*async*/(id) =>{
+  let data =  dataPrueba;//await getDataAPI(url);
+
   data.splice(id-1,1);
 
   //reescribir json
   printCards("blog-container",cards(data));
+  console.log(data);
 };

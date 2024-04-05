@@ -1,0 +1,104 @@
+{
+  "data": [
+    {
+      "name": "Galleta de Chocolate",
+      "dogoName": "Terrier de Chocolate",
+      "description": "Galleta de chocolate con relleno de chocolate",
+      "price": 35,
+      "pieces": 1,
+      "imagen": "https://cocina-casera.com/wp-content/uploads/2017/12/Flan-de-leche-condensada.-Postre-casero.jpg",
+      "classification": "Galleta",
+      "id": "1G"
+    },
+    {
+      "name": "Galleta de Mantequilla",
+      "dogoName": "Corgi Cookies",
+      "description": "Galleta de mantequilla suave con forma de Corgi",
+      "price": 120,
+      "pieces": 6,
+      "imagen": "https://cocina-casera.com/wp-content/uploads/2017/12/Flan-de-leche-condensada.-Postre-casero.jpg",
+      "classification": "Galleta",
+      "id": "2G"
+    },
+    {
+      "name": "Galleta de Avena",
+      "dogoName": "Poodle Oat Puffs",
+      "description": "Galleta de avena bañadas en azucar glass",
+      "price": 35,
+      "pieces": 1,
+      "imagen": "https://cocina-casera.com/wp-content/uploads/2017/12/Flan-de-leche-condensada.-Postre-casero.jpg",
+      "classification": "Galleta",
+      "id": "3G"
+    },
+    {
+      "name": "Galleta de Chispas",
+      "dogoName": "Dalmata Delight",
+      "description": "Galleta de mantequilla con chispas de chocolate",
+      "price": 35,
+      "pieces": 1,
+      "imagen": "https://cocina-casera.com/wp-content/uploads/2017/12/Flan-de-leche-condensada.-Postre-casero.jpg",
+      "classification": "Galleta",
+      "id": "4G"
+    },
+    {
+      "name": "Brownie de Chocolate",
+      "dogoName": "Labrabownie",
+      "description": "Pastelillo de chocolate con relleno de chocolate",
+      "price": 50,
+      "pieces": 1,
+      "imagen": "https://cocina-casera.com/wp-content/uploads/2017/12/Flan-de-leche-condensada.-Postre-casero.jpg",
+      "id": "1B",
+      "classification": "Brownie"
+    },
+    {
+      "name": "Brownie de Frambuesa",
+      "dogoName": "Pastorcito de Frambuesa",
+      "description": "Pastelillo de chocolate con decoracion de frambuesa",
+      "price": 50,
+      "pieces": 1,
+      "imagen": "https://cocina-casera.com/wp-content/uploads/2017/12/Flan-de-leche-condensada.-Postre-casero.jpg",
+      "id": "2B",
+      "classification": "Brownie"
+    },
+    {
+      "name": "Pastel de Tres Leches",
+      "dogoName": "Husky de 3 Leches",
+      "description": "Pastel de Tres Leches",
+      "price": 50,
+      "pieces": 1,
+      "imagen": "https://cocina-casera.com/wp-content/uploads/2017/12/Flan-de-leche-condensada.-Postre-casero.jpg",
+      "id": "1P",
+      "classification": "Pasteles"
+    },
+    {
+      "name": "Pastel de Chocolate",
+      "dogoName": "Chocolate Retriever",
+      "description": "Pastel de chocolate con cubierta de chocolate",
+      "price": 50,
+      "pieces": 1,
+      "imagen": "https://cocina-casera.com/wp-content/uploads/2017/12/Flan-de-leche-condensada.-Postre-casero.jpg",
+      "id": "2P",
+      "classification": "Pasteles"
+    },
+    {
+      "name": "Pastel de Zanahoria",
+      "dogoName": "Pug de zanahoria /carrot bite",
+      "description": "Pastel de zanahoria con betún de queso crema ",
+      "price": 50,
+      "pieces": 1,
+      "imagen": "https://cocina-casera.com/wp-content/uploads/2017/12/Flan-de-leche-condensada.-Postre-casero.jpg",
+      "id": "3P",
+      "classification": "Pasteles"
+    },
+    {
+      "name": "Pastel Cheesecake",
+      "dogoName": "Cheehuhua Dream",
+      "description": "Pastel de cheesecake con decoracion de chocolate",
+      "price": 50,
+      "pieces": 1,
+      "imagen": "https://cocina-casera.com/wp-content/uploads/2017/12/Flan-de-leche-condensada.-Postre-casero.jpg",
+      "id": "4P",
+      "classification": "Pasteles"
+    }
+  ]
+}

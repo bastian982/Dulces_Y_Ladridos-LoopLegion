@@ -1,3 +1,5 @@
+import { createTable } from './tablePublicaciones';
+
 let url = "../json/publicaciones.json";
 
 const getDataAPI = async ( url ) => {
