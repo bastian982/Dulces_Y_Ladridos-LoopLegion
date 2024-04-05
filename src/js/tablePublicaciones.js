@@ -2,16 +2,16 @@ import { getProducts, setProducts } from './localStorage';
 const arregloDePublicacionesName = "arregloDePublicaciones";
 
 
-  function deleteProduct(event) {
+  function deletePublicacion(event) {
     console.log("delete");
     let id = event.target.id.slice(0,-9);
     const products  = getProducts(arregloDePublicacionesName);
     let index =  products.indexOf(products.filter(product => product.id ==id)[0] );
     products.splice(index,1)
      setProducts(arregloDePublicacionesName,products)   
-     createTable();
+     createTablePublicacion();
   }
-  function updateProduct(event) {
+  function updatePublicacion(event) {
     event.preventDefault();
     console.log(event)
     const idElement =event.target.id.slice(0,-9);
@@ -24,7 +24,7 @@ const arregloDePublicacionesName = "arregloDePublicaciones";
     }
     // const products  = getProducts(arregloDePublicacionesName);
   }
-  function changeCell (idElement,key,value){
+  function changeCellPublicacion (idElement,key,value){
     const products  = getProducts(arregloDePublicacionesName);
     let index =  products.indexOf(products.filter(product => product.id ==idElement)[0] );
     let product = products[index];
@@ -49,7 +49,7 @@ const arregloDePublicacionesName = "arregloDePublicaciones";
             break;
     }
     setProducts(arregloDePublicacionesName,products);
-    createTable();
+    createTablePublicacion();
 
   }
 function  saveChanges (event) {
@@ -60,7 +60,7 @@ function  saveChanges (event) {
     for (const e of elements) {
         if( e.value !== ""){
             console.log(count);
-            changeCell(idElement,count++,e.value);
+            changeCellPublicacion(idElement,count++,e.value);
         } 
         count++;
     console.log();   
@@ -72,7 +72,7 @@ function  saveChanges (event) {
     //    }
     console.log(idElement);
 }
-export function createTable() {
+export function createTablePublicacion() {
     const updateTable = document.getElementById("tablePublicaciones");
     updateTable.innerHTML =`
     <div class="container-fluid pt-5">
@@ -94,10 +94,10 @@ export function createTable() {
   </table>
 </div>`
   ;
-  createBodyTable();
+  createBodyTablePublicacion();
   }
   
-  function createBodyTable() {
+  function createBodyTablePublicacion() {
     let data = getProducts(arregloDePublicacionesName);
     const tBody = document.getElementById("tbodyPublicaciones")
     data.map(({ id, title, description, content, image, autor,categories }) => {
@@ -115,10 +115,10 @@ export function createTable() {
               </tr>`;
 
     });
-    data.map(({id})=> document.getElementById(`${id}buttonDel`).addEventListener('click', deleteProduct));
-    data.map(({id})=> document.getElementById(`${id}buttonUpd`).onclick =updateProduct);
+    data.map(({id})=> document.getElementById(`${id}buttonDel`).addEventListener('click', deletePublicacion));
+    data.map(({id})=> document.getElementById(`${id}buttonUpd`).onclick =updatePublicacion);
     data.map(({id})=> document.getElementById(`${id}buttonSav`).onclick =saveChanges);
 
   }
-  createTable();
+  createTablePublicacion();
 
