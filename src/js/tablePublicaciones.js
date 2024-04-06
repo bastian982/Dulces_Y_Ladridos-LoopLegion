@@ -1,4 +1,4 @@
-import { getProducts, setProducts } from './localStorage';
+import { getProducts, setProducts } from './localStorage.js';
 const arregloDePublicacionesName = "arregloDePublicaciones";
 
 
