@@ -3,6 +3,43 @@ const arregloDePublicacionesName = "arregloDePublicaciones";
 let url = "../json/publicaciones.json";
 const dataPrueba = getProducts(arregloDePublicacionesName);
 console.log(dataPrueba);
+
+
+
+const printThisPublication = async(id) => { 
+  let data = dataPrueba // await getDataAPI(url);
+  let info = data[id-1];
+  let message = `
+    <div class="row text-center justify-content-center my-3">
+      <h1 class="mb-3">${info.title}</h1>
+      <p id="paragraph-content" class="text-start"></p>
+      <img src="../img/perrito.jpg" class=" mt-3" alt="..." style="width: 45%">
+      <h4 class="mb-3 text-end">By: ${info.autor.first_name} ${info.autor.last_name}</h4>
+    </div>
+  `;
+  printHTML("blog-container",message);
+  printText("paragraph-content",`${info.content}`);
+  console.log(id);
+};
+
+
+const printInfo = async(id) =>{
+  let data = await getDataAPI(url);
+  let info = data[id-1];
+  let message = `
+    <div class="row text-center justify-content-center my-3">
+      <h1 class="mb-3">${info.title}</h1>
+      <p id="paragraph-content" class="text-start"></p>
+      <img src="../img/perrito.jpg" class=" mt-3" alt="..." style="width: 45%">
+      <h4 class="mb-3 text-end">By: ${info.autor.first_name} ${info.autor.last_name}</h4>
+    </div>
+  `;
+  printHTML("blog-container",message);
+  printText("paragraph-content",`${info.content}`);
+  console.log(id);
+}
+
+
 const cards = (publicaciones) =>
 publicaciones.map( data => `
     <article class="card col-3 m-4 p-0 icon-link-hover" style="width: 18rem;" category="Tips" style="width: 27%;" ><!--  -->
@@ -73,20 +110,7 @@ categoriaRecetas.addEventListener("click", ()=>{
 });
 
 
-const printThisPublication = async(id) => { 
-  let data = dataPrueba // await getDataAPI(url);
-  let info = data[id-1];
-  let message = `
-    <div class="row text-center justify-content-center my-3">
-      <h1 class="mb-3">${info.title}</h1>
-      <p id="paragraph-content" class="text-start"></p>
-      <img src="../img/perrito.jpg" class=" mt-3" alt="..." style="width: 45%">
-      <h4 class="mb-3 text-end">By: ${info.autor.first_name} ${info.autor.last_name}</h4>
-    </div>
-  `;
-  printHTML("blog-container",message);
-  printText("paragraph-content",`${info.content}`);
-};
+
 /* <button onclick="printAll(url)" class="btn btn-primary col-2" >Return</button> */
 
 const deleteThisPublication = /*async*/(id) =>{
