@@ -114,7 +114,7 @@ export function createTable() {
                   <td class="${id}Row"><input class="${id}inputAdmin" style="width: 8rem;" type="text" placeholder="${ description}" disabled ></td>
                   <td class="${id}Row"><input class="${id}inputAdmin" style="width: 3rem;" type="text" placeholder="${ price}" disabled></td>
                   <td class="${id}Row"><input class="${id}inputAdmin" style="width: 3rem;" type="number" min="1" placeholder="${ pieces}" disabled></td>
-                  <td class="${id}Row"><img src=${imagen} class="rounded-circle" alt="${name}"></td>
+                  <td class="${id}Row"><img src=${imagen} class="w-50" alt="${name}"></td>
                   <td class="${id}Row"><button type="button" id="${id}buttonDel" class="btn ${id}Row btn-danger-subtle" >Borrar</button></td>
                   <td class="${id}Row"><button type="button" id="${id}buttonUpd" class="btn ${id}Row btn-info" >Modificar</button>
                   <button type="button" id="${id}buttonSav" class="btn ${id}Row btn-success" style="visibility:hidden;">Guardar</button></td>

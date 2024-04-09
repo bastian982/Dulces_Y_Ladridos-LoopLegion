@@ -17,7 +17,7 @@ const getProducts = () => {
 const cards = (productos) => {
   return productos.map((producto, index) => `
     <div class="card col-md-4 col-6 m-4 ${index % 2 === 0 ? 'cardNaranja' : 'cardCafe'}" >
-      <img src="../img/default.png" class="card-img-top mt-2" alt="...">
+      <img src="${producto.imagen}"  class=" card-img-top mt-2" alt="...">
       <div class="card-body">
         <h6 class="card-title">${producto.name}</h6>
         <p class="card-text">$ ${producto.price}</p>

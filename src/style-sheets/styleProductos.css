@@ -23,11 +23,13 @@
 .cardNaranja {
     background-color: #ECB159;
     width: 250px;
+    height: 500px;
 }
 
 .cardCafe {
     background-color: #B67352;
     width: 250px;
+    height: 500px;
 }
 
 .btnProduct {
