@@ -1,0 +1,103 @@
+{
+  "data": [
+    {
+      "name": "Galleta de Chocolate",
+      "dogoName": "Terrier de Chocolate",
+      "description": "Galleta de chocolate con relleno de chocolate",
+      "price": 35,
+      "pieces": 1,
+      "imagen": "https://raw.githubusercontent.com/Alera9/product-img/main/Galleta-chocolate.png",
+      "classification": "Galleta",
+      "id": "1G"
+    },
+    {
+      "name": "Galleta de Mantequilla",
+      "dogoName": "Corgi Cookies",
+      "description": "Galleta de mantequilla suave con forma de Corgi",
+      "price": 120,
+      "pieces": 6,
+      "imagen": "https://raw.githubusercontent.com/Alera9/product-img/main/galleta-mantequilla.png",
+      "classification": "Galleta",
+      "id": "2G"
+    },
+    {
+      "name": "Galleta de Avena",
+      "dogoName": "Poodle Oat Puffs",
+      "description": "Galleta de avena bañadas en azucar glass",
+      "price": 35,
+      "pieces": 1,
+      "imagen": "https://raw.githubusercontent.com/Alera9/product-img/main/Galleta-avena.png",
+      "id": "3G"
+    },
+    {
+      "name": "Galleta de Chispas",
+      "dogoName": "Dalmata Delight",
+      "description": "Galleta de mantequilla con chispas de chocolate",
+      "price": 35,
+      "pieces": 1,
+      "imagen": "https://raw.githubusercontent.com/Alera9/product-img/main/galleta-chispas.png",
+      "classification": "Galleta",
+      "id": "4G"
+    },
+    {
+      "name": "Brownie de Chocolate",
+      "dogoName": "Labrabownie",
+      "description": "Pastelillo de chocolate con relleno de chocolate",
+      "price": 50,
+      "pieces": 1,
+      "imagen": "https://raw.githubusercontent.com/Alera9/product-img/main/brownie-chocolate.png",
+      "id": "1B",
+      "classification": "Brownie"
+    },
+    {
+      "name": "Brownie de Frambuesa",
+      "dogoName": "Pastorcito de Frambuesa",
+      "description": "Pastelillo de chocolate con decoracion de frambuesa",
+      "price": 50,
+      "pieces": 1,
+      "imagen": "https://raw.githubusercontent.com/Alera9/product-img/main/brownie-frambuesa.png",
+      "id": "2B",
+      "classification": "Brownie"
+    },
+    {
+      "name": "Pastel de Tres Leches",
+      "dogoName": "Husky de 3 Leches",
+      "description": "Pastel de Tres Leches",
+      "price": 50,
+      "pieces": 1,
+      "imagen": "https://raw.githubusercontent.com/Alera9/product-img/main/pastel-de-tres-leches.png",
+      "id": "1P",
+      "classification": "Pasteles"
+    },
+    {
+      "name": "Pastel de Chocolate",
+      "dogoName": "Chocolate Retriever",
+      "description": "Pastel de chocolate con cubierta de chocolate",
+      "price": 50,
+      "pieces": 1,
+      "imagen": "https://raw.githubusercontent.com/Alera9/product-img/main/pastel-de-chocolate.png",
+      "id": "2P",
+      "classification": "Pasteles"
+    },
+    {
+      "name": "Pastel de Zanahoria",
+      "dogoName": "Pug de zanahoria /carrot bite",
+      "description": "Pastel de zanahoria con betún de queso crema ",
+      "price": 50,
+      "pieces": 1,
+      "imagen":"https://raw.githubusercontent.com/Alera9/product-img/main/pastel-de-zanahoria.png",
+      "id": "3P",
+      "classification": "Pasteles"
+    },
+    {
+      "name": "Pastel Cheesecake",
+      "dogoName": "Cheehuhua Dream",
+      "description": "Pastel de cheesecake con decoracion de chocolate",
+      "price": 50,
+      "pieces": 1,
+      "imagen": "https://raw.githubusercontent.com/Alera9/product-img/main/pastel-cheescake.png",
+      "id": "4P",
+      "classification": "Pasteles"
+    }
+  ]
+}
