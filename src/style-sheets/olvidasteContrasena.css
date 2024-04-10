@@ -7,44 +7,39 @@
     padding: 30px;
     margin: 30px;
     border-radius: 10px;
-    border: dotted black;
-
+    border: solid black;
 }
 
-h3,h5{
+ h3,h5{
     text-align: center;
     margin-bottom: 30px;
 }
 
-form{
-    
-    width: 100%;
-    margin-bottom: 30px;
+.form-olvidaste-contrasena{
     display: flex;
     justify-content: center;
+    width: 100%;
+    margin-bottom: 30px;
+} 
 
-}
-
-input{
-    
+#resetPassword{  
     width: 300px;
     border-radius: 10px;
     height: 30px;
     text-align: center;
-
 }
 
-.botones{
-    display: flex;
-}
-
-button{
-   
+.btn-olvidaste-contrasena{
     margin-left:10px ;
     border-radius: 10px;
-    height: 30px;
-    
+    height: 30px;   
 }
+
+button a {
+    text-decoration: none;
+    color: black;
+}
+
 .img-recuperar-contraseña{
     height: 300px;
     mask-image: linear-gradient(black 80%,transparent);
@@ -55,3 +50,6 @@ button:hover{
     color: white;
 }
 
+button a:hover{    
+    color: white;
+} 

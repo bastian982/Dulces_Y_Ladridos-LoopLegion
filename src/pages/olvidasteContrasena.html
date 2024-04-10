@@ -5,11 +5,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Dulces y Ladridos</title>
+    <link rel="stylesheet" href="../style-sheets/style.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <script src="https://kit.fontawesome.com/aa7627e879.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../style-sheets/olvidasteContraseña.css" />
-    <link rel="stylesheet" href="../style-sheets/style.css" />
+    <link rel="stylesheet" href="../style-sheets/olvidasteContrasena.css" />
+
 
 </head>
 
@@ -22,7 +23,8 @@
                     aria-label="Toggle navigation">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </a>
-                <a class="navbar-brand"><img src="../img/logo_y_nombre.png" alt="Logo y nombre de la empresa" /></a>
+                <a class="navbar-brand"><img src="../img/logo_y_nombre.png"
+                        alt="Logo y nombre de la empresa" /></a>
                 <div class="navbar">
                     <div class="collapse navbar-collapse" id="searchContent">
                         <form class="d-flex" role="search">
@@ -57,22 +59,22 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item ">
-                            <a class="nav-link active text-white" aria-current="page" href="../../index.html">Inicio</a>
+                            <a class="nav-link active text-white " aria-current="page" href="index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="./productos.html">Productos</a>
+                            <a class="nav-link text-white " href="./assets/pages/productos.html">Productos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="./publicaciones.html">Publicaciones</a>
+                            <a class="nav-link text-white" href="./assets/pages/publicaciones.html">Publicaciones</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="./experiencia.html">Experiencia</a>
+                            <a class="nav-link text-white" href="./assets/pages/experiencia.html">Experiencia</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="./nosotros.html">Nosotros</a>
+                            <a class="nav-link text-white" href="./assets/pages/nosotros.html">Nosotros</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="./contacto.html">Contáctanos</a>
+                            <a class="nav-link text-white" href="./assets/pages/contacto.html">Contactanós</a>
                         </li>
                     </ul>
                     </form>
@@ -81,30 +83,30 @@
         </nav>
 
     </header>
-
+   
     <main class="d-flex justify-content-center align-items-center">
 
         <div class="d-flex flex-wrap justify-content-center align-items-center m-5">
             <div class="wrapper">
                 <h3>No te preocupes si olvidaste tu contraseña</h3>
                 <h5>Ingresa el correo con el que te registraste</h5>
-                <form action="">
+                <form action="" class="form-olvidaste-contrasena">
                     <label for="resetPassword">
                         <input type="email" name="Recuperar-Contraseña" id="resetPassword"
                             placeholder="email@email.com">
                     </label>
                 </form>
                 <div class="botones">
-                    <button type="submit">Recuperar Contraseña</button>
-                    <button>Iniciar Sesión</button>
+                    <button class="btn-olvidaste-contrasena" type="submit">Recuperar Contraseña</button>
+                    <button class="btn-olvidaste-contrasena"><a href="./formulario-login.html">Iniciar Sesión</a></button>
                 </div>
             </div>
 
-           
-                <picture >
-                    <img src="../img/perro-olvidaste-contraseña.png" alt="" class="img-recuperar-contraseña">
-                </picture>
-          
+
+            <picture>
+                <img src="../img/perro-olvidaste-contrasena.png" alt="" class="img-recuperar-contraseña">
+            </picture>
+
 
         </div>
 
