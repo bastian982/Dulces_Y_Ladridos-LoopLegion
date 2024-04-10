@@ -1,5 +1,5 @@
 import { createTable } from './tablePublicaciones.js';
-
+/*Genera el formato Json con los datos obtenidos */
 let url = "../json/publicaciones.json";
 
 const getDataAPI = async ( url ) => {
@@ -8,7 +8,8 @@ const getDataAPI = async ( url ) => {
     const publicaciones = usersData.data;
     return publicaciones;
 };
-
+/* Comando para añadir publicaciones nuevas cada vez que requiera generando un id nuevo que se complementa 
+con otra instruccion para sumar el numero de publicacione */
 const getInputValueID = (id) => document.getElementById(id).value;
 
 const buttonCreate = document.getElementById("boton-agregar");
@@ -18,7 +19,8 @@ buttonCreate.addEventListener( "click", ()=>{
     if(isInfoValid(info)) addNewElement(info);
 });
 
-
+/* Restricciones del formulario, limita el contenido que se va a colocar en los campos abierto para que el 
+usuario ocupe parametros establecidos como tamaño minimo de caracteres  */
 const isInfoValid = (info) => {
     let message = "";
     let isValid = false;
@@ -33,7 +35,7 @@ const isInfoValid = (info) => {
     document.getElementById("error-message").innerHTML = message;
     return isValid;
 };
-
+/* formulario , permite al usuario colocar la informacion personal y de contenido en los campos correspondientes */
 const getNewElement = () => {
     let newElement = {
         title : getInputValueID("title-input"),
@@ -45,7 +47,7 @@ const getNewElement = () => {
     };
     return newElement;
 };
-
+/*bloque de retencion de informacion  */
 const getCheckbox = () => {
     const checkbox = document.getElementsByName("checkbox-input");
     let list = [];
@@ -54,7 +56,8 @@ const getCheckbox = () => {
     });
     return list;
 };
-
+/* Funcionamiento de nuevo bloque de publicacion con las especificaciones de titulo , descripcion,
+ tema, contenido y autor  */
 const addNewElement = async(element) => {
     let data = await getDataAPI(url);
     let id = lastId(data);
@@ -75,7 +78,7 @@ const addNewElement = async(element) => {
     console.log(data); //_____________________________________________________
     //reescribir json
 };
-
+/* Aumenta el contador de cada nueva publicacion registrada */
 const lastId = (data) => {
     let newId = data[ data.length - 1 ].id + 1;
     return newId;
