@@ -1,7 +1,16 @@
-import { getProducts } from "./localStorage.js";
+//import { getProducts } from "./localStorage.js";
+const getData = (nameData) => {
+  return JSON.parse(
+    localStorage.getItem(nameData)
+  );  
+}
+const setProducts = (nameData,data) => {
+   localStorage.setItem(nameData, JSON.stringify(data));  
+}
+
 const arregloDePublicacionesName = "arregloDePublicaciones";
 let url = "../json/publicaciones.json";
-const dataPrueba = getProducts(arregloDePublicacionesName);
+const dataPrueba = getData(arregloDePublicacionesName);
 console.log(dataPrueba);
 
 
@@ -50,7 +59,7 @@ publicaciones.map( data => `
             <p class="card-text">${data.description}</p>
             <section class="d-flex justify-content-around">
               <button onclick="printThisPublication(${data.id})" class="btn btn-primary my-1" >Ver mas ...</button>
-              <button onclick="deleteThisPublication(${data.id})" class="btn btn-danger my-1" >eliminar</button>
+              
             </section>
           </div>
         </article>
@@ -109,16 +118,3 @@ categoriaRecetas.addEventListener("click", ()=>{
   printFiltered("recetas");
 });
 
-
-
-/* <button onclick="printAll(url)" class="btn btn-primary col-2" >Return</button> */
-
-const deleteThisPublication = /*async*/(id) =>{
-  let data =  dataPrueba;//await getDataAPI(url);
-
-  data.splice(id-1,1);
-
-  //reescribir json
-  printCards("blog-container",cards(data));
-  console.log(data);
-};
