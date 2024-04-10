@@ -9,6 +9,7 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
   <script src="https://kit.fontawesome.com/aa7627e879.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./src/style-sheets/style.css" />
+  <link rel="stylesheet" href="./src/style-sheets/productsCarousel.css">
 
 </head>
 
@@ -82,8 +83,33 @@
     </nav>
 
   </header>
-  <main class="d-flex justify-content-center align-items-center">
-    <img class="img-fluid" src="./src/img/bienvenidos-background.png" alt="Imagen con la palabra bienvenidos">
+  <main class="container-fluid align-content-center">
+    <section class="container" >
+      <img class="img-fluid" src="./src/img/bienvenidos-background.png" alt="Imagen con la palabra bienvenidos">
+    </section>
+    
+    <section class="container">
+      <div class="container"><h1 class="text-center titleProductCarousel">Productos principales</h1></div>
+      <div id="productsCarouselIndicators" class="carousel productCarousel slide " data-bs-ride="carousel">
+        <div id="carouselIndicators" class="carousel-indicators">
+          <!-- Se añaden los botones desde el script -->
+        </div>
+        <div id="productsCarouselInner" class="carousel-inner carouselInner ">
+          <!-- Se añade desde el script -->
+        </div>
+       
+        <button id="leftArrow" class="carousel-control-prev  arrow" type="button" data-bs-target="#productsCarouselIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button id="rightArrow" class="carousel-control-next arrow" type="button" data-bs-target="#productsCarouselIndicators" data-bs-slide="next" >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div> 
+      <!--  -->
+    </section>
+  
   </main>
 
     <footer class="text-center bg-body-tertiary">
@@ -131,6 +157,7 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"></script>
       <script type="module" src="./main.js"></script>
+      <script type="module" src="./src/js/homeProductCaurosel.js"></script>
 </body>
 
 </html>
