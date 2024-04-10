@@ -6,7 +6,7 @@
       "description": "Galleta de chocolate con relleno de chocolate",
       "price": 35,
       "pieces": 1,
-      "imagen": "https://cocina-casera.com/wp-content/uploads/2017/12/Flan-de-leche-condensada.-Postre-casero.jpg",
+      "imagen": "https://raw.githubusercontent.com/Alera9/product-img/main/Galleta-chocolate.png",
       "classification": "Galleta",
       "id": "1G"
     },
@@ -16,7 +16,7 @@
       "description": "Galleta de mantequilla suave con forma de Corgi",
       "price": 120,
       "pieces": 6,
-      "imagen": "https://cocina-casera.com/wp-content/uploads/2017/12/Flan-de-leche-condensada.-Postre-casero.jpg",
+      "imagen": "https://raw.githubusercontent.com/Alera9/product-img/main/galleta-mantequilla.png",
       "classification": "Galleta",
       "id": "2G"
     },
@@ -26,8 +26,7 @@
       "description": "Galleta de avena bañadas en azucar glass",
       "price": 35,
       "pieces": 1,
-      "imagen": "https://cocina-casera.com/wp-content/uploads/2017/12/Flan-de-leche-condensada.-Postre-casero.jpg",
-      "classification": "Galleta",
+      "imagen": "https://raw.githubusercontent.com/Alera9/product-img/main/Galleta-avena.png",
       "id": "3G"
     },
     {
@@ -36,7 +35,7 @@
       "description": "Galleta de mantequilla con chispas de chocolate",
       "price": 35,
       "pieces": 1,
-      "imagen": "https://cocina-casera.com/wp-content/uploads/2017/12/Flan-de-leche-condensada.-Postre-casero.jpg",
+      "imagen": "https://raw.githubusercontent.com/Alera9/product-img/main/galleta-chispas.png",
       "classification": "Galleta",
       "id": "4G"
     },
@@ -46,7 +45,7 @@
       "description": "Pastelillo de chocolate con relleno de chocolate",
       "price": 50,
       "pieces": 1,
-      "imagen": "https://cocina-casera.com/wp-content/uploads/2017/12/Flan-de-leche-condensada.-Postre-casero.jpg",
+      "imagen": "https://raw.githubusercontent.com/Alera9/product-img/main/brownie-chocolate.png",
       "id": "1B",
       "classification": "Brownie"
     },
@@ -56,7 +55,7 @@
       "description": "Pastelillo de chocolate con decoracion de frambuesa",
       "price": 50,
       "pieces": 1,
-      "imagen": "https://cocina-casera.com/wp-content/uploads/2017/12/Flan-de-leche-condensada.-Postre-casero.jpg",
+      "imagen": "https://raw.githubusercontent.com/Alera9/product-img/main/brownie-frambuesa.png",
       "id": "2B",
       "classification": "Brownie"
     },
@@ -66,7 +65,7 @@
       "description": "Pastel de Tres Leches",
       "price": 50,
       "pieces": 1,
-      "imagen": "https://cocina-casera.com/wp-content/uploads/2017/12/Flan-de-leche-condensada.-Postre-casero.jpg",
+      "imagen": "https://raw.githubusercontent.com/Alera9/product-img/main/pastel-de-tres-leches.png",
       "id": "1P",
       "classification": "Pasteles"
     },
@@ -76,7 +75,7 @@
       "description": "Pastel de chocolate con cubierta de chocolate",
       "price": 50,
       "pieces": 1,
-      "imagen": "https://cocina-casera.com/wp-content/uploads/2017/12/Flan-de-leche-condensada.-Postre-casero.jpg",
+      "imagen": "https://raw.githubusercontent.com/Alera9/product-img/main/pastel-de-chocolate.png",
       "id": "2P",
       "classification": "Pasteles"
     },
@@ -86,7 +85,7 @@
       "description": "Pastel de zanahoria con betún de queso crema ",
       "price": 50,
       "pieces": 1,
-      "imagen": "https://cocina-casera.com/wp-content/uploads/2017/12/Flan-de-leche-condensada.-Postre-casero.jpg",
+      "imagen":"https://raw.githubusercontent.com/Alera9/product-img/main/pastel-de-zanahoria.png",
       "id": "3P",
       "classification": "Pasteles"
     },
@@ -96,7 +95,7 @@
       "description": "Pastel de cheesecake con decoracion de chocolate",
       "price": 50,
       "pieces": 1,
-      "imagen": "https://cocina-casera.com/wp-content/uploads/2017/12/Flan-de-leche-condensada.-Postre-casero.jpg",
+      "imagen": "https://raw.githubusercontent.com/Alera9/product-img/main/pastel-cheescake.png",
       "id": "4P",
       "classification": "Pasteles"
     }
