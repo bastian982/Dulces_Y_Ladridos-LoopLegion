@@ -73,7 +73,7 @@ categoriaRecetas.addEventListener("click", ()=>{
 });
 
 
-const printThisPublication = async(id) => { 
+const printThisPublication = /*async*/(id) => { 
   let data = dataPrueba // await getDataAPI(url);
   let info = data[id-1];
   let message = `
