@@ -14,6 +14,10 @@ const getProducts = () => {
   );  
 }
 
+const addToCart = async() =>{
+   console.log("hola");
+}
+
 const cards = (productos) => {
   return productos.map((producto, index) => `
     <div class="card col-md-4 col-6 m-4 ${index % 2 === 0 ? 'cardNaranja' : 'cardCafe'}" >
@@ -22,7 +26,7 @@ const cards = (productos) => {
         <h6 class="card-title">${producto.name}</h6>
         <p class="card-text">$ ${producto.price}</p>
         <div class="text-end">
-          <button class="btnProduct"> <img src="../img/carrito.png" alt=""> </button>
+          <button class="btnProduct" onclick="addToCart()"> <img src="../img/carrito.png" alt=""> </button>
         </div> 
       </div>
     </div>
@@ -40,3 +44,6 @@ const printAll = /*async*/ () => {
 };
 
 printAll();
+
+
+
