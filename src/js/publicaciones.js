@@ -13,7 +13,6 @@ publicaciones.map( data => `
             <p class="card-text">${data.description}</p>
             <section class="d-flex justify-content-around">
               <button onclick="printThisPublication(${data.id})" class="btn btn-primary my-1" >Ver mas ...</button>
-              <button onclick="deleteThisPublication(${data.id})" class="btn btn-danger my-1" >eliminar</button>
             </section>
           </div>
         </article>

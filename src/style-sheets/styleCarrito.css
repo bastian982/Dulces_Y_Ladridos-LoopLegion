@@ -1,0 +1,58 @@
+#title-table{
+    background-color: #8cb9bd;
+}
+
+#footer-table{
+    background-color: #8cb9bd;
+}
+
+#footer-total{
+    background-color: #8cb9bd;
+}
+
+.tabla-personalizada {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #000;
+    border-radius: 30px;
+}
+
+
+.tabla-personalizada tbody th {
+    background-color: #ffe8ce;
+}
+
+.tabla-personalizada td {
+    background-color: #ffe8ce;
+}
+
+.table-recuento th{
+    background-color: #b67352;
+    color: white;
+}
+
+.table-recuento td{
+    background-color: #b67352;
+}
+
+#div-donar{
+    background-color: #b67352;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#div-donar button{
+    background: #ECB159;
+    border: none;
+    border-radius: 30%;
+    margin: 8px;
+}
+
+#boton-pago{
+    background: none;
+    border: none;
+    color: white;
+    font-weight: bold;
+}
