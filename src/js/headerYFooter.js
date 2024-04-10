@@ -106,7 +106,7 @@ document.getElementById("main-footer").innerHTML = `
         <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button"
           data-mdb-ripple-color="dark"><i class="fab fa-linkedin"></i></a>
         <!-- Github -->
-        <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button"
+        <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="/src/pages/formulario-login.html" role="button"
           data-mdb-ripple-color="dark"><i class="fab fa-github"></i></a>
       </section>
       <!-- Section: Social media -->
