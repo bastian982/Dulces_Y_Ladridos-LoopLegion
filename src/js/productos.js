@@ -14,8 +14,8 @@ const getProducts = () => {
   );  
 }
 
-const addToCart = async() =>{
-   console.log("hola");
+const addToCart = () =>{
+    console.log("hola");
 }
 
 const cards = (productos) => {
@@ -26,7 +26,7 @@ const cards = (productos) => {
         <h6 class="card-title">${producto.name}</h6>
         <p class="card-text">$ ${producto.price}</p>
         <div class="text-end">
-          <button class="btnProduct" onclick="addToCart()"> <img src="../img/carrito.png" alt=""> </button>
+          <button id="${producto.id}cartBtn" class="btnProduct" > <img src="../img/carrito.png" alt=""> </button>
         </div> 
       </div>
     </div>
@@ -41,7 +41,15 @@ const printAll = /*async*/ () => {
   let data = getProducts() //await getProducts(url);
   console.log(data);
   printCards("cards", cards(data));
+
+  addFncToButtons(data);
 };
+
+const addFncToButtons = (data) => {
+  data.map(producto => {document.getElementById(`${producto.id}cartBtn`).onclick=addToCart;
+
+})
+}
 
 printAll();
 

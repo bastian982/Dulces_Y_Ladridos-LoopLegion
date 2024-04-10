@@ -22,7 +22,7 @@ const printThisPublication = async(id) => {
     <div class="row text-center justify-content-center my-3">
       <h1 class="mb-3">${info.title}</h1>
       <p id="paragraph-content" class="text-start"></p>
-      <img src="../img/perrito.jpg" class=" mt-3" alt="..." style="width: 45%">
+      <img src="../img/perrito.jpg" class=" mt-3" alt="..." style="width: 45%"> 
       <h4 class="mb-3 text-end">By: ${info.autor.first_name} ${info.autor.last_name}</h4>
     </div>
   `;
