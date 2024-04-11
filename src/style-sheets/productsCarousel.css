@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+/*Carrusel publicaciones o promocionales*/
+#carouselExampleRide{
+  margin: 0;
+  padding: 0;
+}
+/*Carrusel de productos*/
 .titleProductCarousel{
     color: #B67352;
     font-size: 3vw;
@@ -99,11 +105,9 @@
 } 
 }
 
- #leftArrow , #rightArrow{
-    background: rgba(247, 245, 245, 0.012) ;
-}  
+ 
 .arrow:hover {
-    background: rgba(150, 148, 148, 0.299) ;
+    background: rgba(255, 255, 255, 0.299) ;
     cursor: pointer;
 }
 
@@ -192,3 +196,5 @@
   } 
 
 }
+
+/*Carrusel de comentarios*/
