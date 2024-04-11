@@ -15,7 +15,26 @@ const getProducts = () => {
 }
 
 const addToCart = () =>{
-    console.log("hola");
+  
+  const table = document.getElementById("table-carrito");
+  console.log(table);
+  //const total = parseFloat(quantity) * parseFloat(price);
+  /* table.innerHTML += `
+        <tr >
+          <tr >
+              <th  scope="row" rowspan = "2">Imagen</th>
+              <td>Nombre</td>
+              <td>Cantidad</td>
+              <td>Precio unitario</td>
+          </tr>
+          <tr>
+              <td>Ingredientes</td>
+              <td>Descuento</td>
+              <td>Precio Total</td>
+          </tr>
+        </tr>
+  `
+} */
 }
 
 const cards = (productos) => {

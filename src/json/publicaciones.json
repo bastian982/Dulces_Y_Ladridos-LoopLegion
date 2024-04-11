@@ -2,14 +2,14 @@
     "data": [
         {
             "id": 1,
-            "title": "1 cuidado dental canino",
-            "description":"lalalalalalalalala",
-            "content": "George",
+            "title": "La influencia de las mascotas en la vida humana",
+            "description":"La influencia positiva de las mascotas en la salud y bienestar humanos",
+            "content": "La influencia positiva de las mascotas en la salud y bienestar humanos es ampliamente reconocida, abarcando aspectos psicológicos, fisiológicos, terapéuticos y socioemocionales. Su papel como facilitadores en terapias motivacionales y físicas para diversas enfermedades ha permitido la aplicación de los efectos beneficiosos de tener mascotas en contextos terapéuticos.\n\nAdemás, la presencia de mascotas se ha identificado como un factor protector contra enfermedades cardiovasculares y como un medio para reducir el estrés en sus dueños, brindando apoyo emocional, mitigando la sensación de soledad y fomentando la interacción social.",
             "image":"url",
             "autor": {
                 "link":"perfil",
-                "first_name":"Pedro",
-                "last_name":"Wong"
+                "first_name":"Leonardo F",
+                "last_name":"Gómez"
             },
             "date": "Tue Jul 20 1999 15:17:40 GMT-0500 (hora de verano central)",
             "categories": ["alimentacion","cuidado","tips"]
@@ -30,28 +30,28 @@
         },
         {
             "id": 3,
-            "title": "3 cuidado dental canino",
-            "description":"lalalalalalalalala",
-            "content": "George",
+            "title": "Nueva manada",
+            "description":"Todos los cánidos viven y trabajan en sociedad",
+            "content": "Todos los cánidos viven y trabajan en sociedad. Al separarlo de la madre y hermanos de camada, e introducirlo a un ambiente diferente, donde sus únicos compañeros van a ser personas, el perro traslada su comportamiento social a su nueva “manada”. Esta capacidad de adaptarse fácilmente a convivir con las personas ha permitido la domesticación del perro.",
             "image":"url",
             "autor": {
                 "link":"perfil",
-                "first_name":"Pedro",
-                "last_name":"Wong"
+                "first_name":"Rivas A",
+                "last_name":"Castro"
             },
-            "date": 1711412263002,
+            "date": 2005,
             "categories": ["alimentacion","tips","recetas"]
         },
         {
             "id": 4,
-            "title": "4 cuidado dental canino",
-            "description":"lalalalalalalalala",
-            "content": "George",
+            "title": "Sabías que… ?",
+            "description":"Los perros son nuestros amigos inseparables y por ello siempre queremos compartirles de nuestros gustos",
+            "content": "Los perros son nuestros amigos inseparables y por ello siempre queremos compartirles de nuestros gustos, si bien muchas cosas que les damos les pueden gustar mucho no todo les es bueno para su salud, hay algunos alimentos que son nocivos para su salud aquí te dejamos una pequeña lista.\n\n- Chocolate. No metabolizan las metilxantinas, por lo que resulta muy tóxico para ellos.\n\n- Caramelos Causan vómitos y bajada súbita de la glucosa en sangre.\n\n- Cebollas, ajos, puerros y similares. Ni crudos ni cocinados. Causan anemia por hemólisis (destrucción de los glóbulos rojos).\n\n- Uvas y pasas. Son nefrotóxicas, es decir, causan fallo renal.\n\n- Aguacate. Este fruto contiene una toxina fungicida llamada persina, tras su consumo puede haber síntomas leves, como diarrea y vómitos, pero en casos más graves llega a ocasionar pancreatitis.\n\n- Frutos secos. Las más peligrosas son las nueces de macadamia, cuyo consumo puede ocasionar un cuadro de debilidad, temblores y vómitos. También las almendras, que en grandes cantidades pueden causar pancreatitis.",
             "image":"url",
             "autor": {
                 "link":"perfil",
-                "first_name":"Pedro",
-                "last_name":"Wong"
+                "first_name":"Luis",
+                "last_name":"Carricart"
             },
             "date": 1711412263002,
             "categories": ["cuidado","tips","recetas"]

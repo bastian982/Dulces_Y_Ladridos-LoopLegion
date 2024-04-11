@@ -51,7 +51,7 @@ const printInfo = async(id) =>{
 
 const cards = (publicaciones) =>
 publicaciones.map( data => `
-    <article class="card col-3 m-4 p-0 icon-link-hover" style="width: 18rem;" category="Tips" style="width: 27%;" ><!--  -->
+    <article class="card col-3 m-4 p-0 icon-link-hover" style="width: 21rem;" category="Tips" style="width: 27%;" >
           <img src="../img/perrito.jpg" class="card-img-top mt-3" alt="...">
           <div class="card-body">
             <h5 class="card-title">${data.title}</h5>

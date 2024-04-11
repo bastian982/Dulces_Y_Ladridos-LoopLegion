@@ -1,5 +1,28 @@
 const arregloCarrito = "arregloCarrito";
 
+function addToCart(){
+
+  const table = document.getElementById("table-carrito");
+  //const total = parseFloat(quantity) * parseFloat(price);
+  table.innerHTML += `
+        <tr >
+          <tr >
+              <th  scope="row" rowspan = "2">Imagen</th>
+              <td>Nombre</td>
+              <td>Cantidad</td>
+              <td>Precio unitario</td>
+          </tr>
+          <tr>
+              <td>Ingredientes</td>
+              <td>Descuento</td>
+              <td>Precio Total</td>
+          </tr>
+        </tr>
+  `
+}
+
+
+
 
 function addData(event) {
   event.preventDefault();
