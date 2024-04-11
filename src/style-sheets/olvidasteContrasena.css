@@ -8,6 +8,7 @@
     margin: 30px;
     border-radius: 10px;
     border: solid black;
+
 }
 
  h3,h5{
@@ -15,41 +16,54 @@
     margin-bottom: 30px;
 }
 
+
+
 .form-olvidaste-contrasena{
     display: flex;
     justify-content: center;
-    width: 100%;
+    
     margin-bottom: 30px;
+
 } 
 
-#resetPassword{  
-    width: 300px;
+#inputResetPassword{
     border-radius: 10px;
-    height: 30px;
+    border: none;
+    height: 50px;
     text-align: center;
 }
 
-.btn-olvidaste-contrasena{
-    margin-left:10px ;
-    border-radius: 10px;
-    height: 30px;   
+.botones{
+    display: flex;
 }
 
-button a {
-    text-decoration: none;
-    color: black;
+.btn-olvidaste-contrasena{
+    width: 100px;
+    border-radius: 10px;
+    border: none;
+    height: 50px;  
+    background-color: transparent;
+    color: white;
 }
+
+.btn-olvidaste-contrasena a {
+    text-decoration: none;
+    color: white;
+} 
 
 .img-recuperar-contraseña{
     height: 300px;
     mask-image: linear-gradient(black 80%,transparent);
 }
 
-button:hover{
+.btn-olvidaste-contrasena:hover{
     background-color: #b67352;
+    border: solid white;
     color: white;
+    
 }
 
-button a:hover{    
+.btn-olvidaste-contrasena a:hover{
+    
     color: white;
-} 
+}  
