@@ -26,7 +26,7 @@ document.getElementById("main-header").innerHTML = `
         </button>
       </form>
       <div>
-        <a href="#"><i class="fa-regular fa-user"></i></a>
+        <a href="./src/pages/formulario-login.html"><i class="fa-regular fa-user"></i></a>
         <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
       </div>
     </div>
