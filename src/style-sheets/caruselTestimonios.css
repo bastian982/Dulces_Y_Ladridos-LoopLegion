@@ -6,7 +6,7 @@ article {
   
 }
 .container {
-	margin-top: 15%;
+	margin-top: 5%;
  
 }
 .card {
@@ -16,7 +16,7 @@ article {
     perspective: 500px;
     border: none;
     background-color: inherit;  
-    margin-top: 75px;
+    margin-top: 15px;
 }
 
 .card .box {
@@ -64,9 +64,7 @@ article {
 	font-size: 18px;
 	letter-spacing: 2px;
 }
-.socials i {
-	margin: 0 15px;
-}
+
 .card .box.back {
     position: absolute;
     background: #fff;
@@ -89,6 +87,12 @@ article {
 
 article h2{
   font-size: 1rem;
+}
+
+h4{
+    text-align: center;
+    padding-top: 50px;    
+    font-weight: bold;
 }
 
 @media(max-width: 991.5px) {
