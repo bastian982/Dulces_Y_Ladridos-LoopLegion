@@ -27,7 +27,7 @@ document.getElementById("main-header").innerHTML = `
       </form>
       <div>
         <a href="./formulario-login.html"><i class="fa-regular fa-user" title="Login / Registro"></i></a>
-        <a href="#"><i class="fa-solid fa-cart-shopping" title="Carrito"></i></a>
+        <a href="./carrito.html"><i class="fa-solid fa-cart-shopping" title="Carrito"></i></a>
       </div>
     </div>
 
