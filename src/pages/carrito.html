@@ -10,7 +10,7 @@
   <script src="https://kit.fontawesome.com/aa7627e879.js" crossorigin="anonymous"></script>
 
   <link rel="stylesheet" href="../style-sheets/style.css" />
-  <link rel="stylesheet" href="../style-sheets/styleProductos.css">
+  <link rel="stylesheet" href="../style-sheets/styleCarrito.css" />
 </head>
 
 <body>
@@ -21,7 +21,7 @@
           data-bs-target="#searchContent" aria-controls="searchContent" aria-expanded="false"
           aria-label="Toggle navigation">
           <i class="fa-solid fa-magnifying-glass"></i>
-        </a>
+        </a>  
         <a class="navbar-brand"><img src="../img/logo_y_nombre.png" alt="Logo y nombre de la empresa" /></a>
         <div class="navbar">
           <div class="collapse navbar-collapse" id="searchContent">
@@ -81,62 +81,68 @@
 
   </header>
 
-  <main class="">
-    <div class="container-fluid row ">
 
-      <div class="dropdown m-2 d-flex flex-row-reverse" id="dropdownCategorias">
-        <button class="btn btn-secondary dropdown-toggle me-0" type="button" data-bs-toggle="dropdown"
-          aria-expanded="false" id="botonCategorias">
-          Categorias
-        </button>
-        <ul class="dropdown-menu ">
-          <li class="dropdown-item">
-            <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
-            <label class="form-check-label" for="firstCheckbox">Pasteles</label>
-          </li>
-          <li class="dropdown-item">
-            <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
-            <label class="form-check-label" for="secondCheckbox">Galletas</label>
-          </li>
-          <li class="dropdown-item">
-            <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
-            <label class="form-check-label" for="thirdCheckbox">Brownies</label>
-          </li>
-          <li class="dropdown-item">
-            <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
-            <label class="form-check-label" for="thirdCheckbox">Otros</label>
-          </li>
-        </ul>
+  <main class= " container-fluid row">
+    <div class="col-9">
+     <table  class=" table tabla-personalizada m-2 " >
+        <thead>
+          <tr>
+            <th id="title-table" scope="col" colspan="4">Perrito Car <img src="../img/logo_y_nombre.png" alt=""> </th>
+          </tr> 
+        </thead>
+        <tbody  id="table-carrito">
+          <tr >
+            <tr >
+                <th  scope="row" rowspan = "2">Imagen</th>
+                <td>Nombre</td>
+                <td>Cantidad</td>
+                <td>Precio unitario</td>
+            </tr>
+            <tr>
+                <td>Ingredientes</td>
+                <td>Descuento</td>
+                <td>Precio Total</td>
+            </tr>
+          </tr>
+          
+        </tbody>
+        <tfoot>
+          <tr >
+            <th id="footer-table" scope="col" colspan = "3">Recuento total de productos</th>
+            <th id="footer-total"> total </th>
+          </tr>
+        </tfoot>
+    </table>   
+    </div>
+    
+   <div class="col-3" >
+    <div class="rounded bg-warning">
+    <table class="table table-borderless table-recuento m-2 rounded-5" >
+        <tbody >
+          <tr >
+            <th>Recuento total de productos</th>
+            <th>18</th>
+          </tr>
+
+          <tr>
+            <th scope="row">Total</th>
+            <td>$ 726</td>
+          </tr>
+          <tr>
+            <th scope="row" colspan="2"><button id="boton-pago">Proceder al pago</button></th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+      <div class="m-2" id="div-donar">
+        Si deseas contribuir directamente a la causa haz click en el botón de abajo
+        <br>
+        <button>Donar a la causa</button>
       </div>
+   </div>
 
-      <div class="col-2 m-2 mt-4" id="contenedorCategorias">
-        Categorias
-        <ul class="list-group">
-          <li class="list-group-item">
-            <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
-            <label class="form-check-label" for="firstCheckbox">Pasteles</label>
-          </li>
-          <li class="list-group-item">
-            <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
-            <label class="form-check-label" for="secondCheckbox">Galletas</label>
-          </li>
-          <li class="list-group-item">
-            <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
-            <label class="form-check-label" for="thirdCheckbox">Brownies</label>
-          </li>
-          <li class="list-group-item">
-            <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
-            <label class="form-check-label" for="thirdCheckbox">Otros</label>
-          </li>
-        </ul>
-      </div>
-
-      <div class="col-md-10 container-fluid">
-        <div id="cards" class="row center">
-
-        </div>
-      </div>
   </main>
+
 
   <footer class="text-center bg-body-tertiary">
     <!-- Grid container -->
@@ -172,7 +178,6 @@
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
       Politicas de privacidad / Terminos y condiciones
-      <a class="text-body" href="https://mdbootstrap.com/"></a>
     </div>
     <!-- Copyright -->
   </footer>
@@ -181,8 +186,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
-  <script type="module" src="../js/productos.js"></script>
-  <script src="../js/carrito.js"></script>
 </body>
 
 </html>
