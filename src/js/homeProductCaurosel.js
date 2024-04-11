@@ -35,11 +35,8 @@ function carruselFuncion ()  {
     // console.log("items", grupoDeElementos);
     grupoDeElementos.forEach((el) => {
       const minPerSlide = 4;
-      console.log(el);
       let next = el.nextElementSibling;
-      console.log("next", next);
       for (let i = 1; i < minPerSlide; i++) {
-        console.log(!next);
         if (!next) {
           //
           next = grupoDeElementos[0];

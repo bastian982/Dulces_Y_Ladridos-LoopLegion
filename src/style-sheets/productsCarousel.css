@@ -60,18 +60,49 @@
       } 
       .carouselInner .carousel-item-end.active,
       .carouselInner .carousel-item-next {
-        transform: translateX(20%);
+        transform: translateX(23%);
       }
       
       .carouselInner .carousel-item-start.active, 
       .carouselInner .carousel-item-prev {
-        transform: translateX(-20%);
+        transform: translateX(-23%);
       }
 
   .carouselInner .carousel-item-end,
   .carouselInner .carousel-item-start { 
     transform: translateX(0);
   } 
+}
+@media (max-width: 1400px) {
+  .productCard {
+      border: none;
+      border-radius: 10px;
+      width: 300px;
+      height: 400px;
+      padding: 10px;
+      margin: 0;
+    
+    }
+    .productImage{
+        border: none;
+        border-radius: 10px;
+        width: auto; 
+        height: 250px ;
+    } 
+    .carouselInner .carousel-item-end.active,
+    .carouselInner .carousel-item-next {
+      transform: translateX(26.5%);
+    }
+    
+    .carouselInner .carousel-item-start.active, 
+    .carouselInner .carousel-item-prev {
+      transform: translateX(-26.5%);
+    }
+
+.carouselInner .carousel-item-end,
+.carouselInner .carousel-item-start { 
+  transform: translateX(0);
+} 
 }
 @media (max-width: 992px) {
   .productCard {
