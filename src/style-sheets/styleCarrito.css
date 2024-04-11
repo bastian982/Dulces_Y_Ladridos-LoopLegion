@@ -35,6 +35,10 @@
     background-color: #b67352;
 }
 
+.imgProduct{
+    width: 180px;
+}
+
 #div-donar{
     background-color: #b67352;
     color: white;
@@ -55,4 +59,10 @@
     border: none;
     color: white;
     font-weight: bold;
+}
+
+@media screen and (max-width: 900px) {
+    .imgProduct{
+        width: 80px;
+    }
 }
