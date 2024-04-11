@@ -10,54 +10,59 @@ document.addEventListener('DOMContentLoaded', function() {
             const password = document.getElementById('inputPassword').value.trim();
             const confirmPassword = document.getElementById('inputConfirmPassword').value.trim();
             const tyc = document.getElementById('gridCheck').checked;
-
+    
+            let errores = []; // Array para almacenar todas las alertas
+    
             // Validación del nombre y apellido
-            
-            const nameRegExp = /^[A-Za-zÁ-ÿ\s']+$/; //expresion regular que valida que solo se ingresen letras en los input
-            if (!nameRegExp.test(name) || !nameRegExp.test(lastName)) { // Compara si nombre y apellido cumplen con la exp regular
-                reject('El nombre y el apellido deben contener solo letras.');//si es diferente la promesa devuelve reject.
+            const nameRegExp = /^[A-Za-zÁ-ÿ\s']+$/;
+            if (!nameRegExp.test(name) || !nameRegExp.test(lastName)) {
+                errores.push('El nombre y el apellido deben contener solo letras.');
             }
-
-             // Validación del numero telefonico
-            
-             const NumberRegExp = /^[0-9\s']+$/; //valida que solo entren numeros del 0 al 9
-             if (!NumberRegExp.test(number) || number.length != 10) { // Compara si nombre y apellido cumplen con la exp regular
-                 reject('El numero telefonico debe contener 10 digitos.');//si es diferente la promesa devuelve reject.
-             }
- 
+    
+            // Validación del numero telefonico
+            const NumberRegExp = /^[0-9\s']+$/;
+            if (!NumberRegExp.test(number) || number.length != 10) {
+                errores.push('El numero telefonico debe contener 10 digitos.');
+            }
+    
             // Validación del correo
-            const emailRegExp = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;//busca que antes y despues del @ y del . no hay espacios u otro @ 
-            const serverAllow = ['gmail.com', 'outlook.com','hotmail.com']; // Aqui podemos agregar todos los servidores que permitiremos
-            const dominioCorreo = email.split('@')[1]; //identifica el 1er @ idicando que luego va el serverAllow
-            if (!emailRegExp.test(email) || !serverAllow.includes(dominioCorreo)) { //valida el patron y que se incluya serverAllow
-                reject('El correo electrónico debe ser válido y utilizar un servidor permitido.'); //si es diferente devuelve reject
+            const emailRegExp = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const serverAllow = ['gmail.com', 'outlook.com','hotmail.com'];
+            const dominioCorreo = email.split('@')[1];
+            if (!emailRegExp.test(email) || !serverAllow.includes(dominioCorreo)) {
+                errores.push('El correo electrónico debe ser válido y utilizar un servidor permitido.');
             }
-
-            if(password != confirmPassword){
-                reject('Las contraseñas no coinciden.'); //si es diferente devuelve reject
-            }
+    
             if(password.length < 8 ){
-                reject('Las contraseña debe tener al menos 8 caracteres.'); //si es diferente devuelve reject
+                errores.push('La contraseña debe tener al menos 8 caracteres.');
             }
-
+    
+            if(password !== confirmPassword){
+                errores.push('Las contraseñas no coinciden.');
+            }
+    
             // Validación de términos y condiciones
-            if (!tyc) { //valida si es difernte a checked
-                reject('Debes aceptar los términos y condiciones.'); //si es diferente devuelve reject
+            if (!tyc) {
+                errores.push('Debes aceptar los términos y condiciones.');
             }
-
-            //en caso que las validaciones cumplan se resuelven cada una de las promesas en name, lastname, email, message
-            resolve({
-                name,
-                lastName,
-                number,
-                email,
-                password,
-                confirmPassword
-            });
+    
+            // Si hay errores, los devolvemos
+            if (errores.length > 0) {
+                reject(errores.join('<br><br>')); // Devolvemos todas las alertas juntas con saltos de línea
+            } else {
+                // Si no hay errores, resolvemos con los datos del formulario
+                resolve({
+                    name,
+                    lastName,
+                    number,
+                    email,
+                    password,
+                    confirmPassword
+                });
+            }
         });
     }
-
-    //Se añade un escuchador de evento de tipo submit donde se estable el parametro e para que al hacer clic en enviar primero se valide la info y no solo se recargue el navegador a como lo hace por defecto. 
+   
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
 
