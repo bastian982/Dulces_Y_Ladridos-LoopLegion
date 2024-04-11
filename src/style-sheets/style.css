@@ -283,6 +283,10 @@ article {
     transform: rotateY(360deg);
 }
 
+article h2{
+  font-size: 1rem;
+}
+
 
 
 @media(max-width: 991.5px) {
