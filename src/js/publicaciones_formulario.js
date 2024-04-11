@@ -1,4 +1,4 @@
-import { createTable } from './tablePublicaciones.js';
+// import { createTable } from './tablePublicaciones.js';
 
 let url = "../json/publicaciones.json";
 
