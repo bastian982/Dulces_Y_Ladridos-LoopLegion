@@ -2,19 +2,19 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Recuperar Contraseña</title>
+    <link rel="stylesheet" href="../style-sheets/style.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <script src="https://kit.fontawesome.com/aa7627e879.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../style-sheets/olvidasteContrasena.css" />
 
-    <title>Terminos y Condiciones</title>
-    <link rel="stylesheet" href="../style-sheets/style.css">
-    <link rel="stylesheet" href="../style-sheets/styleTermsAndConditions.css">
+
 </head>
 
 <body>
-
     <header class="container-sm-fluid ps-0 pe-0 pt-0">
         <nav class="container-sm-fluid ps-0 pe-0 pt-0">
             <div class="navbar navbar-expand-lg  justify-content-between navbarSuperior" id="navbarSuperior">
@@ -59,22 +59,22 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item ">
-                            <a class="nav-link active text-white " aria-current="page" href="index.html">Inicio</a>
+                            <a class="nav-link active text-white " aria-current="page" href="../../index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white " href="./assets/pages/productos.html">Productos</a>
+                            <a class="nav-link text-white " href="./productos.html">Productos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="./assets/pages/publicaciones.html">Publicaciones</a>
+                            <a class="nav-link text-white" href="./publicaciones.html">Publicaciones</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="./assets/pages/experiencia.html">Experiencia</a>
+                            <a class="nav-link text-white" href="./experiencia.html">Experiencia</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="./assets/pages/nosotros.html">Nosotros</a>
+                            <a class="nav-link text-white" href="./nosotros.html">Nosotros</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="./assets/pages/contacto.html">Contactanós</a>
+                            <a class="nav-link text-white" href="./contacto.html">Contactanós</a>
                         </li>
                     </ul>
                     </form>
@@ -83,33 +83,34 @@
         </nav>
 
     </header>
+   
+    <main class="d-flex justify-content-center align-items-center">
 
-    <section class="img-fluid">
-        <h1>Terminos y condiciones</h1>
-    </section>
+        <div class="d-flex flex-wrap justify-content-center align-items-center m-5">
+            <div class="wrapper">
+                <h3>No te preocupes si olvidaste tu contraseña</h3>
+                <h5>Ingresa el correo con el que te registraste</h5>
 
-    <main>
-        <section class="container container-fluid">
-            <h2>Terminos y Condiciones</h2>
-            <p>Los presentes términos y condiciones de uso (en adelante los "Términos y Condiciones") regulan el acceso y uso que usted haga, como persona física, desde los Estados Unidos Mexicanos de la página web www...com.mx/ (en adelante <strong>“la Plataforma”)</strong>, puestos a disposición por NOMBRE COMERCIAL Y REGIMEN, una sociedad mercantil constituida bajo las leyes de los Estados Unidos Mexicanos, con domicilio en ...  con RFC ... , teléfono ...  (en lo sucesivo <strong>"Dulces y Ladridos"</strong>.).</p>
+                <form action="" class="form-olvidaste-contrasena">
+                    <label for="inputResetPassword">
+                        <input type="email" name="Recuperar-Contraseña" id="inputResetPassword"
+                            placeholder="email@email.com">
+                    </label>
+                </form>
+                <div class="botones">
+                    <button class="btn-olvidaste-contrasena" type="submit">Recuperar Contraseña</button>
+                    <button class="btn-olvidaste-contrasena"><a href="./formulario-login.html">Iniciar Sesión</a></button>
+                </div>
+            </div>
 
-            <p>Mediante la aceptación de estos términos y condiciones se regula el acceso y uso de la Plataforma y son los que establecen una relación contractual entre usted y Dulces y Ladridos. Si usted no acepta dichos Términos y Condiciones, no podrá acceder o usar la Plataforma. Dulces y Ladridos podrá poner fin de inmediato a estos Términos y Condiciones o cualquiera de los Productos respecto de usted o, en general, dejar de ofrecer o denegar el acceso a los Productos o cualquier parte de ellos, en cualquier momento y por cualquier motivo de manera unilateral.</p>
 
-            <p>Se podrán aplicar condiciones suplementarias a determinados Productos, como políticas para un evento, una actividad o una promoción particular, y dichas condiciones suplementarias se le comunicarán en relación con los Servicios aplicables. Las condiciones suplementarias se establecen además de los Términos y Condiciones, y se considerarán una parte de estas, para los fines de los Productos aplicables. Las condiciones suplementarias prevalecerán sobre los Términos y Condiciones en el caso de conflicto con respecto a los Productos aplicables.</p>
+            <picture>
+                <img src="../img/perro-olvidaste-contrasena.png" alt="" class="img-recuperar-contraseña">
+            </picture>
 
-            <p>Dulces y Ladridos podrá modificar los Términos y Condiciones relativos a los Productos cuando lo considere oportuno. Las modificaciones serán efectivas después de la publicación por parte de Dulces y Ladridos de dichos Términos y Condiciones, políticas modificadas o condiciones suplementarias sobre el Producto aplicable actualizadas en esta ubicación. Su acceso o uso continuado de la Plataforma después de dicha publicación constituye su consentimiento a vincularse por los Términos y Condiciones y sus modificaciones.</p>
 
-            <p>En caso de falla, falta de disponibilidad, accesibilidad o interrupción de la Plataforma, los Consumidores podrán solicitar soporte técnico a través de nuestras líneas de atención al cliente disponibles de Lunes a Viernes en un horario de 9 a 18 hrs:</p>
-            <ul>
-                <li><a href="mailto:">Correo: ...</a></li>
-                <li><a href="tel:+">Ciudad de México: ...</a></li>
-            </ul>
+        </div>
 
-            <h3>Definiciones</h3>
-
-            <p></p>
-
-        </section>
     </main>
 
     <footer class="text-center bg-body-tertiary">
@@ -145,13 +146,18 @@
         <!-- Grid container -->
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
-            Politicas de privacidad / Terminos y condiciones
-            <a class="text-body" href="https://mdbootstrap.com/"></a>
+
+            <p><a href="./src/pages/tyc.html">Terminos y condiciones</a> / <a href="./src/pages/tyc.html">Politicas de
+                    Privacidad</a></p>
+
         </div>
         <!-- Copyright -->
     </footer>
 
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 
 </body>
 

@@ -16,7 +16,7 @@ document.getElementById("main-header").innerHTML = `
     aria-label="Toggle navigation">
     <i class="fa-solid fa-magnifying-glass"></i>
   </a>
-  <a class="navbar-brand"><img src="/src/img/logo_y_nombre.png" alt="Logo y nombre de la empresa" /></a> <!-- ../img/logo_y_nombre.png -->
+  <a class="navbar-brand"><img src="../img/logo_y_nombre.png" alt="Logo y nombre de la empresa" /></a> <!-- ../img/logo_y_nombre.png -->
   <div class="navbar">
     <div class="collapse navbar-collapse" id="searchContent">
       <form class="d-flex" role="search">
@@ -26,8 +26,8 @@ document.getElementById("main-header").innerHTML = `
         </button>
       </form>
       <div>
-        <a href="#"><i class="fa-regular fa-user"></i></a>
-        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+        <a href="./formulario-login.html"><i class="fa-regular fa-user" title="Login / Registro"></i></a>
+        <a href="./carrito.html"><i class="fa-solid fa-cart-shopping" title="Carrito"></i></a>
       </div>
     </div>
 
@@ -50,22 +50,22 @@ document.getElementById("main-header").innerHTML = `
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
       <li class="nav-item ">
-        <a class="nav-link active text-white" aria-current="page" href="/index.html">Inicio</a> <!-- ../../index.html -->
+        <a class="nav-link active text-white" aria-current="page" href="../../index.html">Inicio</a> <!-- ../../index.html -->
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" href="/src/pages/productos.html">Productos</a> <!-- ./productos.html -->
+        <a class="nav-link text-white" href="./productos.html">Productos</a> <!-- ./productos.html -->
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" href="/src/pages/publicaciones.html">Publicaciones</a> <!-- ./publicaciones.html -->
+        <a class="nav-link text-white" href="./publicaciones.html">Publicaciones</a> <!-- ./publicaciones.html -->
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" href="/src/pages/experiencia.html">Experiencia</a> <!-- ./experiencia.html -->
+        <a class="nav-link text-white" href="./experiencia.html">Experiencia</a> <!-- ./experiencia.html -->
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" href="/src/pages/nosotros.html">Nosotros</a> <!-- ./nosotros.html -->
+        <a class="nav-link text-white" href="./nosotros.html">Nosotros</a> <!-- ./nosotros.html -->
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" href="/src/pages/contacto.html">Contáctanos</a> <!-- ./contacto.html -->
+        <a class="nav-link text-white" href="./contacto.html">Contáctanos</a> <!-- ./contacto.html -->
       </li>
     </ul>
     </form>
@@ -83,34 +83,34 @@ document.getElementById("main-header").innerHTML = `
 
 document.getElementById("main-footer").innerHTML = `
 <!-- Grid container -->
-    <div class="container pt-4">
-      <!-- Section: Social media -->
-      <section class="mb-4">
+<div class="container pt-4">
+    <!-- Section: Social media -->
+    <section class="mb-4">
         <!-- Facebook -->
         <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button"
-          data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i></a>
+            data-mdb-ripple-color="dark"><i class="fab fa-facebook-f" title="Facebook"></i></a>
 
         <!-- Twitter -->
         <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button"
-          data-mdb-ripple-color="dark"><i class="fab fa-twitter"></i></a>
+            data-mdb-ripple-color="dark"><i class="fab fa-twitter" title="Twitter"></i></a>
 
         <!-- Google -->
         <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button"
-          data-mdb-ripple-color="dark"><i class="fab fa-google"></i></a>
+            data-mdb-ripple-color="dark"><i class="fab fa-google" title="Google"></i></a>
 
         <!-- Instagram -->
         <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button"
-          data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i></a>
+            data-mdb-ripple-color="dark"><i class="fab fa-instagram" title="Instagram"></i></a>
 
         <!-- Linkedin -->
         <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button"
-          data-mdb-ripple-color="dark"><i class="fab fa-linkedin"></i></a>
+            data-mdb-ripple-color="dark"><i class="fab fa-linkedin" title="LinkedIn"></i></a>
         <!-- Github -->
         <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button"
-          data-mdb-ripple-color="dark"><i class="fab fa-github"></i></a>
-      </section>
-      <!-- Section: Social media -->
-    </div>
+            data-mdb-ripple-color="dark"><i class="fab fa-github" title="GitHub"></i></a>
+    </section>
+    <!-- Section: Social media -->
+</div>
     <!-- Grid container -->
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">

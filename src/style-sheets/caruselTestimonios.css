@@ -1,0 +1,96 @@
+/*Testimonios*/
+article {
+	background: #b67352;
+	height: 70vh;
+	font-family: 'Poppins', sans-serif;
+  
+}
+
+.card {
+    width: 100%;
+    height: 300px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    border: none;
+    background-color: inherit;  
+    margin-top: 75px;
+}
+
+.card .box {
+    position: absolute;
+    color: #262626;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    background: #fff;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+    backface-visibility: hidden;
+}
+.card .box.front{
+    background-image: url(../img/Fondo-de-pagina-huellitas.png);
+    background-repeat: repeat;
+    
+}
+.card .box.front,
+.card .box.back {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card .box.front img {
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	object-fit: cover;
+	border: 5px solid #262626;
+	margin-bottom: 25px;
+}
+
+.card:hover .box.front {
+    transform: rotateY(180deg);
+}
+.box.front h2 {
+	font-family: 'Bebas Neue', cursive;
+}
+.box.front h4 {
+	font-size: 18px;
+	letter-spacing: 2px;
+}
+.socials i {
+	margin: 0 15px;
+}
+.card .box.back {
+    position: absolute;
+    background: #fff;
+    transform: rotateY(180deg);
+    padding: 20px 30px;
+    text-align: center;
+    user-select: none;
+}
+
+.card .box.back .fa-quote-left {
+	position: absolute;
+	top: 25px;
+	left: 180px;
+	font-size: 3.2rem;
+}
+
+.card:hover .box.back {
+    transform: rotateY(360deg);
+}
+
+article h2{
+  font-size: 1rem;
+}
+
+@media(max-width: 991.5px) {
+    .col-lg-4 {
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+}

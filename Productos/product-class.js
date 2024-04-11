@@ -1,7 +1,7 @@
 /* Creación de clases 
  
  */
-// const fs = require("node:fs");
+// import fs from 'node:fs';
 class Postre {
   #stock;
 
@@ -72,12 +72,12 @@ class Pasteles extends Postre {
 //constructor(name, dogoName, description, price, pieces)
 // const arregloDeProductos = [
 //   new Postre(
-    // "name",
-    // "dogoName",
-    // "description",
-    // "price",
-    // "pieces",
-    // 20
+//     "name",
+//     "dogoName",
+//     "description",
+//     "price",
+//     "pieces",
+//     20
 //   ),
 //   new Galleta(
 //     "Galleta de Chocolate",
@@ -168,10 +168,10 @@ class Pasteles extends Postre {
 //   )
 // );
 // console.log(arregloDeProductos);
-//usar un setItem() para guardar arreglo de productos en localstorage
+// // usar un setItem() para guardar arreglo de productos en localstorage
 
 // const addDataToJson = (objectToSave) => {
-//getItem traer el arreglo para crear el archivo json
+// // getItem traer el arreglo para crear el archivo json
 //   fs.writeFile("archivo.json", JSON.stringify(objectToSave), "utf8", (err) => {
 //     if (err) throw err;
 //     console.log("The file has been saved!");

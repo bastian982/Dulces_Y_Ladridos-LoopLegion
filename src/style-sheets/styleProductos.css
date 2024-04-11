@@ -23,11 +23,13 @@
 .cardNaranja {
     background-color: #ECB159;
     width: 250px;
+    height: 350px;
 }
 
 .cardCafe {
     background-color: #B67352;
     width: 250px;
+    height: 350px;
 }
 
 .btnProduct {
@@ -44,7 +46,13 @@
     align-items: center;
 }
 
+.img-card{
+    height: 200px;
+}
 
+.card-body{
+    height: 50px;
+}
 
 @media screen and (max-width: 900px) {
     #contenedorCategorias {
@@ -53,17 +61,23 @@
 
     .cardNaranja {
         background-color: #ECB159;
-        width: 180px;
+        width: 150px;
+        margin: 0;
     }
 
     .cardCafe {
         background-color: #B67352;
-        width: 180px;
+        width: 150px;
+        margin: 0;
     }
 
     #botonCategorias {
         display: block;
         background-color: #8CB9BD;
         color: #B67352;
+    }
+
+    .img-card{
+        height: 50%;
     }
 }
