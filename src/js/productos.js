@@ -14,28 +14,28 @@ const getProducts = () => {
   );  
 }
 
-const addToCart = () =>{
-  
-  const table = document.getElementById("table-carrito");
-  console.log(table);
-  //const total = parseFloat(quantity) * parseFloat(price);
-  /* table.innerHTML += `
-        <tr >
-          <tr >
-              <th  scope="row" rowspan = "2">Imagen</th>
-              <td>Nombre</td>
-              <td>Cantidad</td>
-              <td>Precio unitario</td>
-          </tr>
-          <tr>
-              <td>Ingredientes</td>
-              <td>Descuento</td>
-              <td>Precio Total</td>
-          </tr>
-        </tr>
-  `
-} */
+
+
+
+const addToCart = (productoId) => {
+  const productosCarrito = JSON.parse(localStorage.getItem("productosCarrito")) || [];
+  const productosIndex = productosCarrito.reduce((acc, tarjeta, index) => {
+    acc[tarjeta.id] = index;
+    return acc;
+  }, {});
+
+  if (productosIndex[productoId] !== undefined) {
+    alert("Este producto ya está en el carrito");
+    return;
+  }
+
+  const producto = getProducts().find(producto => producto.id === productoId);
+  productosCarrito.push(producto);
+  localStorage.setItem("productosCarrito", JSON.stringify(productosCarrito));
+  alert("Producto agregado al carrito");
 }
+
+
 
 const cards = (productos) => {
   return productos.map((producto, index) => `
@@ -53,22 +53,24 @@ const cards = (productos) => {
 };
 
 /* <a href="./publicacion_lectura.html" class="btn btn-primary">Ver mas . . .</a> */
-const printCards = (container, cards) =>
+const printCards = (container, cards) =>{
   (document.getElementById(container).innerHTML = cards.join(""));
+
+
+document.querySelectorAll('.btnProduct').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const productoId = btn.id.replace('cartBtn', ''); // Obtener el ID del producto
+    addToCart(productoId);
+  });
+});
+}
 
 const printAll = /*async*/ () => {
   let data = getProducts() //await getProducts(url);
   console.log(data);
   printCards("cards", cards(data));
-
-  addFncToButtons(data);
-};
-
-const addFncToButtons = (data) => {
-  data.map(producto => {document.getElementById(`${producto.id}cartBtn`).onclick=addToCart;
-
-})
 }
+
 
 printAll();
 
