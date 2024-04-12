@@ -1,8 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
 /*Carrusel publicaciones o promocionales*/
-#carouselExampleRide{
-  margin: 0;
-  padding: 0;
+#carouselExampleRide .carousel-item {
+  transition: transform 0.6s ease-in-out;
+}
+
+#carouselExampleRide .carousel-item-next,
+#carouselExampleRide .carousel-item-prev {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+#carouselExampleRide .carousel-item-next.carousel-item-start,
+#carouselExampleRide .carousel-item-prev.carousel-item-end {
+  transform: translateX(0);
+}
+
+#carouselExampleRide .carousel-item-next,
+#carouselExampleRide .active.carousel-item-end {
+  transform: translateX(100%);
+}
+
+#carouselExampleRide .carousel-item-prev,
+#carouselExampleRide .active.carousel-item-start {
+  transform: translateX(-100%);
 }
 /*Carrusel de productos*/
 .titleProductCarousel{

@@ -11,33 +11,33 @@
   <link rel="stylesheet" href="./src/style-sheets/navBarYFooter.css" />
   <link rel="stylesheet" href="./src/style-sheets/caruselTestimonios.css">
   <link rel="stylesheet" href="./src/style-sheets/productsCarousel.css">
-  <style>
-  .carousel-item {
-    transition: transform 0.6s ease-in-out;
-  }
-
-  .carousel-item-next,
-  .carousel-item-prev {
-    position: absolute;
-    top: 0;
-    width: 100%;
-  }
-
-  .carousel-item-next.carousel-item-start,
-  .carousel-item-prev.carousel-item-end {
-    transform: translateX(0);
-  }
-
-  .carousel-item-next,
-  .active.carousel-item-end {
-    transform: translateX(100%);
-  }
-
-  .carousel-item-prev,
-  .active.carousel-item-start {
-    transform: translateX(-100%);
-  }
-  </style>
+  <!-- <style>
+	.carousel-item {
+	  transition: transform 0.6s ease-in-out;
+	}
+  
+	.carousel-item-next,
+	.carousel-item-prev {
+	  position: absolute;
+	  top: 0;
+	  width: 100%;
+	}
+  
+	.carousel-item-next.carousel-item-start,
+	.carousel-item-prev.carousel-item-end {
+	  transform: translateX(0);
+	}
+  
+	.carousel-item-next,
+	.active.carousel-item-end {
+	  transform: translateX(100%);
+	}
+  
+	.carousel-item-prev,
+	.active.carousel-item-start {
+	  transform: translateX(-100%);
+	}
+	</style> -->
 </head>
 
 <body>
@@ -113,79 +113,300 @@
 			</div>
 		</nav>
 
-  </header>
-  <main class="d-flex justify-content-center align-items-center">
-    <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="./src/img/Carrusel Bienvenida .png" class="d-block w-20 " alt="Banner de Bienvenida postres">
-        </div>
+	</header>
+	<main class="container-fluid mt-0">
+		<section class="container mb-2">
+			<div id="carouselExampleRide" class="carousel carousel-dark text-center slide" data-bs-ride="true">
+				<div class="carousel-inner">
+				  <div class="carousel-item  active">
+					<img src="./src/img/Carrusel-Bienvenida.png" class=" img-fluid " alt="Banner de Bienvenida postres">
+				  </div>
+				  <div class="carousel-item w-100">
+					<img src="./src/img/Carrusel-promo-1.png" class=" img-fluid " alt="Banner Promocion  pastel hora">
+				  </div>
+				  <div class="carousel-item">
+					<img src="./src/img/Carrusel-promo-2.png" class=" img-fluid " alt="Banner promocion galleta perros">
+				  </div>
+				  <div class="carousel-item">
+					<img src="./src/img/Carrusel-promo-3.png	" class="img-fluid " alt="Banner promocion galleta dalmata">
+				  </div>
+				</div>
+				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+				  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				  <span class="visually-hidden">Previous</span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+				  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+				  <span class="visually-hidden">Next</span>
+				</button>
+			  </div>
+		</section>
+
+		<section class="container">
+			<div class="container">
+				<h1 class="text-center titleProductCarousel">Productos principales</h1>
+			</div>
+			<div id="productsCarouselIndicators" class="carousel productCarousel slide " data-bs-ride="carousel">
+				<div id="carouselIndicators" class="carousel-indicators">
+					<!-- Se añaden los botones desde el script -->
+				</div>
+				<div id="productsCarouselInner" class="carousel-inner carouselInner ">
+					<!-- Se añade desde el script -->
+				</div>
+
+				<button id="leftArrow" class="carousel-control-prev  arrow" type="button"
+					data-bs-target="#productsCarouselIndicators" data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Previous</span>
+				</button>
+				<button id="rightArrow" class="carousel-control-next arrow" type="button"
+					data-bs-target="#productsCarouselIndicators" data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Next</span>
+				</button>
+			</div>
+			<!--  -->
+		</section>
+
+	</main>
+	<!--Carrusel de calificaciones de cliente-->
+	<article>
+		<div class="container-fluid col-12">
+			<div class="carousel slide" data-bs-ride="carousel" id="carouselExampleSlidesOnly">
+
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<div class="row align-items-center justify-content-center">
+							<div class="col-6">
+								<div class="card">
+									<div class="box front">
+										<img class="img-fluid" alt="" src="./src/img/perrito.jpg">
+										<h2 class="text-center">Bastian Cortes</h2>
+										<p class="socials text-center">
+											<i class="fa fa-facebook im"></i>
+											<i class="fa fa-twitter"></i>
+											<i class="fa fa-instagram"></i>
+										</p>
+									</div>
+									<div class="box back">
+										<span class="fa fa-quote-left img-fluid"></span>
+										<p>
+											Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores soluta
+											quidem dolorem debitis. Minima, optio illum magni exercitationem eum
+											laborum! Incidunt sequi repellat vero.
+										</p>
+									</div>
+								</div>
+							</div>
+
+            <div class="col-6">
+							<div class="card">
+								<div class="box front">
+									<img class="img-fluid" alt="" src="./src/img/perrito.jpg">
+									<h2 class="text-center">Juan Pérez</h2>
+									<p class="socials text-center">
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+									</p>
+								</div>
+								<div class="box back">
+									<p>
+										"¡Increíble sabor y presentación impecable! Nunca me decepcionan, son mi indulgencia favorita."
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="row align-items-center justify-content-center">
+						<div class="col-6">
+							<div class="card">
+								<div class="box front">
+									<img class="img-fluid" alt="" src="./src/img/perrito.jpg">
+									<h2>Ana Rodríguez</h2>
+									<p class="socials text-center">
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+									</p>
+								</div>
+								<div class="box back">
+									<p>
+										"Los postres de este ecommerce son una verdadera obra de arte. ¡Cada bocado es exquisito!"
+									</p>
+								</div>
+							</div>
+						</div>
+
+            <div class="col-6">
+							<div class="card">
+								<div class="box front">
+									<img class="img-fluid" alt="" src="./src/img/perrito.jpg">
+									<h2>Luis González</h2>
+									<p class="socials text-center">
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+									</p>
+								</div>
+								<div class="box back">
+									<p>
+										"¡La calidad de los ingredientes se nota en cada postre! ¡Nunca me canso de ordenar aquí!"
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="row align-items-center justify-content-center">
+						<div class="col-6">
+							<div class="card">
+								<div class="box front">
+									<img class="img-fluid" alt="" src="./src/img/perrito.jpg">
+									<h2>María López</h2>
+									<p class="socials text-center">
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+									</p>
+								</div>
+								<div class="box back">
+									<p>
+										"¡Los postres son una explosión de sabores! Siempre sorprenden y alegran mis reuniones familiares."
+									</p>
+								</div>
+							</div>
+						</div>
+
+            <div class="col-6">
+							<div class="card">
+								<div class="box front">
+									<img class="img-fluid" alt="" src="./src/img/perrito.jpg">
+									<h2>Carlos Martínez</h2>
+									<p class="socials text-center">
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+									</p>
+								</div>
+								<div class="box back">
+									<p>
+										"¡Estoy enamorado de estos postres! Siempre llegan en perfecto estado y son la guinda perfecta para cualquier comida."
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
         <div class="carousel-item">
-          <img src="./src/img/Carrusel promo 1.png" class="d-block w-20  " alt="Banner Promocion  pastel hora">
-        </div>
-        <div class="carousel-item">
-          <img src="/src/img/Carrusel promo 2.png" class="d-block w-20  " alt="Banner promocion galleta perros">
-        </div>
-        <div class="carousel-item">
-          <img src="/src/img/Carrusel promo 3.png" class="d-block w-20 " alt="Banner promocion galleta dalmata">
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next  " type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next" style="color:black">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
+					<div class="row align-items-center justify-content-center">
+						<div class="col-6">
+							<div class="card">
+								<div class="box front">
+									<img class="img-fluid" alt="" src="./src/img/perrito.jpg">
+									<h2>Laura Sánchez</h2>
+									<p class="socials text-center">
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+									</p>
+								</div>
+								<div class="box back">
+									<p>
+										"¡Los postres son una tentación irresistible! Siempre encuentro algo nuevo y delicioso para satisfacer mi antojo de dulce."
+									</p>
+								</div>
+							</div>
+						</div>
 
-   <!-- <img class="img-fluid" src="./src/img/bienvenidos-background.png" alt="Imagen con la palabra bienvenidos">-->
-  </main>
+            <div class="col-6">
+							<div class="card">
+								<div class="box front">
+									<img class="img-fluid" alt="" src="./src/img/perrito.jpg">
+									<h2>Sergio Ramírez</h2>
+									<p class="socials text-center">
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+									</p>
+								</div>
+								<div class="box back">
+									<p>
+										"¡Los postres de este ecommerce son simplemente adictivos! Cada vez que los pruebo, quiero más. ¡Definitivamente vale la pena cada caloría!"
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>			
+  </article>
 
-    <footer class="text-center bg-body-tertiary">
-      <!-- Grid container -->
-      <div class="container pt-4">
-        <!-- Section: Social media -->
-        <section class="mb-4">
-          <!-- Facebook -->
-          <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button"
-            data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i></a>
+	<footer class="text-center bg-body-tertiary">
+		<!-- Grid container -->
+		<div class="container pt-4">
+			<!-- Section: Social media -->
+			<section class="mb-4">
+				<!-- Facebook -->
+				<a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button"
+					data-mdb-ripple-color="dark"><i class="fab fa-facebook-f" title="Facebook"></i></a>
 
-          <!-- Twitter -->
-          <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button"
-            data-mdb-ripple-color="dark"><i class="fab fa-twitter"></i></a>
+				<!-- Twitter -->
+				<a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button"
+					data-mdb-ripple-color="dark"><i class="fab fa-twitter" title="Twitter"></i></a>
 
-          <!-- Google -->
-          <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button"
-            data-mdb-ripple-color="dark"><i class="fab fa-google"></i></a>
+				<!-- Google -->
+				<a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button"
+					data-mdb-ripple-color="dark"><i class="fab fa-google" title="Google"></i></a>
 
-          <!-- Instagram -->
-          <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button"
-            data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i></a>
+				<!-- Instagram -->
+				<a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button"
+					data-mdb-ripple-color="dark"><i class="fab fa-instagram" title="Instagram"></i></a>
 
-          <!-- Linkedin -->
-          <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button"
-            data-mdb-ripple-color="dark"><i class="fab fa-linkedin"></i></a>
-          <!-- Github -->
-          <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button"
-            data-mdb-ripple-color="dark"><i class="fab fa-github"></i></a>
-        </section>
-        <!-- Section: Social media -->
-      </div>
-      <!-- Grid container -->
-      <!-- Copyright -->
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
-        
-        <p><a href="./src/pages/tyc.html">Terminos y condiciones</a> / <a href="./src/pages/tyc.html">Politicas de Privacidad</a></p>
-        
-      </div>
-      <!-- Copyright -->
-    </footer>
+				<!-- Linkedin -->
+				<a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button"
+					data-mdb-ripple-color="dark"><i class="fab fa-linkedin" title="LinkedIn"></i></a>
+				<!-- Github -->
+				<a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button"
+					data-mdb-ripple-color="dark"><i class="fab fa-github" title="GitHub"></i></a>
+			</section>
+			<!-- Section: Social media -->
+		</div>
+		<!-- Grid container -->
+		<!-- Copyright -->
+		<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
 
+			<p><a href="./src/pages/tyc.html">Terminos y condiciones</a> / <a href="./src/pages/tyc.html">Politicas de
+					Privacidad</a></p>
 
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"></script>
-      <script type="module" src="./main.js"></script>
+		</div>
+		<!-- Copyright -->
+	</footer>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+		crossorigin="anonymous"></script>
+	<script type="module" src="./main.js"></script>
+	<script type="module" src="./src/js/homeProductCaurosel.js"></script>
 </body>
 
 </html>
