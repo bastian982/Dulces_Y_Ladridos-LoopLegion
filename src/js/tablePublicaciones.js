@@ -1,6 +1,6 @@
 // Importa las funciones getProducts y setProducts desde el archivo localStorage.js
 import { getProducts, setProducts } from './localStorage.js';
-import { getProducts, setProducts } from './localStorage.js'; 
+
 
 // Nombre del arreglo de publicaciones en el localStorage
 const arregloDePublicacionesName = "arregloDePublicaciones";
