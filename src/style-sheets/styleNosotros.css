@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+:root{
+    --color-claro:#ECB159;
+    --color-oscuro: #B67352;
+    --color-azul: #8CB9BD;
+}
+
+main {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.img-header {
+    background-image: url(../img/img-header-nosotros.png);
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-size: cover;
+}
+
+div.contenido-mision-vision {
+    display: flex;
+    background-color: #FEFBF6;
+    border: 2px solid #b67352;
+    border-radius: 10px;
+    padding: 0px 10px 0px 0;
+}
+
+.encabezado-mision-vision,
+.encabezado-mision-vision h6 {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-oscuro);
+    border: 2px solid var(--color-oscuro);
+    border-radius: 10px 0 0 10px;
+}
+
+.bg-atributos {
+    background-color: #b67352;
+}
+
+section.contactanos-nosotros {
+    text-align: center;
+    background-color: #b67352;
+}
+
+section.img-final-nosotros {
+    background-image: url(../img/imagen_con_frase-al-final-de-pag-nosotros.png);
+    background-size: cover;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+div.texto-imagen-final-nosotros {
+    text-align: center;
+}
+
+#collapseExampleBtn {
+  background-image: linear-gradient(92.88deg, var(--color-azul) 30%, #b67352c5 40%, var(--color-claro) 60%);
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-family: "Inter UI","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  height: 4rem;
+  padding: 0 1.6rem;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+  transition: all .5s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+#collapseExampleBtn:hover {
+  box-shadow: var(--color-claro) 0 1px 30px;
+  transition-duration: .1s;
+}
+
+@media (min-width: 768px) {
+  .button-36 {
+    padding: 0 2.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+    div.encabezado-mision-vision {
+        padding: 10px;
+    }
+
+    h6.encabezadoMisionVisionH {
+
+        transform: rotate(-90deg);
+    }
+}
