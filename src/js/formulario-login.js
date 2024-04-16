@@ -1,56 +1,44 @@
-/**
- * Crea algunos usuarios falsos en el local storage para pruebas temporales
- */
-const fakeUser = () => {
-    data = [{
-        name : "Daniel Gomez",
-        userName : "dani_gomez",
-        email : "dg@gmail.com",
-        password : "87654321"
-    },
-    {
-        name : "Rafael Guitierritos",
-        userName : "rafa_guitos",
-        email : "rafa@gmail.com",
-        password : "12345678"
-    }]
-    localStorage.setItem("fakeUser", JSON.stringify(data));
-};
-fakeUser();  //crear el usuarios falsos
-
 /* Tomamos el boton de inicio de sesion y se activa la función si la información es valida */
-const buttonLogIn = document.getElementById("boton-login");
-buttonLogIn.addEventListener( "click", ()=>{
-    if(isInfoValid()) console.log("si es valido"); //si la informacion es valida se inicia sesion
+const buttonLogIn = document.querySelector('#formulario-login');
+buttonLogIn.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const email = document.querySelector("#user-input").value;
+  const password = document.querySelector("#password-input").value;
+  const users = JSON.parse(localStorage.getItem("users")) || []; //obtienen información de usuarios
+
+  const validateEmail = users.find(user => user.email === email);
+
+  if(!validateEmail){
+    alert('Usuario no registrado, crea una cuenta')
+  }
+  else{
+    const validateUser = users.find(
+        (user) => user.email === email && user.password === password
+      );
+      if (!validateUser) {
+        alert("Usuario y/o contraseña incorrectos");
+
+      }
+    
+      alert(`Bienvenido ${validateUser.name} ${validateUser.lastName}`);
+      //localStorage.setItem('login-success', JSON.stringify(validateUser));
+      localStorage.setItem('login-success', JSON.stringify(validateUser))
+
+      document.querySelector('.dropdown').innerHTML = `
+      <a href="./src/pages/formulario-login.html" class=" dropdown-toggle"
+								type="button" data-bs-toggle="dropdown" aria-expanded="false"><i
+									class="fa-regular fa-user" title="Login / Registro"></i></a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
+							</ul>
+							<span class="client-name"></span>
+							<a href="./src/pages/carrito.html"><i class="fa-solid fa-cart-shopping"
+									title="Carrito"></i></a>
+      `
+
+      document.querySelector('.client-name').innerHTML = `${validateUser.name} ${validateUser.lastName}`
+      window.location.href = "../../index.html";
+     
+  }
+
 });
-
-/**
- * lee el valor del elemento con el id indicado
- * @param {string} id  el id del elemento 
- * @returns valor que lee del elemento
- */
-const getInputValueID = (id) => document.getElementById(id).value;
-
-/**
- * verifica si el usuario y contraseña que lee del formulario existe en los usuarios del localstorage
- * @returns true (si la información es correcta) o false (si la información no es correcta)
- */
-const isInfoValid = () => {
-    let message = "Usuario o contraseña incorrectos"; //mensaje de error
-    let isValid = false; //returno de la funcion
-    const userInput = getInputValueID("user-input").toLowerCase(); //entrada de email
-    const password = getInputValueID("password-input"); //entrada de password
-    const data = JSON.parse( localStorage.getItem("fakeUser") );  //obtienen informacion de usuarios
-
-    for(let user of data){
-        if( userInput === user.userName.toLowerCase() || userInput === user.email.toLowerCase() ){ //busca que el usuario exista
-            if( password === user.password ){ //si la contraseña coincide con el usuario
-                isValid = true;
-                message = "";
-            }
-        }
-    }
-
-    document.getElementById("error-message").innerHTML = message;   //imprime el mensaje de error o "" 
-    return isValid;
-};

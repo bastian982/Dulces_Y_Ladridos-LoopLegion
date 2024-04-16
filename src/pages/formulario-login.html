@@ -9,11 +9,12 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <script src="https://kit.fontawesome.com/aa7627e879.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="../style-sheets/style.css" />
+    <!-- <link rel="stylesheet" href="../style-sheets/style.css" /> -->
+    <link rel="stylesheet" href="../style-sheets/navBarYFooter.css">
     <link rel="stylesheet" href="../style-sheets/formulario-login.css">
 </head>
 
-<body>
+<body> 
     <header id="main-header" class="container-sm-fluid ps-0 pe-0 pt-0">
         <!-- Aqui se inserta el header derde headerYFooter.js con el id="main-header"-->
     </header>
@@ -23,7 +24,7 @@
         <div class="container">
             <form class="mt-5" id="formulario-login"> <!-- Formulario Log in -->
                 <h3 class="text-center mb-5">Iniciar Sesion</h3>
-                <label for="user-input" class="form-label">Correo o usuario</label>
+                <label for="user-input" class="form-label">Correo</label>
                 <input type="text" class="form-control" id="user-input"
                     placeholder="dulcesYladridos@gmail.com">
                 <label for="password-input" class="form-label mt-4">Contraseña</label>
@@ -32,7 +33,7 @@
                     <p id="error-message" class="text-danger"></p>
                 </div>
                 <div class="col-12 d-flex justify-content-center my-4">
-                    <button id="boton-login" type="button" class="">Iniciar Sesión</button>
+                    <button id="boton-login" type="submit" class="">Iniciar Sesión</button>
                     <a id="boton-signup" class="text-center" href="./registo-usuarios.html">Crear Cuenta</a>
                 </div>
                 <div class="col-12 d-flex justify-content-center mt-2">
