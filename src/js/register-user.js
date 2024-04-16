@@ -82,3 +82,54 @@ document.addEventListener('DOMContentLoaded', function() {
             });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contactForm');
+  
+    async function validarFormulario() {
+      return new Promise((resolve, reject) => {
+        // ... (el resto del código de validación es el mismo)
+  
+        // Si no hay errores, resolvemos con los datos del formulario
+        if (errores.length === 0) {
+          resolve({ name, lastName, number, email, password, confirmPassword });
+        } else {
+          reject(errores.join('<br><br>'));
+        }
+      });
+    }
+  
+    async function guardarEnJSON(datos) {
+      try {
+        const dirHandle = await window.showDirectoryPicker();
+        const fileHandle = await dirHandle.getFileHandle('datos_formulario.json', { create: true });
+        const writable = await fileHandle.createWritable();
+        await writable.write(JSON.stringify(datos));
+        await writable.close();
+        return true;
+      } catch (error) {
+        console.error('Error al guardar el archivo JSON:', error);
+        return false;
+      }
+    }
+  
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+  
+      try {
+        const datos = await validarFormulario();
+        const guardadoExitoso = await guardarEnJSON(datos);
+  
+        if (guardadoExitoso) {
+          document.getElementById("error-message").innerHTML = "";
+          alert('Formulario enviado correctamente. Los datos se han guardado en un archivo JSON.');
+          document.getElementById("contactForm").reset();
+        } else {
+          throw new Error('Error al guardar los datos del formulario.');
+        }
+      } catch (error) {
+        console.log(error);
+        document.getElementById("error-message").innerHTML = `<li>${error}</li>`;
+      }
+    });
+  });
