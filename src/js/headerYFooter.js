@@ -28,7 +28,7 @@ document.getElementById("main-header").innerHTML = `
       <div class="dropdown">
         <a href="./formulario-login.html"><i class="fa-regular fa-user" title="Login / Registro"></i></a>
         <span class="client-name"></span>
-        <a href="./carrito.html"><i class="fa-solid fa-cart-shopping" title="Carrito"></i></a>
+        <a href="../pages/carrito.html"><i class="fa-solid fa-cart-shopping" title="Carrito"></i></a>
       </div>
     </div>
 
