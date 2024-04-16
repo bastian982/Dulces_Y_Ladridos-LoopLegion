@@ -25,8 +25,9 @@ document.getElementById("main-header").innerHTML = `
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </form>
-      <div>
+      <div class="dropdown">
         <a href="./formulario-login.html"><i class="fa-regular fa-user" title="Login / Registro"></i></a>
+        <span class="client-name"></span>
         <a href="./carrito.html"><i class="fa-solid fa-cart-shopping" title="Carrito"></i></a>
       </div>
     </div>
