@@ -1,0 +1,52 @@
+
+
+
+:root{
+    --color-claro:#ECB159;
+    --color-oscuro: #B67352;
+    --color-azul: #8CB9BD;
+}
+
+#formulario-login {    /* Fondo-de-pagina-huellitas 2 */
+margin: 10%;
+padding: 5% 10%;
+border-radius: 2em;
+border-style: solid;
+border-color: black;
+background: url(../img/Fondo-de-pagina-huellitas.png);
+font-weight: bold;
+}
+
+#boton-login {  /*  Bototn de inicio de sesion  */
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    background-color: var(--color-claro);
+    font-weight: bold;
+    border-style: none;
+    &:active{
+        transform: scale(0.95);
+    }
+}
+
+#boton-signup {  /*  Bototn de creacion de cuenta  */
+    padding: 0.5em 1em;
+    margin-left: 20%;
+    border-radius: 0.5em;
+    background-color: var(--color-azul);
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    border-style: none;
+    &:active{
+        transform: scale(0.95);
+    }
+}
+
+#boton-forgot-password {
+    text-decoration: none;
+    color: black;
+    cursor:pointer;
+    &:hover{
+        color: var(--color-oscuro);
+    }
+}
