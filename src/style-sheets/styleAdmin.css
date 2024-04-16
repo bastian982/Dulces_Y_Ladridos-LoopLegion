@@ -3,12 +3,14 @@ input[type=text] {
     word-wrap: break-word !important;
     word-break: break-all;
 }
-body{
-    background-image: url("../img/Fondo-de-pagina-huellitas.png");
-    background-repeat: repeat-y;
+main{
     font-family: "Lilita One", sans-serif;
     font-weight: 200;
     font-style: normal;
+}
+
+body{
+    background-image: url("../img/Fondo-de-pagina-huellitas.png");
 }
 .thead{
     border-radius: 10px;
