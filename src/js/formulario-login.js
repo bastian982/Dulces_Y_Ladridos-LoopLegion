@@ -1,7 +1,7 @@
 /* Tomamos el boton de inicio de sesion y se activa la función si la información es valida */
 const buttonLogIn = document.querySelector('#formulario-login');
 buttonLogIn.addEventListener("submit", (e) => {
-  e.preventDefault();
+  //e.preventDefault();
   const email = document.querySelector("#user-input").value;
   const password = document.querySelector("#password-input").value;
   const users = JSON.parse(localStorage.getItem("users")) || []; //obtienen información de usuarios
