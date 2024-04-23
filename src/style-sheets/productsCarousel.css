@@ -29,6 +29,8 @@
 .titleProductCarousel{
     color: #B67352;
     font-size: 3vw;
+    margin-top: 15vh;
+    margin-bottom: 5vh;
 }
 .prductsCarouselCardBody,.titleProductCarousel{
   font-family: "Lilita One", sans-serif;
@@ -94,7 +96,7 @@
     transform: translateX(0);
   } 
 }
-@media (max-width: 1400px) {
+@media (max-width: 1440px) {
   .productCard {
       border: none;
       border-radius: 10px;
@@ -125,7 +127,41 @@
   transform: translateX(0);
 } 
 }
-@media (max-width: 992px) {
+
+@media (max-width: 1024px) {
+  .productCard {
+      border: none;
+      border-radius: 10px;
+      width: 300px;
+      height: 400px;
+      padding: 10px;
+      margin: 0 auto;
+      margin-left: 25px;
+    
+    }
+    .productImage{
+        border: none;
+        border-radius: 10px;
+        width: auto; 
+        height: 250px ;
+    } 
+    .carouselInner .carousel-item-end.active,
+    .carouselInner .carousel-item-next {
+      transform: translateX(26.5%);
+    }
+    
+    .carouselInner .carousel-item-start.active, 
+    .carouselInner .carousel-item-prev {
+      transform: translateX(-26.5%);
+    }
+
+.carouselInner .carousel-item-end,
+.carouselInner .carousel-item-start { 
+  transform: translateX(0);
+} 
+}
+
+/* @media (max-width: 992px) {
   .productCard {
       border: none;
       border-radius: 10px;
@@ -155,7 +191,7 @@
 .carouselInner .carousel-item-start { 
   transform: translateX(0);
 } 
-}
+} */
 
  
 .arrow:hover {
@@ -164,7 +200,7 @@
 }
 
 
-@media (max-width:760px) {
+@media (max-width:768px) {
   .titleProductCarousel{
     font-size: 5vw;
 }
@@ -180,8 +216,6 @@
         border-radius: 10px;
         width: 45vw;
         height: 300px;
-        padding: 0 5vw ; 
-        margin: 0;     
       }
       .productImage{
           border: none;
@@ -205,7 +239,7 @@
   } 
 
 }
-@media (max-width: 450px) {
+@media (max-width: 425px) {
   .titleProductCarousel{
     font-size: 7vw;
 }
@@ -220,9 +254,99 @@
         align-items: center;
         border: none;
         border-radius: 10px;
-        width: 300px;
+        width: 320px;
         height: 260px;
-        margin: 0 10vw;      
+        margin: 0 10vw;  
+      }
+      .productImage{
+          border: none;
+          border-radius: 10px;
+          width: fit-content; 
+          height: 170px ;
+          margin: 0;
+          padding: 0;
+      } 
+      .carouselInner .carousel-item-end.active,
+      .carouselInner .carousel-item-next {
+        transform: translateX(100%);
+      }
+      
+      .carouselInner .carousel-item-start.active, 
+      .carouselInner .carousel-item-prev {
+        transform: translateX(-100%);
+      }
+
+  .carouselInner .carousel-item-end,
+  .carouselInner .carousel-item-start { 
+    transform: translateX(0);
+  } 
+
+}
+
+@media (max-width: 375px) {
+  .titleProductCarousel{
+    font-size: 7vw;
+}
+  .productCarousel{
+    width:90vw;
+    margin: 0;
+    padding: 0;
+  }
+    .productCard {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        border-radius: 10px;
+        width: 270px;
+        height: 260px;
+        margin: 0 10vw; 
+        
+      }
+      .productImage{
+          border: none;
+          border-radius: 10px;
+          width: fit-content; 
+          height: 170px ;
+          margin: 0;
+          padding: 0;
+      } 
+      .carouselInner .carousel-item-end.active,
+      .carouselInner .carousel-item-next {
+        transform: translateX(100%);
+      }
+      
+      .carouselInner .carousel-item-start.active, 
+      .carouselInner .carousel-item-prev {
+        transform: translateX(-100%);
+      }
+
+  .carouselInner .carousel-item-end,
+  .carouselInner .carousel-item-start { 
+    transform: translateX(0);
+  } 
+
+}
+
+@media (max-width: 320px) {
+  .titleProductCarousel{
+    font-size: 7vw;
+}
+  .productCarousel{
+    width:90vw;
+    margin: 0;
+    padding: 0;
+  }
+    .productCard {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        border-radius: 10px;
+        width: 230px;
+        height: 260px;
+        margin: 0 10vw;
+        
       }
       .productImage{
           border: none;
