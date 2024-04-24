@@ -7,6 +7,9 @@ nav.bg-header, #navbarSuperior {
     background-color: #b67352;
   }
 
+  #iconoNavBar{
+    border: none;
+  }
   form.d-flex {
     position: relative;
   }
@@ -41,6 +44,13 @@ nav.bg-header, #navbarSuperior {
       height: auto;
       padding: 0;
       margin: 0;    
+    }
+
+    .client-name{
+      display: none;
+    }
+    div a i {
+      font-size: 25px;
     }
   }
     
