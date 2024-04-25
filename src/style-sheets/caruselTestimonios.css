@@ -24,7 +24,6 @@ article {
     border-radius: 15px;
     background: #fff;
     transform-style: preserve-3d;
-    transition: 0.5s;
     backface-visibility: hidden;
 }
 .card .box.front{
