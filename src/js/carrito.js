@@ -70,9 +70,9 @@ function actualizarTabla(){
 
   // Obtener el cuerpo de la tabla donde se insertarán las filas
 const cuerpoTabla = document.getElementById("table-carrito");
-
+let vacio = " ";
 // Limpiar el contenido actual de la tabla
-cuerpoTabla.innerHTML = "";
+cuerpoTabla.innerHTML = vacio;
 
 // Generar las filas de la tabla con los productos del carrito
 productosCarrito.forEach((producto) => {
