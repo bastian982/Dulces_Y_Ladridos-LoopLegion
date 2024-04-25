@@ -23,3 +23,4 @@ Este proyecto tiene como objetivo crear una plataforma en línea que no solo ofr
 - Daniela Maciel Carrazana Gomez
 - Victor Alfredo Mairena Almendares
 - Erick Ignacio Contreras Martínez 
+- Carlos Cabrera Chongo
