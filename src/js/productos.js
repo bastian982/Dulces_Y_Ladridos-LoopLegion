@@ -112,7 +112,7 @@ categoriaBrownies.addEventListener("click", () => {
   printFiltered("Brownie");
 });
 
-const user = JSON.parse(localStorage.getItem('login-success')) || false;
+/* const user = JSON.parse(localStorage.getItem('login-success')) || false;
 if (user){
   document.querySelector('.dropdown').innerHTML = `
       <a href="./src/pages/formulario-login.html" class=" dropdown-toggle"
@@ -126,7 +126,7 @@ if (user){
 									title="Carrito"></i></a>
       `
   document.querySelector('.client-name').innerHTML = `${user.name} ${user.lastName}`
-}
+} */
 
 const logout = document.querySelector('.logout');
 logout.addEventListener('click', () =>{
