@@ -31,16 +31,13 @@ document.getElementById("main-header").innerHTML = `
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 						<li class="nav-item ">
-							<a class="nav-link active text-white " aria-current="page" href="../index.html">Inicio</a>
+							<a class="nav-link active text-white " aria-current="page" href="/index.html">Inicio</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link text-white " href="./productos.html">Productos</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link text-white" href="./publicaciones.html">Publicaciones</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link text-white" href="./experiencia.html">Experiencia</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link text-white" href="./nosotros.html">Nosotros</a>
