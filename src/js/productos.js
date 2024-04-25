@@ -42,7 +42,7 @@ const addToCart = (productoId) => {
 
 const cards = (productos) => {
   return productos.map((producto, index) => `
-    <div class="card col-3 m-3 p-0 ${index % 2 === 0 ? 'cardNaranja' : 'cardCafe'}  style="width: 21rem;">
+    <div class="card col-3 m-2 p-0 ${index % 2 === 0 ? 'cardNaranja' : 'cardCafe'}  style="width: 21rem;">
       <img src="${producto.imagen}"  class="card-img-top mt-2 img-card" alt="...">
       <div class="card-body">
         <h6 class="card-title">${producto.name}</h6>
@@ -113,7 +113,7 @@ categoriaBrownies.addEventListener("click", () => {
 document.addEventListener('DOMContentLoaded', () => {
   const user = JSON.parse(localStorage.getItem('login-success')) || false;
   if (user) {
-      const dropdown = document.querySelector('.dropdown');
+      const dropdown = document.querySelector('.dropdown-login');
       const clientName = document.querySelector('.client-name');
 
       if (dropdown && clientName) {
@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
           alert('Hasta Pronto!');
           localStorage.removeItem('login-success');
   
-          const dropdown = document.querySelector('.dropdown');
+          const dropdown = document.querySelector('.dropdown-login');
           if (dropdown) {
               dropdown.innerHTML = `
                   <a href="./formulario-login.html"><i class="fa-regular fa-user" title="Login / Registro"></i></a>
