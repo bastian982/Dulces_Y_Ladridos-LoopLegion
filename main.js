@@ -40,18 +40,20 @@ if (user){
   document.querySelector('.client-name').innerHTML = `${user.name} ${user.lastName}`
 }
 
-const logout = document.querySelector('.logout');
-logout.addEventListener('click', () =>{
-  alert('Hasta Pronto!');
-  localStorage.removeItem('login-success');
+document.addEventListener('DOMContentLoaded', () => {
+  const logout = document.querySelector('.logout');
+  if (logout) {
+    logout.addEventListener('click', () =>{
+      alert('Hasta Pronto!');
+      localStorage.removeItem('login-success');
 
-  document.querySelector('.dropdown').innerHTML = `
-  <a href="./src/pages/formulario-login.html"><i
-              class="fa-regular fa-user" title="Login / Registro"></i></a>
-              
-          <a href="./src/pages/carrito.html"><i class="fa-solid fa-cart-shopping"
-              title="Carrito"></i></a>
-  `
-})
-
-
+      document.querySelector('.dropdown').innerHTML = `
+      <a href="./src/pages/formulario-login.html"><i
+                  class="fa-regular fa-user" title="Login / Registro"></i></a>
+                  
+              <a href="./src/pages/carrito.html"><i class="fa-solid fa-cart-shopping"
+                  title="Carrito"></i></a>
+      `;
+    });
+  }
+});
