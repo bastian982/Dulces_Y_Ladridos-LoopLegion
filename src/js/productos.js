@@ -42,8 +42,7 @@ const addToCart = (productoId) => {
 
 const cards = (productos) => {
   return productos.map((producto, index) => `
-    <div class="col-6 col-md-3">
-    <div class="card  m-4 ${index % 2 === 0 ? 'cardNaranja' : 'cardCafe'}" >
+    <div class="card col-3 m-3 p-0 ${index % 2 === 0 ? 'cardNaranja' : 'cardCafe'}  style="width: 21rem;">
       <img src="${producto.imagen}"  class="card-img-top mt-2 img-card" alt="...">
       <div class="card-body">
         <h6 class="card-title">${producto.name}</h6>
@@ -52,7 +51,6 @@ const cards = (productos) => {
           <button id="${producto.id}cartBtn" class="btnProduct" > <img src="../img/carrito.png" alt=""> </button>
         </div> 
       </div>
-    </div>
     </div>
   `);
 };

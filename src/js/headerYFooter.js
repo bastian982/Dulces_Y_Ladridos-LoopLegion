@@ -40,9 +40,6 @@ document.getElementById("main-header").innerHTML = `
 							<a class="nav-link text-white" href="./publicaciones.html">Publicaciones</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link text-white" href="./experiencia.html">Experiencia</a>
-						</li>
-						<li class="nav-item">
 							<a class="nav-link text-white" href="./nosotros.html">Nosotros</a>
 						</li>
 						<li class="nav-item">
