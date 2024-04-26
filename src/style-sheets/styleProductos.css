@@ -1,3 +1,4 @@
+
 #contenedorCategorias {
     background-color: #8CB9BD;
     color: #B67352;
@@ -24,6 +25,7 @@
     background-color: #ECB159;
     width: 250px;
     height: 500px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .cardCafe {

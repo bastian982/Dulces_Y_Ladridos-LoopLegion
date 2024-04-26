@@ -9,6 +9,7 @@ article {
 	margin-top: 5%;
  
 }
+
 .card {
     width: 100%;
     height: 300px;
@@ -58,7 +59,7 @@ article {
     transform: rotateY(180deg);
 }
 .box.front h2 {
-	font-family: 'Bebas Neue', cursive;
+	font-family: 'serif sans', cursive;
 }
 .box.front h4 {
 	font-size: 18px;
@@ -90,8 +91,8 @@ article h2{
 }
 
 h4{
-    text-align: center;
-    padding-top: 50px;    
+    text-align: center;  
+    padding-top: 50px;
     font-weight: bold;
 }
 
