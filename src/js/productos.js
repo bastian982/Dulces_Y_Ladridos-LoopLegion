@@ -46,7 +46,7 @@ const cards = (productos) => {
       <img src="${producto.imagen}"  class="card-img-top mt-2 img-card" alt="...">
       <div class="card-body">
         <h6 class="card-title">${producto.name}</h6>
-        <p class="card-text">$ ${producto.price}</p>
+        <p class="card-text">$ ${producto.price}.00 MXN</p>
         <div class="text-end">
           <button id="${producto.id}cartBtn" class="btnProduct" > <img src="../img/carrito.png" alt=""> </button>
         </div> 
