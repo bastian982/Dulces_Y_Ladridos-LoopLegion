@@ -10,33 +10,21 @@
 
 document.getElementById("main-header").innerHTML = `
 <nav class="container-sm-fluid ps-0 pe-0 pt-0">
-<div class="navbar navbar-expand-lg  justify-content-between navbarSuperior" id="navbarSuperior">
-  <a id="botonBusqueda" class="btn nav-link navbar-toggler" role="button" data-bs-toggle="collapse"
-    data-bs-target="#searchContent" aria-controls="searchContent" aria-expanded="false"
-    aria-label="Toggle navigation">
-    <i class="fa-solid fa-magnifying-glass"></i>
-  </a>
-  <a class="navbar-brand"><img src="../img/logo_y_nombre.png" alt="Logo y nombre de la empresa" /></a> <!-- ../img/logo_y_nombre.png -->
-  <div class="navbar">
-    <div class="collapse navbar-collapse" id="searchContent">
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search" />
-        <button class="btn-search text-white" type="submit">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
-      </form>
-      <div class="dropdown">
-        <a href="./formulario-login.html"><i class="fa-regular fa-user" title="Login / Registro"></i></a>
-        <span class="client-name"></span>
-        <a href="../pages/carrito.html"><i class="fa-solid fa-cart-shopping" title="Carrito"></i></a>
-      </div>
-    </div>
+			<div class="navbar navbar-expand-lg  justify-content-between navbarSuperior" id="navbarSuperior"><!-- div color azul -->
+				<a id="logoDulcesYLadridos" class="navbar-brand"><img src="../img/logo_y_nombre.png" alt="Logo y nombre de la empresa" /></a>
+				<div class="navbar dropdown" id="client">
+					<a href="./formulario-login.html"><i class="fa-regular fa-user" title="Login / Registro"></i></a>
+					<span class="client-name "></span>
+					<a href="./carrito.html"><i class="fa-solid fa-cart-shopping" title="Carrito"></i></a>
+				</div>
+				<button class="navbar-toggler m-2" type="button" data-bs-toggle="collapse"
+					data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+					aria-expanded="false" aria-label="Toggle navigation" id="#iconoNavBar">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+			</div>
 
-    <button class="navbar-toggler m-2" type="button" data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-      aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+		</nav>
 
 
 
@@ -70,10 +58,23 @@ document.getElementById("main-header").innerHTML = `
 				</div>
 			</div>
 		</nav>
-
-		
-
 `;
+
+const user = JSON.parse(localStorage.getItem('login-success')) || false;
+if (user){
+  document.querySelector('#client').innerHTML = `
+      <a href="./src/pages/formulario-login.html" class=" dropdown-toggle"
+								type="button" data-bs-toggle="dropdown" aria-expanded="false"><i
+									class="fa-regular fa-user" title="Login / Registro"></i></a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item logout" href="#">Cerrar Sesión</a></li>
+							</ul>
+							<span class="client-name"></span>
+							<a href="../pages/carrito.html"><i class="fa-solid fa-cart-shopping"
+									title="Carrito"></i></a>
+      `
+  document.querySelector('.client-name').innerHTML = `${user.name} ${user.lastName}`
+}
 
 /*            ------------------- Footer -------------------
 

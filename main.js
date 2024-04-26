@@ -26,7 +26,7 @@ export {setDataLocalStorage}
 
 const user = JSON.parse(localStorage.getItem('login-success')) || false;
 if (user){
-  document.querySelector('.dropdown').innerHTML = `
+  document.querySelector('#client').innerHTML = `
       <a href="./src/pages/formulario-login.html" class=" dropdown-toggle"
 								type="button" data-bs-toggle="dropdown" aria-expanded="false"><i
 									class="fa-regular fa-user" title="Login / Registro"></i></a>

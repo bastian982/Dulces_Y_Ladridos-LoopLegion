@@ -1,4 +1,4 @@
-const user = JSON.parse(localStorage.getItem('login-success')) || false;
+/* const user = JSON.parse(localStorage.getItem('login-success')) || false;
 if (user){
   document.querySelector('.dropdown').innerHTML = `
       <a href="./src/pages/formulario-login.html" class=" dropdown-toggle"
@@ -13,7 +13,7 @@ if (user){
       `
   document.querySelector('.client-name').innerHTML = `${user.name} ${user.lastName}`
 }
-
+ */
 document.addEventListener('DOMContentLoaded', () => {
   const logout = document.querySelector('.logout');
   if (logout) {
@@ -22,10 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
       localStorage.removeItem('login-success');
 
       document.querySelector('.dropdown').innerHTML = `
-      <a href="./src/pages/formulario-login.html"><i
+      <a href="../pages/formulario-login.html"><i
                   class="fa-regular fa-user" title="Login / Registro"></i></a>
                   
-              <a href="./src/pages/carrito.html"><i class="fa-solid fa-cart-shopping"
+              <a href="../pages/carrito.html"><i class="fa-solid fa-cart-shopping"
                   title="Carrito"></i></a>
       `;
     });
