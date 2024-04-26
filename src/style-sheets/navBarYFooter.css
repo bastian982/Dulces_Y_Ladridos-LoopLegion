@@ -1,0 +1,66 @@
+
+nav.bg-header, #navbarSuperior {
+    background-color: #8cb9bd;
+  }
+  
+  .bg-header2 {
+    background-color: #b67352;
+  }
+
+  #iconoNavBar{
+    border: none;
+  }
+  form.d-flex {
+    position: relative;
+  }
+  
+  form .btn-search {
+    background: #b67352;
+    position: absolute;
+    border: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    padding: 0 15px;
+    border-radius: 0 15px;
+  }
+  
+  div a i {
+    padding: 10px;
+    font-size: 30px;
+    color: #b67352;
+  }
+  @media (max-width: 991px){
+    #botonBusqueda{
+      width: fit-content;
+      border: none;
+      padding: 0;
+      margin: 5px 0 0 10px;   
+  
+    }
+    i.fa-solid{
+      width: 5vw;
+      height: auto;
+      padding: 0;
+      margin: 0;    
+    }
+
+    .client-name{
+      display: none;
+    }
+    div a i {
+      font-size: 25px;
+    }
+  }
+    
+@media (max-width: 375px) {
+    #logoDulcesYLadridos{
+        width: 60vw; 
+        margin: 0;
+    }
+    /* #navbarSuperior{
+        
+        width: fit-content;
+    } */
+}

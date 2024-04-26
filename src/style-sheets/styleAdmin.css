@@ -1,5 +1,44 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 input[type=text] {
     word-wrap: break-word !important;
     word-break: break-all;
+}
+main{
+    font-family: "Lilita One", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+body{
+    background-image: url("../img/Fondo-de-pagina-huellitas.png");
+}
+.thead{
+    border-radius: 10px;
+}
+ .productsRow::nth-child(even){
+    border: solid red;
+    background-color: aqua;
+
+}
+#addProducts, #addPublicaciones{
+    background-color: antiquewhite;
+    border-radius: 10px;
+    padding: 3rem;
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.fw{
+    font-family: "Lilita One", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+#main-footer{
+    margin-top: 35vh;
+    width: 100%;
+    position: relative;
+    top:100%; left: 0%;
 }

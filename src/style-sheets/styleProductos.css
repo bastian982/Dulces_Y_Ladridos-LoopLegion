@@ -24,14 +24,13 @@
 .cardNaranja {
     background-color: #ECB159;
     width: 250px;
-    height: 500px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 350px;
 }
 
 .cardCafe {
     background-color: #B67352;
     width: 250px;
-    height: 500px;
+    height: 350px;
 }
 
 .btnProduct {
@@ -48,21 +47,17 @@
     align-items: center;
 }
 
+.img-card{
+    height: 200px;
+}
 
+.card-body{
+    height: 50px;
+}
 
 @media screen and (max-width: 900px) {
     #contenedorCategorias {
         display: none;
-    }
-
-    .cardNaranja {
-        background-color: #ECB159;
-        width: 180px;
-    }
-
-    .cardCafe {
-        background-color: #B67352;
-        width: 180px;
     }
 
     #botonCategorias {
@@ -70,4 +65,11 @@
         background-color: #8CB9BD;
         color: #B67352;
     }
+
+    .dropdown-menu {
+        background-color: #8CB9BD ;
+    }
+
 }
+
+
