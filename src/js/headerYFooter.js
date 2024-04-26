@@ -38,7 +38,7 @@ document.getElementById("main-header").innerHTML = `
       <span class="navbar-toggler-icon"></span>
     </button>
 
-<<<<<<< HEAD
+
 
   </div>
 
@@ -47,35 +47,6 @@ document.getElementById("main-header").innerHTML = `
 </nav>
 
 <nav class="navbar navbar-expand-lg bg-header2">
-<div class="container-fluid">
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-      <li class="nav-item ">
-        <a class="nav-link active text-white" aria-current="page" href="../../index.html">Inicio</a> <!-- ../../index.html -->
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-white" href="./productos.html">Productos</a> <!-- ./productos.html -->
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-white" href="./publicaciones.html">Publicaciones</a> <!-- ./publicaciones.html -->
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-white" href="./experiencia.html">Experiencia</a> <!-- ./experiencia.html -->
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-white" href="./nosotros.html">Nosotros</a> <!-- ./nosotros.html -->
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-white" href="./contacto.html">Contáctanos</a> <!-- ./contacto.html -->
-      </li>
-    </ul>
-    </form>
-  </div>
-</div>
-</nav>
-=======
-		<nav class="navbar navbar-expand-lg bg-header2">
 			<div class="container-fluid">
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -99,7 +70,9 @@ document.getElementById("main-header").innerHTML = `
 				</div>
 			</div>
 		</nav>
->>>>>>> 3275625 (arreglar tarjetas de productos encimadas)
+
+		
+
 `;
 
 /*            ------------------- Footer -------------------

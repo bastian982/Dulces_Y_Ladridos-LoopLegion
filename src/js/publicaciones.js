@@ -118,9 +118,10 @@ categoriaRecetas.addEventListener("click", () => {
   printFiltered("recetas");
 });
 
-const user = JSON.parse(localStorage.getItem('login-success')) || false;
-if (user){
-  document.querySelector('.dropdown').innerHTML = `
+const user = JSON.parse(localStorage.getItem("login-success")) || false;
+
+if (user) {
+  document.querySelector(".dropdown").innerHTML = `
       <a href="./src/pages/formulario-login.html" class=" dropdown-toggle"
 								type="button" data-bs-toggle="dropdown" aria-expanded="false"><i
 									class="fa-regular fa-user" title="Login / Registro"></i></a>
@@ -130,20 +131,25 @@ if (user){
 							<span class="client-name"></span>
 							<a href="./carrito.html"><i class="fa-solid fa-cart-shopping"
 									title="Carrito"></i></a>
-      `
-  document.querySelector('.client-name').innerHTML = `${user.name} ${user.lastName}`
+      `;
+  document.querySelector(
+    ".client-name"
+  ).innerHTML = `${user.name} ${user.lastName}`;
 }
+document.addEventListener("DOMContentLoaded", () => {
+  const logout = document.querySelector(".logout");
+  if (logout) {
+    logout.addEventListener("click", () => {
+      alert("Hasta Pronto!");
+      localStorage.removeItem("login-success");
 
-const logout = document.querySelector('.logout');
-logout.addEventListener('click', () =>{
-  alert('Hasta Pronto!');
-  localStorage.removeItem('login-success');
-
-  document.querySelector('.dropdown').innerHTML = `
-  <a href="./formulario-login.html"><i
-              class="fa-regular fa-user" title="Login / Registro"></i></a>
-              
-          <a href="./carrito.html"><i class="fa-solid fa-cart-shopping"
-              title="Carrito"></i></a>
-  `
-})
+      document.querySelector(".dropdown").innerHTML = `
+      <a href="./src/pages/formulario-login.html"><i
+                  class="fa-regular fa-user" title="Login / Registro"></i></a>
+                  
+              <a href="./src/pages/carrito.html"><i class="fa-solid fa-cart-shopping"
+                  title="Carrito"></i></a>
+      `;
+    });
+  }
+});
