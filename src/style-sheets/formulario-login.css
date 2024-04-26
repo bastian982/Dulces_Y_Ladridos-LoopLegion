@@ -6,14 +6,19 @@
     --color-oscuro: #B67352;
     --color-azul: #8CB9BD;
 }
+.titulo-inicio-sesion,
+.correo-inicio-sesion,
+.contraseña-inicio-sesion{
+    color: white;
+}
 
 #formulario-login {    /* Fondo-de-pagina-huellitas 2 */
 margin: 10%;
 padding: 5% 10%;
-border-radius: 2em;
+border-radius: 10px;
 border-style: solid;
 border-color: black;
-background: url(../img/Fondo-de-pagina-huellitas.png);
+background-color: #B67352;
 font-weight: bold;
 }
 
@@ -25,6 +30,10 @@ font-weight: bold;
     border-style: none;
     &:active{
         transform: scale(0.95);
+    }
+
+    &:hover{
+        color: white;
     }
 }
 
@@ -40,6 +49,10 @@ font-weight: bold;
     &:active{
         transform: scale(0.95);
     }
+
+    &:hover{
+        color: white;
+    }
 }
 
 #boton-forgot-password {
@@ -47,6 +60,6 @@ font-weight: bold;
     color: black;
     cursor:pointer;
     &:hover{
-        color: var(--color-oscuro);
+        color: white;
     }
 }

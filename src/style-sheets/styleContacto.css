@@ -21,6 +21,14 @@ body{
     resize: none;
 }
 
+.btn-contacto-enviar{
+    background-color: #8cb9bd;
+    padding: 0 3%;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+}
+
 .custom-img {
     max-width: 100%;
     height: auto;
