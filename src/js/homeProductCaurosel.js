@@ -13,7 +13,7 @@ function createCarouselItems(){
 
 function createSlide(producto, index){
     return `<div class="carousel-item productCarousel-item ${ index == 0 ? "active":""} ">
-    <div class="carousel-slide">
+    <div class="carousel-slide mx-auto">
     <!-- Información producto inicio -->
     <div class="card productCard">
       <img src="${producto.imagen}" class="card-img-top productImage" alt="...">

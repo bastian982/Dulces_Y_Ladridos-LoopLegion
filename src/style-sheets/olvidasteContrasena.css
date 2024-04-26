@@ -11,45 +11,65 @@
 
 }
 
- h3,h5{
+.titulo-h3, .titulo-h5{
     text-align: center;
     margin-bottom: 30px;
+    color: white;
+   
 }
 
 
 
-.form-olvidaste-contrasena{
+/* .form-olvidaste-contrasena{
     display: flex;
     justify-content: center;
-    
+    width: 300px;
     margin-bottom: 30px;
 
-} 
+} */ 
 
 #inputResetPassword{
     border-radius: 10px;
     border: none;
-    height: 50px;
+    height: 40px;
     text-align: center;
+    width: 300px;
+    margin-bottom: 20px;
 }
 
 .botones{
     display: flex;
+    justify-content: center;
 }
 
-.btn-olvidaste-contrasena{
+.btn-recuperar-contrasena{
     width: 100px;
     border-radius: 10px;
     border: none;
     height: 50px;  
-    background-color: transparent;
-    color: white;
+    background-color: #ECB159;
+    color: black;
+    margin-right: 10px;
+    font-weight: bold;
+    &:hover{
+        color: white;
+    }
 }
 
-.btn-olvidaste-contrasena a {
-    text-decoration: none;
-    color: white;
-} 
+.btn-inicio-sesion{
+    width: 100px;
+    border-radius: 10px;
+    border: none;
+    height: 50px;  
+    background-color: #8CB9BD;
+    color: black;
+    margin-right: 10px;
+    font-weight: bold;
+    &:hover{
+        color: white;
+    }
+}
+
 
 .img-recuperar-contraseña{
     height: 300px;

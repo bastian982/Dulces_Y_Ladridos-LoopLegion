@@ -84,7 +84,7 @@ export function createTable() {
     const updateTable = document.getElementById("updateTable");
     updateTable.innerHTML =`
     <div class="container-fluid p-0">
-      <table class="table productTable">
+      <table class="table  table-info table-striped productTable">
     <thead>
       <tr>
         <th scope="col">id</th>

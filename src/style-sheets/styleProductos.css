@@ -59,25 +59,16 @@
         display: none;
     }
 
-    .cardNaranja {
-        background-color: #ECB159;
-        width: 150px;
-        margin: 0;
-    }
-
-    .cardCafe {
-        background-color: #B67352;
-        width: 150px;
-        margin: 0;
-    }
-
     #botonCategorias {
         display: block;
         background-color: #8CB9BD;
         color: #B67352;
     }
 
-    .img-card{
-        height: 50%;
+    .dropdown-menu {
+        background-color: #8CB9BD ;
     }
+
 }
+
+
