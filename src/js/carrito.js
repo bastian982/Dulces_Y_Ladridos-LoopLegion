@@ -14,6 +14,18 @@ productosCarrito.forEach((producto) => {
 // Guardar los cambios en el localStorage
 localStorage.setItem("productosCarrito", JSON.stringify(productosCarrito));
 
+//Muestra mensaje en carrito vacio
+function mostrarCarritoVacio() {
+  const productosCarrito =
+  JSON.parse(localStorage.getItem("productosCarrito")) || [];
+  const cuerpoTabla = document.getElementById("table-carrito");
+  if(productosCarrito.length == 0){
+    console.log("carrito vacio");
+    cuerpoTabla.innerHTML = `<tr><th scope="row" rowspan = "2" style="background-color:#F0F0F0; margin:0;padding:0;"></th><td style="background-color:#F0F0F0; margin:0;padding:0;"></td><td id="emptyCar" ></td><td style="background-color:#F0F0F0; width:0; margin:0;padding:0;"></td></tr>`
+  }
+  
+}
+
 function sumar(cantidad, id) {
   const productosCarrito =
   JSON.parse(localStorage.getItem("productosCarrito")) || [];
@@ -55,6 +67,7 @@ function restar(cantidad, id) {
       localStorage.setItem("productosCarrito", JSON.stringify(productosCarrito));
 
       actualizarTabla();
+      mostrarCarritoVacio();
   } else {
       console.log("Objeto no encontrado con el ID especificado.");
   }
@@ -64,46 +77,50 @@ function restar(cantidad, id) {
 
 function actualizarTabla(){
   console.log("Actualizar tabla");
+  
   const productosCarrito =
   JSON.parse(localStorage.getItem("productosCarrito")) || [];
   console.log(productosCarrito);
 
   // Obtener el cuerpo de la tabla donde se insertarán las filas
 const cuerpoTabla = document.getElementById("table-carrito");
-
+let vacio = " ";
 // Limpiar el contenido actual de la tabla
-cuerpoTabla.innerHTML = "";
+cuerpoTabla.innerHTML = vacio;
 
 // Generar las filas de la tabla con los productos del carrito
 productosCarrito.forEach((producto) => {
   const fila = `
   <tr >
       <th  scope="row" rowspan = "2"><img src="${producto.imagen}"  class=" card-img-top mt-2 imgProduct " alt="..."></th>
-      <td>${producto.name}</td>
+      <td class="productInCarTxt">${producto.name}</td>
       <td>
-      <button id="${producto.id}cartBtn" class="btnProduct btn btn-primary btn-sm" onclick="restar('${producto.cantidad}' ,'${producto.id}')" > -</button>
+      <button id="${producto.id}cartBtn" class="btnProduct btn btn-sm" onclick="restar('${producto.cantidad}' ,'${producto.id}')" > -</button>
       ${producto.cantidad}
-      <button id="${producto.id}cartBtn" class="btnProduct btn btn-primary btn-sm" onclick="sumar('${producto.cantidad}' ,'${producto.id}')" > +</button>
+      <button id="${producto.id}cartBtn" class="btnProduct btn btn-sm" onclick="sumar('${producto.cantidad}' ,'${producto.id}')" > +</button>
       </td>
-      <td>Precio Unitario:${producto.price}</td>
+      <td class="productInCarTxt">Precio Unitario: $${producto.price}.00 MXN</td>
   </tr>
     <tr>
       <td>${producto.description}</td>
       <td></td>
-      <td>Precio Total: ${producto.price * producto.cantidad}</td>
+      <td class="productInCarTxt">Precio Total: $${producto.price * producto.cantidad}.00 MXN</td>
     </tr>
   `;
   
   cuerpoTabla.innerHTML += fila ;
+ 
 });
 
-  let total= 0;
+  let totalNumero= 0;
+  let total ="";
   let numProductos= 0;
   productosCarrito.forEach((producto) =>{
-    total += (producto.price * producto.cantidad);
+    totalNumero += (producto.price * producto.cantidad);
     numProductos += (producto.cantidad);
   });
-  
+  total = `$${totalNumero}.00`
+  mostrarCarritoVacio();
   document.getElementById("footer-total").innerHTML = total
   document.getElementById("total").innerHTML = total
   document.getElementById("numProductos").innerHTML = numProductos
@@ -123,42 +140,31 @@ if (indice !== -1) {
     
     // Guardar los cambios en el localStorage
     localStorage.setItem("productosCarrito", JSON.stringify(productosCarrito));
+    mostrarCarritoVacio();
     
     console.log(`Objeto con ID ${id} eliminado.`);
     actualizarTabla();
+   
 } else {
     console.log(`Objeto no encontrado con el ID especificado.`);
 }
 }
 
-/* <input type="number" id="${producto.name}Pieces" name="${producto.name}Pieces" value="1" min="1" max="${producto.pieces}" /> */
 
-/* const user = JSON.parse(localStorage.getItem('login-success')) || false;
-if (user){
-  document.querySelector('.dropdown').innerHTML = `
-      <a href="./src/pages/formulario-login.html" class=" dropdown-toggle"
-								type="button" data-bs-toggle="dropdown" aria-expanded="false"><i
-									class="fa-regular fa-user" title="Login / Registro"></i></a>
-							<ul class="dropdown-menu">
-								<li><a class="dropdown-item logout" href="#">Cerrar Sesión</a></li>
-							</ul>
-							<span class="client-name"></span>
-							<a href="./src/pages/carrito.html"><i class="fa-solid fa-cart-shopping"
-									title="Carrito"></i></a>
-      `
-  document.querySelector('.client-name').innerHTML = `${user.name} ${user.lastName}`
-} */
-
-const logout = document.querySelector('.logout');
-logout.addEventListener('click', () =>{
-  alert('Hasta Pronto!');
-  localStorage.removeItem('login-success');
-
-  document.querySelector('.dropdown').innerHTML = `
-  <a href="./src/pages/formulario-login.html"><i
-              class="fa-regular fa-user" title="Login / Registro"></i></a>
-              
-          <a href="./src/pages/carrito.html"><i class="fa-solid fa-cart-shopping"
-              title="Carrito"></i></a>
-  `
-})
+document.addEventListener('DOMContentLoaded', () => {
+  const logout = document.querySelector('.logout');
+  if (logout) {
+      logout.addEventListener('click', () => {
+          alert('Hasta Pronto!');
+          localStorage.removeItem('login-success');
+  
+          const dropdown = document.querySelector('.dropdown');
+          if (dropdown) {
+              dropdown.innerHTML = `
+                  <a href="../pages/formulario-login.html"><i class="fa-regular fa-user" title="Login / Registro"></i></a>
+                  <a href="../pages/carrito.html"><i class="fa-solid fa-cart-shopping" title="Carrito"></i></a>
+              `;
+          }
+      });
+  }
+});

@@ -1,0 +1,17 @@
+
+.formContainer{
+    border: solid black 3px;
+    border-radius: 10px;
+}
+.btn-register-user{
+    background-color: #8cb9bd;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    height: 40px;
+    padding: 0 3%;
+}
+
+.btn-register-user:hover{
+    color: white;
+}
