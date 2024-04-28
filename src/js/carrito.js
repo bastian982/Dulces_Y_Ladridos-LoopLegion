@@ -99,20 +99,12 @@ productosCarrito.forEach((producto) => {
       ${producto.cantidad}
       <button id="${producto.id}cartBtn" class="btnProduct btn btn-sm" onclick="sumar('${producto.cantidad}' ,'${producto.id}')" > +</button>
       </td>
-<<<<<<< HEAD
-      <td class="productInCarTxt">Precio Unitario: $${producto.price}.00</td>
-=======
       <td class="productInCarTxt">Precio Unitario: $${producto.price}.00 MXN</td>
->>>>>>> victor
   </tr>
     <tr>
       <td>${producto.description}</td>
       <td></td>
-<<<<<<< HEAD
-      <td class="productInCarTxt">Precio Total: $${producto.price * producto.cantidad}.00</td>
-=======
       <td class="productInCarTxt">Precio Total: $${producto.price * producto.cantidad}.00 MXN</td>
->>>>>>> victor
     </tr>
   `;
   
@@ -169,8 +161,8 @@ document.addEventListener('DOMContentLoaded', () => {
           const dropdown = document.querySelector('.dropdown');
           if (dropdown) {
               dropdown.innerHTML = `
-                  <a href="./formulario-login.html"><i class="fa-regular fa-user" title="Login / Registro"></i></a>
-                  <a href="./carrito.html"><i class="fa-solid fa-cart-shopping" title="Carrito"></i></a>
+                  <a href="../pages/formulario-login.html"><i class="fa-regular fa-user" title="Login / Registro"></i></a>
+                  <a href="../pages/carrito.html"><i class="fa-solid fa-cart-shopping" title="Carrito"></i></a>
               `;
           }
       });
