@@ -99,12 +99,20 @@ productosCarrito.forEach((producto) => {
       ${producto.cantidad}
       <button id="${producto.id}cartBtn" class="btnProduct btn btn-sm" onclick="sumar('${producto.cantidad}' ,'${producto.id}')" > +</button>
       </td>
+<<<<<<< HEAD
       <td class="productInCarTxt">Precio Unitario: $${producto.price}.00</td>
+=======
+      <td class="productInCarTxt">Precio Unitario: $${producto.price}.00 MXN</td>
+>>>>>>> victor
   </tr>
     <tr>
       <td>${producto.description}</td>
       <td></td>
+<<<<<<< HEAD
       <td class="productInCarTxt">Precio Total: $${producto.price * producto.cantidad}.00</td>
+=======
+      <td class="productInCarTxt">Precio Total: $${producto.price * producto.cantidad}.00 MXN</td>
+>>>>>>> victor
     </tr>
   `;
   
