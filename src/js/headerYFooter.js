@@ -11,7 +11,7 @@
 document.getElementById("main-header").innerHTML = `
 <nav class="container-sm-fluid ps-0 pe-0 pt-0">
 			<div class="navbar navbar-expand-lg  justify-content-between navbarSuperior" id="navbarSuperior"><!-- div color azul -->
-				<a id="logoDulcesYLadridos" class="navbar-brand"><img src="../img/logo_y_nombre.png" alt="Logo y nombre de la empresa" /></a>
+				<a href="/index.html" id="logoDulcesYLadridos" class="navbar-brand"><img src="../img/logo_y_nombre.png" alt="Logo y nombre de la empresa" /></a>
 				<div class="navbar dropdown" id="client">
 					<a href="./formulario-login.html"><i class="fa-regular fa-user" title="Login / Registro"></i></a>
 					<span class="client-name "></span>
