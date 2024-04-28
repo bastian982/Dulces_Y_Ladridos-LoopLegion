@@ -11,8 +11,8 @@
 document.getElementById("main-header").innerHTML = `
 <nav class="container-sm-fluid ps-0 pe-0 pt-0">
 			<div class="navbar navbar-expand-lg  justify-content-between navbarSuperior" id="navbarSuperior"><!-- div color azul -->
-				<a id="logoDulcesYLadridos" class="navbar-brand"><img src="../img/logo_y_nombre.png" alt="Logo y nombre de la empresa" /></a>
-				<div class="navbar dropdown-login" id="client">
+				<a href="/index.html" id="logoDulcesYLadridos" class="navbar-brand"><img src="../img/logo_y_nombre.png" alt="Logo y nombre de la empresa" /></a>
+				<div class="navbar dropdown" id="client">
 					<a href="./formulario-login.html"><i class="fa-regular fa-user" title="Login / Registro"></i></a>
 					<span class="client-name "></span>
 					<a href="./carrito.html"><i class="fa-solid fa-cart-shopping" title="Carrito"></i></a>
@@ -26,12 +26,20 @@ document.getElementById("main-header").innerHTML = `
 
 		</nav>
 
-		<nav class="navbar navbar-expand-lg bg-header2">
+
+
+  </div>
+
+</div>
+
+</nav>
+
+<nav class="navbar navbar-expand-lg bg-header2">
 			<div class="container-fluid">
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 						<li class="nav-item ">
-							<a class="nav-link active text-white " aria-current="page" href="/index.html">Inicio</a>
+						    <a class="nav-link active text-white " aria-current="page" href="../../index.html">Inicio</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link text-white " href="./productos.html">Productos</a>
@@ -62,7 +70,7 @@ if (user){
 								<li><a class="dropdown-item logout" href="#">Cerrar Sesión</a></li>
 							</ul>
 							<span class="client-name"></span>
-							<a href="./src/pages/carrito.html"><i class="fa-solid fa-cart-shopping"
+							<a href="../pages/carrito.html"><i class="fa-solid fa-cart-shopping"
 									title="Carrito"></i></a>
       `
   document.querySelector('.client-name').innerHTML = `${user.name} ${user.lastName}`

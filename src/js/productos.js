@@ -42,11 +42,11 @@ const addToCart = (productoId) => {
 
 const cards = (productos) => {
   return productos.map((producto, index) => `
-    <div class="card col-3 m-2 p-0 ${index % 2 === 0 ? 'cardNaranja' : 'cardCafe'}  style="width: 21rem;">
+    <div class="card col-3 m-3 p-0 ${index % 2 === 0 ? 'cardNaranja' : 'cardCafe'}  style="width: 21rem;">
       <img src="${producto.imagen}"  class="card-img-top mt-2 img-card" alt="...">
       <div class="card-body">
         <h6 class="card-title">${producto.name}</h6>
-        <p class="card-text">$ ${producto.price}</p>
+        <p class="card-text">$ ${producto.price}.00 MXN</p>
         <div class="text-end">
           <button id="${producto.id}cartBtn" class="btnProduct" > <img src="../img/carrito.png" alt=""> </button>
         </div> 
@@ -110,45 +110,36 @@ categoriaBrownies.addEventListener("click", () => {
   printFiltered("Brownie");
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-  const user = JSON.parse(localStorage.getItem('login-success')) || false;
-  if (user) {
-      const dropdown = document.querySelector('.dropdown-login');
-      const clientName = document.querySelector('.client-name');
-
-      if (dropdown && clientName) {
-          dropdown.innerHTML = `
-              <a href="./src/pages/formulario-login.html" class=" dropdown-toggle"
-                  type="button" data-bs-toggle="dropdown" aria-expanded="false"><i
-                      class="fa-regular fa-user" title="Login / Registro"></i></a>
-              <ul class="dropdown-menu">
-                  <li><a class="dropdown-item logout" href="#">Cerrar Sesión</a></li>
-              </ul>
-              <span class="client-name">${user.name} ${user.lastName}</span>
-              <a href="./carrito.html"><i class="fa-solid fa-cart-shopping"
-                      title="Carrito"></i></a>
-          `;
-      }
-  }
-});
-
+/* const user = JSON.parse(localStorage.getItem('login-success')) || false;
+if (user){
+  document.querySelector('.dropdown').innerHTML = `
+      <a href="./src/pages/formulario-login.html" class=" dropdown-toggle"
+								type="button" data-bs-toggle="dropdown" aria-expanded="false"><i
+									class="fa-regular fa-user" title="Login / Registro"></i></a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item logout" href="#">Cerrar Sesión</a></li>
+							</ul>
+							<span class="client-name"></span>
+							<a href="./carrito.html"><i class="fa-solid fa-cart-shopping"
+									title="Carrito"></i></a>
+      `
+  document.querySelector('.client-name').innerHTML = `${user.name} ${user.lastName}`
+}*/
 document.addEventListener('DOMContentLoaded', () => {
   const logout = document.querySelector('.logout');
   if (logout) {
-      logout.addEventListener('click', () => {
-          alert('Hasta Pronto!');
-          localStorage.removeItem('login-success');
-  
-          const dropdown = document.querySelector('.dropdown-login');
-          if (dropdown) {
-              dropdown.innerHTML = `
-                  <a href="./formulario-login.html"><i class="fa-regular fa-user" title="Login / Registro"></i></a>
-                  <a href="./carrito.html"><i class="fa-solid fa-cart-shopping" title="Carrito"></i></a>
-              `;
-          }
-      });
+    logout.addEventListener('click', () =>{
+      alert('Hasta Pronto!');
+      localStorage.removeItem('login-success');
+
+      document.querySelector('.dropdown').innerHTML = `
+      <a href="../pages/formulario-login.html"><i
+                  class="fa-regular fa-user" title="Login / Registro"></i></a>
+                  
+              <a href="../pages/carrito.html"><i class="fa-solid fa-cart-shopping"
+                  title="Carrito"></i></a>
+      `;
+    });
   }
 });
-
-
 
