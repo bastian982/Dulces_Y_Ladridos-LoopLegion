@@ -1,0 +1,19 @@
+.payment{
+    background-color: #b67352;
+    padding: 15px;
+    border: solid black 2px;
+    border-radius: 10px;
+}
+
+.resumen{
+    border: solid black 2px;
+    background-color: #ecb159;
+}
+
+#btn-completarPago{
+    background-color: #8cb9bd;
+    font-weight: bold;
+    &:hover{
+        color: white;
+    }
+}
