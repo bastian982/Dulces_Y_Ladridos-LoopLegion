@@ -170,3 +170,10 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   }
 });
+
+const botonPago = document.getElementById('boton-pago');
+botonPago.addEventListener('click', ()=>{
+
+window.location.href = '../pages/pago.html';
+
+});
