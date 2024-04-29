@@ -4,11 +4,13 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 let total=0;
-const productosCarrito =
-  JSON.parse(localStorage.getItem("productosCarrito")) || [];
-// Añadir el atributo 'cantidad' con valor 0 a cada producto
+const productosCarrito = JSON.parse(localStorage.getItem("productosCarrito")) || [];
+
+// Añadir el atributo 'cantidad' con valor 0 a cada producto si no existe
 productosCarrito.forEach((producto) => {
-  producto.cantidad = 1;
+ if (!producto.hasOwnProperty('cantidad')) {
+    producto.cantidad = 1;
+ }
 });
 
 // Guardar los cambios en el localStorage
@@ -168,3 +170,18 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   }
 });
+
+const botonPago = document.getElementById('boton-pago');
+botonPago.addEventListener('click', ()=>{
+
+window.location.href = '../pages/pago.html';
+
+});
+
+const botonDonar = document.getElementById('btn-donar');
+botonDonar.addEventListener('click', ()=>{
+
+window.location.href = 'https://www.milagroscaninos.org/ayudar/';
+
+});
+

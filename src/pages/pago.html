@@ -1,85 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página de Pago</title>
-  <!-- Enlaces a Bootstrap y otros estilos -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Estilos personalizados -->
-  <link rel="stylesheet" href="../style-sheets/style.css"> 
-  <link rel="stylesheet" href="../style-sheets/styleCarrito.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Checkout - Dulces y Ladridos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <script src="https://kit.fontawesome.com/aa7627e879.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="../style-sheets/style.css" />
+  <link rel="stylesheet" href="../style-sheets/stylePago.css" />
+
 </head>
+
 <body>
-  <!-- Encabezado -->
-  <header class="container-sm-fluid ps-0 pe-0 pt-0">
-    <!-- Inserta aquí tu encabezado -->
+  <header id="main-header" class="container-sm-fluid ps-0 pe-0 pt-0">
+    <nav class="container-sm-fluid ps-0 pe-0 pt-0">
+			<div class="navbar navbar-expand-lg  justify-content-around navbarSuperior center" id="navbarSuperior"><!-- div color azul -->
+				<a href="/index.html" id="logoDulcesYLadridos" class="navbar-brand "><img src="../img/logo_y_nombre.png" alt="Logo y nombre de la empresa" /></a>
+				<!-- <div class="navbar dropdown" id="client">
+					<a href="./formulario-login.html"><i class="fa-regular fa-user" title="Login / Registro"></i></a>
+					<span class="client-name "></span>
+					<a href="./carrito.html"><i class="fa-solid fa-cart-shopping" title="Carrito"></i></a>
+				</div> -->
+
+			<!-- 	<button class="navbar-toggler m-2" type="button" data-bs-toggle="collapse"
+					data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+					aria-expanded="false" aria-label="Toggle navigation" id="#iconoNavBar">
+					<span class="navbar-toggler-icon"></span>
+				</button> -->
+			</div>
+
+		</nav>
+
+
+
+  </div>
+
+</div>
+
+</nav>
+
+<!-- <nav class="navbar navbar-expand-lg bg-header2">
+			<div class="container-fluid">
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item ">
+						    <a class="nav-link active text-white " aria-current="page" href="../../index.html">Inicio</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white " href="./productos.html">Productos</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white" href="./publicaciones.html">Publicaciones</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white" href="./nosotros.html">Nosotros</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white" href="./contacto.html">Contáctanos</a>
+						</li>
+					</ul>
+					</form>
+				</div>
+			</div>
+		</nav> -->
   </header>
 
-  <main class="container">
-    <h2>Información de Productos</h2>
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Nombre del Producto</th>
-          <th>Precio Unitario</th>
-          <th>Cantidad</th>
-          <th>Total</th>
-          <!-- Puedes agregar más columnas si es necesario -->
-        </tr>
-      </thead>
-      <tbody id="product-info">
-        <!-- Aquí se mostrará la información de los productos -->
-      </tbody>
-    </table>
-
-    <h2>Total a Pagar</h2>
-    <div id="total-info">
-      <!-- Aquí se mostrará el total a pagar -->
+  <main class="container row mx-auto my-0">
+    <!-- Dentro del div del resumen en pago.html -->
+    <div class="col-md-3 mt-5 mb-5">
+      <div class="rounded resumen">
+        <h3 class="text-center text-white">Resumen</h3>
+        <p class="text-center">Total de productos: <span id="checkout-num-products" class="fw-bold">0</span></p>
+        <p class="text-center">Total MXN: <span id="checkout-total-mxn" class="fw-bold">$0.00</span></p>
+        <table id="checkout-product-list" class="table">
+          <thead>
+            <tr>
+              <th>Producto</th>
+              <th>Cantidad</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Aquí se agregarán los productos y sus cantidades -->
+          </tbody>
+        </table>
+      </div>
     </div>
 
-    <h2>Información Personal</h2>
-    <form id="payment-form">
-      <div class="mb-3">
-        <label for="nombre">Nombre</label>
-        <input type="text" class="form-control" id="nombre" required>
+    <!-- Dentro del div del formulario en checkout.html -->
+    <div class="col-12 col-md-9 payment mt-5 mb-5">
+      <h2 class="text-center text-white">Detalles del Pago</h2>
+      <form id="payment-form">
+        <div class="mb-3">
+          <label for="card-number" class="form-label text-white">Número de tarjeta</label>
+          <input type="text" class="form-control" id="card-number" placeholder="1234 5678 9012 3456">
+        </div>
+        <div class="mb-3">
+          <label for="card-holder" class="form-label text-white">Nombre del titular</label>
+          <input type="text" class="form-control" id="card-holder" placeholder="Juan Pérez">
+        </div>
+
+        <div class="mb-3 d-flex">
+
+          <div class="flex-fill mx-1">
+            <label for="phone" class="form-label text-white">Teléfono</label>
+            <input type="tel" class="form-control" id="phone" placeholder="123-456-7890">
+          </div>
+
+          <div class="flex-fill mx-1">
+            <label for="email" class="form-label text-white">Correo electrónico</label>
+            <input type="email" class="form-control" id="email" placeholder="ejemplo@dominio.com">
+          </div>
+
+        </div>
+
+        <div class="mb-3">
+          <label for="address" class="form-label text-white">Dirección</label>
+          <input type="text" class="form-control" id="address" placeholder="Calle 123, Ciudad, Estado, Código Postal">
+        </div>
+
+        <div class="mb-3 d-flex">
+          <div class="flex-fill mx-1">
+            <label for="expiry-date" class="form-label text-white">Fecha de vencimiento</label>
+            <input type="text" class="form-control" id="expiry-date" placeholder="MM/AA">
+          </div>
+          <div class="flex-fill mx-1">
+            <label for="cvv" class="form-label text-white">CVV</label>
+            <input type="text" class="form-control" id="cvv" placeholder="123">
+          </div>
+        </div>
+
+        <div class="text-center">
+        <button type="submit" class="btn  text-center" id="btn-completarPago">Completar pago</button>
       </div>
-      <div class="mb-3">
-        <label for="apellido">Apellido</label>
-        <input type="text" class="form-control" id="apellido" required>
-      </div>
-      <div class="mb-3">
-        <label for="correo">Correo</label>
-        <input type="email" class="form-control" id="correo" required>
-      </div>
-      <div class="mb-3">
-        <label for="telefono">Teléfono</label>
-        <input type="tel" class="form-control" id="telefono" required>
-      </div>
-      <div class="mb-3">
-        <label for="tarjeta">Número de Tarjeta</label>
-        <input type="text" class="form-control" id="tarjeta" required>
-      </div>
-      <div class="mb-3">
-        <label for="fecha-vencimiento">Fecha de Vencimiento</label>
-        <input type="text" class="form-control" id="fecha-vencimiento" required>
-      </div>
-      <div class="mb-3">
-        <label for="ccv">CCV</label>
-        <input type="text" class="form-control" id="ccv" required>
-      </div>
-      <div class="mb-3">
-        <label for="direccion">Dirección de Envío</label>
-        <input type="text" class="form-control" id="direccion" required>
-      </div>
-      <!-- Botón para enviar el formulario -->
-      <button type="submit" class="btn btn-primary">Pagar</button>
-    </form>
+        <ul id="error-message" class="list-unstyled"></ul>
+
+      </form>
   </main>
 
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../js/carrito.js"></script>
+  <footer id="main-footer" class="text-center bg-body-tertiary">
+    <div class="container pt-4">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+          <!-- Facebook -->
+          <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button"
+              data-mdb-ripple-color="dark"><i class="fab fa-facebook-f" title="Facebook"></i></a>
+  
+          <!-- Twitter -->
+          <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button"
+              data-mdb-ripple-color="dark"><i class="fab fa-twitter" title="Twitter"></i></a>
+  
+          <!-- Google -->
+          <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button"
+              data-mdb-ripple-color="dark"><i class="fab fa-google" title="Google"></i></a>
+  
+          <!-- Instagram -->
+          <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button"
+              data-mdb-ripple-color="dark"><i class="fab fa-instagram" title="Instagram"></i></a>
+  
+          <!-- Linkedin -->
+          <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button"
+              data-mdb-ripple-color="dark"><i class="fab fa-linkedin" title="LinkedIn"></i></a>
+          <!-- Github -->
+          <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button"
+              data-mdb-ripple-color="dark"><i class="fab fa-github" title="GitHub"></i></a>
+      </section>
+      <!-- Section: Social media -->
+  </div>
+      <!-- Grid container -->
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+        Politicas de privacidad / Terminos y condiciones
+        <a class="text-body" href="https://mdbootstrap.com/"></a>
+      </div>
+  </footer>
+
   <script src="../js/pago.js"></script>
+  <!-- <script src="../js/headerYFooter.js"></script> -->
 </body>
+
 </html>
