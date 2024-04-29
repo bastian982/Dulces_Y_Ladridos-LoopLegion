@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             // Validación de la fecha de vencimiento
-            const expiryDateRegExp = /^(0[1-9]|1[0-2])\/\d{2}$/; // Ajusta según el formato requerido
+            const expiryDateRegExp = /^(0[1-9]|1[0-2])\/2[4-9]$/; // Ajusta según el formato requerido
             if (!expiryDateRegExp.test(expiryDate)) {
                 reject('La fecha de vencimiento es inválida.');
             }
