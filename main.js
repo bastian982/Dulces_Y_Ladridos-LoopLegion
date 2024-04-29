@@ -52,8 +52,8 @@ document.addEventListener('DOMContentLoaded', () => {
           const dropdown = document.querySelector('.dropdown');
           if (dropdown) {
               dropdown.innerHTML = `
-                  <a href="./formulario-login.html"><i class="fa-regular fa-user" title="Login / Registro"></i></a>
-                  <a href="./carrito.html"><i class="fa-solid fa-cart-shopping" title="Carrito"></i></a>
+                  <a href="./src/pages/formulario-login.html"><i class="fa-regular fa-user" title="Login / Registro"></i></a>
+                  <a href="./src/pages/carrito.html"><i class="fa-solid fa-cart-shopping" title="Carrito"></i></a>
               `;
           }
       });
