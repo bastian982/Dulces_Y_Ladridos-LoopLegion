@@ -1,40 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
-#title-table{
-    background-color: #8cb9bd;
-    font-weight: 800;
-    font-style: normal;
-    font-size: 24px;
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+#title-table {
+  background-color: #8cb9bd;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 24px;
 }
-main{
-    font-family: "Nunito Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
+main {
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
 }
-#footer-table{
-    background-color: #8cb9bd;
-    font-size: 22px;
+#footer-table {
+  background-color: #8cb9bd;
+  font-size: 22px;
 }
 
-#footer-total{
-    background-color: #8cb9bd;
-    font-size: 22px;
+#footer-total {
+  background-color: #8cb9bd;
+  font-size: 22px;
 }
-.productInCarTxt{
-
-    font-size: 16px;
-    font-weight: 600;
-    font-style: bold;
-    align-content: center;
-
+.productInCarTxt {
+  font-size: 16px;
+  font-weight: 600;
+  font-style: bold;
+  align-content: center;
 }
-.btnProduct{
-
+.btnProduct {
   align-items: center;
   background-clip: padding-box;
   background-color: #fa6400;
   border: 1px solid transparent;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
   box-sizing: border-box;
   color: #fff;
@@ -53,8 +50,6 @@ main{
   touch-action: manipulation;
   vertical-align: baseline;
   width: auto;
-
-
 }
 
 .btnProduct:hover,
@@ -68,97 +63,114 @@ main{
 
 .btnProduct:active {
   background-color: #c85000;
-  box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
   transform: translateY(0);
 }
 
 .tabla-personalizada {
-    background-color: #f0f0f0;
-    color: #333;
-    border: 1px solid #000;
-    border-radius: 30px;
+  background-color: #f0f0f0;
+  color: #333;
+  border: 1px solid #000;
+  border-radius: 30px;
 }
 
-
 .tabla-personalizada tbody th {
-    background-color: #ffe8ce;
+  background-color: #ffe8ce;
 }
 
 .tabla-personalizada td {
-    background-color: #ffe8ce;
+  background-color: #ffe8ce;
 }
 
-.table-recuento th{
-    background-color: #b67352;
-    color: white;
+.table-recuento th {
+  background-color: #b67352;
+  color: white;
 }
 
-.table-recuento td{
-    background-color: #b67352;
+.table-recuento td {
+  background-color: #b67352;
 }
 
-.imgProduct{
-    width: 180px;
+.imgProduct {
+  width: 180px;
 }
 
-#div-donar{
-    background-color: #b67352;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    border-radius: 10px;
+#div-donar {
+  background-color: #b67352;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
 }
 
-#div-donar button{
-    background: #ECB159;
-    border: none;
-    border-radius: 30%;
-    margin: 8px;
-}
+#btn-donar {
+    height: 40px;
+    background: #ecb159;
+    border: solid black 2px;
+    border-radius: 7px;
+    color: black;
+    font-weight: bold;
+  
+    &:hover{
+      border: solid white 2px;
+      color: white;
+      font-weight: bold;
+    }
+  }
 
-#boton-pago{
-    background: none;
-    border: none;
+
+#boton-pago {
+  background: #ecb159;
+  border: solid black 2px;
+  color: black;
+  font-weight: bold;
+
+  &:hover{
+    border: solid white 2px;
     color: white;
     font-weight: bold;
+  }
 }
-#total{
-    color: white;
-    font-weight: 800;
-    font-style: normal;
-    font-size: 24px;
+#total {
+  color: white;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 24px;
 }
-#emptyCar{
-    background-image: url(../img/carrito-vacio.png);
-    background-repeat: no-repeat;
-    background-size: 500px 100%; 
-    background-position: center; 
-    background-color:#F0F0F0;
-    width:100%; height:500px; 
+#emptyCar {
+  background-image: url(../img/carrito-vacio.png);
+  background-repeat: no-repeat;
+  background-size: 500px 100%;
+  background-position: center;
+  background-color: #f0f0f0;
+  width: 100%;
+  height: 500px;
 }
 
 @media screen and (max-width: 900px) {
-    .imgProduct{
-        width: 80px;
-    }
+  .imgProduct {
+    width: 80px;
+  }
 }
 @media screen and (max-width: 1080px) {
-    #emptyCar{
-        background-image: url(../img/carrito-vacio.png);
-        background-repeat: no-repeat;
-        background-size: 390px 100%; 
-        background-position: center top; 
-        background-color:#F0F0F0;
-        width:100%; height:390px; 
-    }
+  #emptyCar {
+    background-image: url(../img/carrito-vacio.png);
+    background-repeat: no-repeat;
+    background-size: 390px 100%;
+    background-position: center top;
+    background-color: #f0f0f0;
+    width: 100%;
+    height: 390px;
+  }
 }
 @media screen and (max-width: 500px) {
-    #emptyCar{
-        background-image: url(../img/carrito-vacio.png);
-        background-repeat: no-repeat;
-        background-size: 290px 100%; 
-        background-position: center top; 
-        background-color:#F0F0F0;
-        width:100%; height:290px; 
-    }
+  #emptyCar {
+    background-image: url(../img/carrito-vacio.png);
+    background-repeat: no-repeat;
+    background-size: 290px 100%;
+    background-position: center top;
+    background-color: #f0f0f0;
+    width: 100%;
+    height: 290px;
+  }
 }

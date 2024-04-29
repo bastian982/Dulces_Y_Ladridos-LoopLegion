@@ -177,3 +177,11 @@ botonPago.addEventListener('click', ()=>{
 window.location.href = '../pages/pago.html';
 
 });
+
+const botonDonar = document.getElementById('btn-donar');
+botonDonar.addEventListener('click', ()=>{
+
+window.location.href = 'https://www.milagroscaninos.org/ayudar/';
+
+});
+
