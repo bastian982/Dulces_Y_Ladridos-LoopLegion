@@ -4,11 +4,13 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 let total=0;
-const productosCarrito =
-  JSON.parse(localStorage.getItem("productosCarrito")) || [];
-// Añadir el atributo 'cantidad' con valor 0 a cada producto
+const productosCarrito = JSON.parse(localStorage.getItem("productosCarrito")) || [];
+
+// Añadir el atributo 'cantidad' con valor 0 a cada producto si no existe
 productosCarrito.forEach((producto) => {
-  producto.cantidad = 1;
+ if (!producto.hasOwnProperty('cantidad')) {
+    producto.cantidad = 1;
+ }
 });
 
 // Guardar los cambios en el localStorage
