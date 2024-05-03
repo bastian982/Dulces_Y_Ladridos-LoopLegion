@@ -81,14 +81,17 @@ document.addEventListener("DOMContentLoaded", function () {
                     return alert("El usuario ya esta registrado!");
                 }
 
-                users.push({
-                    name: name,
+                postUser({
+                    firstName: name,
                     lastName: lastName,
-                    number: number,
+                    telephoneNumber: number,
                     email: email,
                     password: password,
+                    privilege: {
+                        "id": "3"
+                    }
                 });
-                localStorage.setItem("users", JSON.stringify(users));
+                // localStorage.setItem("users", JSON.stringify(users));
                 alert("Registro Exitoso!");
 
                 console.log("Datos del formulario:", datos);
@@ -106,3 +109,32 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     });
 });
+
+const postUser = async(userData)=>{
+    let data = JSON.stringify(userData);
+
+    // URL a la que enviar la solicitud
+    const url = 'http://localhost:8080/api/v1/users';
+    try {
+      const response = await fetch(url, {
+        method: "POST",
+        body: data,
+        headers: { "Content-Type": "application/json"  },
+      });
+      console.log(response);
+      if (!response.ok) {
+        throw new Error(`HTTP error status: ${response.status}`);
+      }
+    //   const jwt = await response.json(); // Asegúrate de que el servidor devuelva un objeto con una propiedad 'token'
+    //   console.log(jwt);
+    //   if (jwt && jwt.token) {
+    //     localStorage.setItem("token", jwt.token); // Guarda el token en localStorage
+    //   } else {
+    //     console.error("No se recibió un token válido");
+    //   }
+ } 
+    catch (error) {
+   console.error("Error al obtener el token:", error);
+    }
+    
+}

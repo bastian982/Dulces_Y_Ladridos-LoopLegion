@@ -83,12 +83,12 @@
       } 
       .carouselInner .carousel-item-end.active,
       .carouselInner .carousel-item-next {
-        transform: translateX(23%);
+        transform: translateX(25%);
       }
       
       .carouselInner .carousel-item-start.active, 
       .carouselInner .carousel-item-prev {
-        transform: translateX(-23%);
+        transform: translateX(-25%);
       }
 
   .carouselInner .carousel-item-end,

@@ -6,6 +6,24 @@ const arregloDeProductosName = "arregloDeProductos";
 const arregloDePublicacionesName = "arregloDePublicaciones";
 const arregloDeProductos = dataProductos.data;// este arreglo tendría que venir de la API 
 const arregloDePublicaciones =dataPublicaciones.data;
+const url = `http://localhost:8080/api/v1/products`
+fetch(url)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Error en la solicitud get');
+    }
+    return response.json(); // o response.text(), response.blob(), etc. dependiendo del tipo de respuesta esperada
+  })
+  .then(data => {
+    // Hacer algo con la respuesta
+
+    console.log(data);
+    setDataLocalStorage(arregloDeProductosName,data);
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+
 
 function checkDataInLocalStorage (arrayName){
     const storageData = localStorage.getItem(arrayName);
@@ -18,7 +36,7 @@ function setDataLocalStorage(name,data) {
     };     
 }
 console.log(checkDataInLocalStorage(arregloDeProductosName));
-setDataLocalStorage(arregloDeProductosName,arregloDeProductos);
+
 console.log(checkDataInLocalStorage(arregloDeProductosName));
 setDataLocalStorage(arregloDePublicacionesName,arregloDePublicaciones);
 

@@ -3,10 +3,13 @@ import { getProducts } from './localStorage.js';
 const homeProductCarousel = document.getElementById("productsCarouselInner");
 const homeProductCarouselButtons = document.getElementById("carouselIndicators");
 const arregloDeProductosName = "arregloDeProductos";
+const url = `http://localhost:8080/api/v1/products`
 
 
 function createCarouselItems(){
-    const products = getProducts(arregloDeProductosName);
+    const products = getProducts(arregloDeProductosName,url);
+    console.log("productos");
+    console.log(products);
     products.map(producto =>homeProductCarouselButtons.innerHTML  += createButton(products.indexOf(producto)));
     products.map(producto =>{homeProductCarousel.innerHTML += createSlide(producto, products.indexOf(producto))});
 }
@@ -16,7 +19,7 @@ function createSlide(producto, index){
     <div class="carousel-slide mx-auto">
     <!-- Información producto inicio -->
     <div class="card productCard">
-      <img src="${producto.imagen}" class="card-img-top productImage" alt="...">
+      <img src="${producto.imageUrl}" class="card-img-top productImage" alt="...">
       <div class="card-body prductsCarouselCardBody">
         <h5 class="card-title">${producto.dogoName}</h5>
         <p class="card-text">$${producto.price}.00</p>

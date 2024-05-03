@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // };
 //Función exclusiva para simular el funcionamiento
 const getProducts = () => {
+
   return JSON.parse(
     localStorage.getItem("arregloDeProductos")
   );  
@@ -30,9 +31,10 @@ const addToCart = (productoId) => {
   if (productosIndex[productoId] !== undefined) {
     alert("Este producto ya está en el carrito");
     return;
-  }
-
-  const producto = getProducts().find(producto => producto.id === productoId);
+   }
+console.log(productoId);
+  const producto = getProducts().find(producto => producto.id == productoId);
+  console.log(producto);
   productosCarrito.push(producto);
   localStorage.setItem("productosCarrito", JSON.stringify(productosCarrito));
   alert("Producto agregado al carrito");
@@ -43,7 +45,7 @@ const addToCart = (productoId) => {
 const cards = (productos) => {
   return productos.map((producto, index) => `
     <div class="card col-3 m-3 p-0 ${index % 2 === 0 ? 'cardNaranja' : 'cardCafe'}  style="width: 21rem;">
-      <img src="${producto.imagen}"  class="card-img-top mt-2 img-card" alt="...">
+      <img src="${producto.imageUrl}"  class="card-img-top mt-2 img-card" alt="...">
       <div class="card-body">
         <h6 class="card-title">${producto.name}</h6>
         <p class="card-text">$ ${producto.price}.00 MXN</p>

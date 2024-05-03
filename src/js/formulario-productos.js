@@ -6,7 +6,7 @@ import {
   Brownie,
 } from "../../Productos/product-class.js";
 import { createTable } from './tableProducts.js';
-import { setProducts as setData, getProducts as getData } from "./localStorage.js";
+import { setProducts as setData, getProducts as getData, getProducts } from "./localStorage.js";
 
 const arregloDeProductosName = "arregloDeProductos";
 const addForm = document.getElementById("addForm");
@@ -35,9 +35,18 @@ function addData(event) {
     priceAddInput,
     piecesAddInput
   );
-  productToAdd.id = productToAdd.id +5;//Borrar linea cuando ya este funcionando el backend
-  arregloDeProductos.push(productToAdd);
-  setData("arregloDeProductos", arregloDeProductos);
+  let product = {
+    name:nameAddInput,
+    dogoName: dogoNameAddInput,
+    description: descriptionAddInput,
+    price: priceAddInput,
+    quantity: piecesAddInput,
+    imageUrl: imageAddInput,
+    productCategory: {
+      id:typeProduct,
+    }
+  }
+  postProduct(product);
   createTable();
   resetForm();  
 }
@@ -101,3 +110,35 @@ function createProduct(
 }
 
 addForm.onsubmit = addData;
+
+
+const postProduct = async(productData)=>{
+  let data = JSON.stringify(productData);
+console.log("postProduct iniciado" +data);
+  // URL a la que enviar la solicitud
+  const url = 'http://localhost:8080/api/v1/products';
+  const token = localStorage.getItem("token");
+  try {
+    const response = await fetch(url, {
+      method: "POST",
+      body: data,
+      headers: { 
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`
+        },
+    });
+    console.log(response);
+    if (!response.ok) {
+      throw new Error(`HTTP error status: ${response.status}`);
+    }else{
+      createTable();
+      getProducts(arregloDeProductosName,url);
+      createTable();
+    }
+  
+} 
+  catch (error) {
+ console.error("Error al obtener el token:", error);
+  }
+  
+}

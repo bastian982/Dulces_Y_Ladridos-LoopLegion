@@ -1,16 +1,18 @@
 
 import { getProducts, setProducts } from './localStorage.js'; //Usamos las funciones para manipular la información en el local Storage
 const arregloDeProductosName = "arregloDeProductos";
+const url = `http://localhost:8080/api/v1/products`
 /**
  * Función que elimina el producto del arreglo como así como actualizar la información en la tabla
  */
-  function deleteProduct(event) {
+  function  deleteProduct(event) {
     console.log("delete");
     let id = event.target.id.slice(0,-9);
-    const products  = getProducts(arregloDeProductosName);
-    let index =  products.indexOf(products.filter(product => product.id ==id)[0] );
-    products.splice(index,1)
-     setProducts(arregloDeProductosName,products)   
+    
+    const products  = getProducts(arregloDeProductosName,url);
+    let product =  products.find(product => product.id ==id );
+    deleteProducts(product);
+     getProducts(arregloDeProductosName,url);   
      createTable();
   }
   /**
@@ -21,18 +23,20 @@ const arregloDeProductosName = "arregloDeProductos";
     const idElement =event.target.id.slice(0,-9);
     document.getElementById(`${idElement}buttonUpd`).style.visibility = "collapse";
     document.getElementById(`${idElement}buttonSav`).style.visibility = "visible";
-    const elements = document.getElementsByClassName(`${idElement}inputAdmin`)
+    const elements = document.getElementsByClassName(`${idElement}inputAdmPr`)
     console.log(elements);
    for (const e of elements) {
      e.disabled  =false;   
     }
+    elements[1].disabled = true;
+
     // const products  = getProducts(arregloDeProductosName);
   }
   /**
    * Función que cambia los valores del producto así, y actualiza el local storage junto con la tabla
    */
   function changeCell (idElement,key,value){
-    const products  = getProducts(arregloDeProductosName);
+    const products  = getProducts(arregloDeProductosName,url);
     let index =  products.indexOf(products.filter(product => product.id ==idElement)[0] );
     let product = products[index];
     switch (key) {
@@ -50,14 +54,14 @@ const arregloDeProductosName = "arregloDeProductos";
             product.price = value;
             break;
             case 4:
-            product.pieces = value;
+            product.quantity = value;
             break;
         default:
             break;
     }
-    setProducts(arregloDeProductosName,products);
+    putProduct(product);
+    getProducts(arregloDeProductosName,url);
     createTable();
-
   }
   /**
    * Función que captura la informacion colocada en los campos editados
@@ -65,17 +69,18 @@ const arregloDeProductosName = "arregloDeProductos";
 function  saveChanges (event) {
     console.log("save");
     const idElement =event.target.id.slice(0,-9);
-    const elements = document.getElementsByClassName(`${idElement}inputAdmin`);
+    const elements = document.getElementsByClassName(`${idElement}inputAdmPr`);
     let count = 0;
     for (const e of elements) {
         if( e.value !== ""){
             changeCell(idElement,count++,e.value);
+            createTable();
         } 
         count++;   
     };
     document.getElementById(`${idElement}buttonUpd`).style.visibility = "visible";
     document.getElementById(`${idElement}buttonSav`).style.visibility = "collapse";
-
+    location.reload();
 }
 /**
  * Funcion que crea las columnas o atributos de la tabla
@@ -108,17 +113,17 @@ export function createTable() {
    * Función que añade los datos a la tabla tomados desde el localstorage y añade las funciones a los botones para editar.
    */
   function createBodyTable() {
-    let data = getProducts(arregloDeProductosName);
     const tBody = document.getElementById("tbody")
-    data.map(({ id, name, dogoName, description, price, pieces,imagen }) => {
+    let data = getProducts(arregloDeProductosName,url);
+    data.map(({ id, name, dogoName, description, price, quantity,imageUrl }) => {
       tBody.innerHTML += `<tr>
                   <th class="productsRow" scope="row">${id}</th>
-                  <td class="productsRow"><input class="${id}inputAdmin " style="width: 7.5rem;"  type="text" placeholder="${name}" disabled></td>
-                  <td class="productsRow"><input class="${id}inputAdmin" style="width: 7.5rem;" type="text" placeholder="${dogoName}" disabled></td>
-                  <td class="productsRow"><input class="${id}inputAdmin" style="width: 8rem;" type="text" placeholder="${ description}" disabled ></td>
-                  <td class="productsRow"><input class="${id}inputAdmin" style="width: 3rem;" type="text" placeholder="${ price}" disabled></td>
-                  <td class="productsRow"><input class="${id}inputAdmin" style="width: 3rem;" type="number" min="0" placeholder="${ pieces}" disabled></td>
-                  <td class="productsRow" style="width: 7rem;"><img src=${imagen}  class="rounded img-fluid" alt="${name}"></td>
+                  <td class="productsRow"><input class="${id}inputAdmPr " style="width: 7.5rem;"  type="text" placeholder="${name}" disabled></td>
+                  <td class="productsRow"><input class="${id}inputAdmPr" style="width: 7.5rem;" type="text" placeholder="${dogoName}" disabled></td>
+                  <td class="productsRow"><input class="${id}inputAdmPr" style="width: 8rem;" type="text" placeholder="${ description}" disabled ></td>
+                  <td class="productsRow"><input class="${id}inputAdmPr" style="width: 3rem;" type="text" placeholder="${ price}" disabled></td>
+                  <td class="productsRow"><input class="${id}inputAdmPr" style="width: 3rem;" type="number" min="0" placeholder="${ quantity}" disabled></td>
+                  <td class="productsRow" style="width: 7rem;"><img src=${imageUrl}  class="rounded img-fluid" alt="${name}"></td>
                   <td class="productsRow" style="width: 4rem;"><button type="button" id="${id}buttonDel" class="btn ${id}Row btn-danger-subtle" >Borrar</button></td>
                   <td class="productsRow" style="width: 4rem;"><button type="button" id="${id}buttonUpd" class="btn ${id}Row btn-info" >Modificar</button><button type="button" id="${id}buttonSav" class="btn ${id}Row btn-success" style="visibility:collapse;">Guardar</button></td>
               </tr>`;
@@ -129,4 +134,66 @@ export function createTable() {
     data.map(({id})=> document.getElementById(`${id}buttonSav`).onclick =saveChanges);
   }
   createTable();
+
+  const putProduct = async(productData)=>{
+    const url = `http://localhost:8080/api/v1/products/${productData.id}`
+    let data = JSON.stringify(productData);
+  console.log("postProduct iniciado" +data);
+    // URL a la que enviar la solicitud
+    const token = localStorage.getItem("token");
+    try {
+      const response = await fetch(url, {
+        method: "PUT",
+        body: data,
+        headers: { 
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`
+          },
+      });
+      console.log(response);
+
+      if (!response.ok) {
+        throw new Error(`HTTP error status: ${response.status}`);
+      }else{
+        getProducts(arregloDeProductosName,url);
+        createTable();
+        
+      }
+    
+  } 
+    catch (error) {
+   console.error("Error al obtener el token:", error);
+    }
+    
+  }
+
+  const deleteProducts = async(product)=>{
+    const url = `http://localhost:8080/api/v1/products/${product.id}`
+    let data = JSON.stringify(product.id);
+  console.log("DELETEProduct iniciado" +data);
+    // URL a la que enviar la solicitud
+    const token = localStorage.getItem("token");
+    try {
+      const response = await fetch(url, {
+        method: "DELETE",
+        body: data,
+        headers: { 
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`
+          },
+      });
+      console.log(response);
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error status: ${response.status}`);
+      }
+      createTable();
+    
+  } 
+    catch (error) {
+   console.error("Error al obtener el token:", error);
+    }
+    
+  }
+
 

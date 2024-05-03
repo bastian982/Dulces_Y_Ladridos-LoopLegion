@@ -33,7 +33,7 @@ function sumar(cantidad, id) {
   JSON.parse(localStorage.getItem("productosCarrito")) || [];
   console.log(cantidad);
   console.log(id);
-  const producto = productosCarrito.find(objeto => objeto.id === id);
+  const producto = productosCarrito.find(objeto => objeto.id == id);
   console.log(producto);
   if (producto) {
       // Si se encuentra el objeto, cambiar el atributo deseado
@@ -94,7 +94,7 @@ cuerpoTabla.innerHTML = vacio;
 productosCarrito.forEach((producto) => {
   const fila = `
   <tr >
-      <th  scope="row" rowspan = "2"><img src="${producto.imagen}"  class=" card-img-top mt-2 imgProduct " alt="..."></th>
+      <th  scope="row" rowspan = "2"><img src="${producto.imageUrl}"  class=" card-img-top mt-2 imgProduct " alt="..."></th>
       <td class="productInCarTxt">${producto.name}</td>
       <td>
       <button id="${producto.id}cartBtn" class="btnProduct btn btn-sm" onclick="restar('${producto.cantidad}' ,'${producto.id}')" > -</button>

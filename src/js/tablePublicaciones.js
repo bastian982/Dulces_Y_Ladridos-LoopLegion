@@ -4,6 +4,7 @@ import { getProducts, setProducts } from './localStorage.js';
 
 // Nombre del arreglo de publicaciones en el localStorage
 const arregloDePublicacionesName = "arregloDePublicaciones";
+const url = `http://localhost:8080/api/v1/posts`
 
 // Función para eliminar una publicación
   function deletePublicacion(event) {
@@ -62,7 +63,7 @@ const arregloDePublicacionesName = "arregloDePublicaciones";
             product.categories = value;
             break;
             case 4:
-            product.autor.first_name = value;
+            product.user.firstName = value;
             break;
         default:
             break;
@@ -130,18 +131,18 @@ export function createTablePublicacion() {
   // Función para crear el cuerpo de la tabla de publicaciones
   function createBodyTablePublicacion() {
     // Obtiene todas las publicaciones
-    let data = getProducts(arregloDePublicacionesName);
+    let data = getProducts(arregloDePublicacionesName,url);
     // Selecciona el cuerpo de la tabla
     const tBody = document.getElementById("tbodyPublicaciones")
     // Itera sobre cada publicación y la agrega a la tabla
-    data.map(({ id, title, description, content, image, autor,categories }) => {
+    data.map(({ id, title, description, content, image, user,categories }) => {
       tBody.innerHTML += `<tr>
                   <th class="${id}Row" scope="row">${id}</th>
                   <td class="${id}Row"><input class="${id}inputAdmin " style="width: 7.5rem;"  type="text" placeholder="${title}" disabled></td>
                   <td class="${id}Row"><input class="${id}inputAdmin" style="width: 7.5rem;" type="text" placeholder="${description}" disabled></td>
                   <td class="${id}Row"><input class="${id}inputAdmin" style="width: 8rem;" type="text" placeholder="${ content}" disabled ></td>
                   <td class="${id}Row"><input class="${id}inputAdmin" style="width: 3rem;" type="text" placeholder="${ categories}" disabled></td>
-                  <td class="${id}Row"><input class="${id}inputAdmin" style="width: 3rem;" type="number" min="1" placeholder="${autor.first_name}" disabled></td>
+                  <td class="${id}Row"><input class="${id}inputAdmin" style="width: 3rem;" type="number" min="1" placeholder="${user.firstName}" disabled></td>
                   <td class="${id}Row"><img src=${image} class="rounded-circle" alt="${title}"></td>
                   <td class="${id}Row"><button type="button" id="${id}buttonDel" class="btn ${id}Row btn-danger-subtle" >Borrar</button></td>
                   <td class="${id}Row"><button type="button" id="${id}buttonUpd" class="btn ${id}Row btn-info" >Modificar</button>

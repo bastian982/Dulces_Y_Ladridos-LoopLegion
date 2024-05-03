@@ -19,7 +19,7 @@ const printThisPublication = async (id) => {
       <h1 class="mb-3">${info.title}</h1>
       <p id="paragraph-content" class="text-start"></p>
       <img src="../img/perrito.jpg" class=" mt-3" alt="..." style="width: 45%"> 
-      <h4 class="mb-3 text-end">By: ${info.autor.first_name} ${info.autor.last_name}</h4>
+      <h4 class="mb-3 text-end">By: ${info.user.firstName} ${info.user.lastName}</h4>
     </div>
   `;
   printHTML("blog-container", message);
@@ -35,7 +35,7 @@ const printInfo = async (id) => {
       <h1 class="mb-3">${info.title}</h1>
       <p id="paragraph-content" class="text-start"></p>
       <img src="../img/perrito.jpg" class=" mt-3" alt="..." style="width: 45%">
-      <h4 class="mb-3 text-end">By: ${info.autor.first_name} ${info.autor.last_name}</h4>
+      <h4 class="mb-3 text-end">By: ${info.user.firstName} ${info.autor.last_name}</h4>
     </div>
   `;
   printHTML("blog-container", message);
@@ -50,7 +50,7 @@ const cards = (publicaciones) =>
           <img src="../img/post_img3.jpg" class="card-img-top mt-3" alt="...">
           <div class="card-body">
             <h5 class="card-title">${data.title}</h5>
-            <h6 class="card-title">${data.autor.first_name} ${data.autor.last_name}</h6>
+            <h6 class="card-title">${data.user.firstName} ${data.user.lastName}</h6>
             <p class="card-text">${data.description}</p>
             <section class="d-flex justify-content-around">
               <button onclick="printThisPublication(${data.id})" class="btn btn-primary my-1" >Ver mas ...</button>

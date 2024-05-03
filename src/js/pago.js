@@ -132,3 +132,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
+// const getInfoUser = async (id) => {
+//     const url = `http://localhost:8080/api/v1/users/${id}`
+//     const token = localStorage.getItem("token");
+//   const response = await fetch(url, {
+//     headers: { Authorization: `Bearer ${token}` },
+//   });
+//   console.log(response.status);
+//   const orders = await response.json();
+//   console.log(orders);
+// };
+
+// function getRandomInt(max) {
+//   return Math.floor(Math.random() * max);
+// };
+     
