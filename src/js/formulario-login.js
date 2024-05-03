@@ -68,12 +68,16 @@ try {
   const jwt = await response.json(); // Asegúrate de que el servidor devuelva un objeto con una propiedad 'token'
   console.log(jwt);
   if (jwt && jwt.token) {
-    localStorage.setItem("token", jwt.token); // Guarda el token en localStorage
+    localStorage.setItem("token", jwt.token);
+    localStorage.setItem("idUser", jwt.idUser);  // Guarda el token en localStorage
+    alert(`Bienvenido `);
   } else {
     console.error("No se recibió un token válido");
   }
 } catch (error) {
   console.error("Error al obtener el token:", error);
+  alert("Usuario y/o contraseña incorrectos");
+  
   }
 
 }

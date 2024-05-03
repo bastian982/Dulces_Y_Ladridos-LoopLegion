@@ -1,15 +1,18 @@
 //import { getProducts } from "./localStorage.js";
-const getData = (nameData) => {
-  return JSON.parse(localStorage.getItem(nameData));
-};
+const url = `http://localhost:8080/api/v1/posts`;
+const arregloDePublicacionesName = "arregloDePublicaciones";
+
+   const getData =  (arregloDePublicacionesName)=>{
+    return localStorage.getItem(arregloDePublicacionesName)
+
+   }
 const setProducts = (nameData, data) => {
   localStorage.setItem(nameData, JSON.stringify(data));
 };
 
-const arregloDePublicacionesName = "arregloDePublicaciones";
-let url = "../json/publicaciones.json";
+
+
 const dataPrueba = getData(arregloDePublicacionesName);
-console.log(dataPrueba);
 
 const printThisPublication = async (id) => {
   let data = dataPrueba; // await getDataAPI(url);
@@ -43,9 +46,12 @@ const printInfo = async (id) => {
   console.log(id);
 };
 
-const cards = (publicaciones) =>
-  publicaciones.map(
-    (data) => `
+const cards = (publicaciones) =>{
+
+  const posts = JSON.parse(publicaciones);
+  console.log(posts);
+  return posts.map((data)=>    
+`
     <article class="card col-3 m-4 p-0 icon-link-hover" style="width: 21rem;" category="Tips" style="width: 27%;" >
           <img src="../img/post_img3.jpg" class="card-img-top mt-3" alt="...">
           <div class="card-body">
@@ -58,8 +64,9 @@ const cards = (publicaciones) =>
             </section>
           </div>
         </article>
-    `
-  );
+    `)
+ }
+
 /* <a href="./publicacion_lectura.html" class="btn btn-primary">Ver mas . . .</a> */
 const printCards = (container, cards) =>
   (document.getElementById(container).innerHTML = cards.join("")); //id = "user-cards"
@@ -75,12 +82,13 @@ const printText = (id, message) =>
 //     return publicaciones;
 // };
 
-const printAll = async (url) => {
-  let data = dataPrueba; //await getDataAPI(url);
+const printAll =  () => {
+  let data = getData(arregloDePublicacionesName);
+  
   printCards("blog-container", cards(data)); /*make and print cards*/
 };
 
-printAll(url);
+
 
 const printFiltered = async (filter) => {
   let publicaciones = dataPrueba; //await getDataAPI(url);
@@ -153,3 +161,27 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+   const getDataAPI = async (nameData, url) => {
+    try {
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error('Error en la solicitud get');
+      }
+      const data = await response.json(); // o response.text(), response.blob(), etc. dependiendo del tipo de respuesta esperada
+  
+      // Hacer algo con la respuesta
+      console.log(data);
+      setProducts(nameData, data);
+  
+      // Guardar los datos en localStorage
+      localStorage.setItem(nameData, JSON.stringify(data));
+  
+      // Llamar a la función printAll después de obtener y procesar los datos
+      printAll();
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  }
+  
+  getDataAPI(arregloDePublicacionesName, url);

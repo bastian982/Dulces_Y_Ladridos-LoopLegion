@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     email: email,
                     password: password,
                     privilege: {
-                        "id": "3"
+                        "id": "1"
                     }
                 });
                 // localStorage.setItem("users", JSON.stringify(users));
